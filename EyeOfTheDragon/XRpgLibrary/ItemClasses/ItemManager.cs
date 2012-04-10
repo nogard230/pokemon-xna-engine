@@ -191,25 +191,25 @@ namespace RpgLibrary.ItemClasses
 
         public BaseItem OpenChest(Chest chest)
         {
-            if (miscItems.ContainsKey(chest.Item.Name))
+            if (miscItems.ContainsKey(chest.Item))
             {
-                return (MiscItem)(miscItems[chest.Item.Name].Clone());
+                return (MiscItem)(miscItems[chest.Item].Clone());
             }
-            if (recoveryItems.ContainsKey(chest.Item.Name))
+            if (recoveryItems.ContainsKey(chest.Item))
             {
-                return (RecoveryItem)(recoveryItems[chest.Item.Name].Clone());
+                return (RecoveryItem)(recoveryItems[chest.Item].Clone());
             }
-            if (tms.ContainsKey(chest.Item.Name))
+            if (tms.ContainsKey(chest.Item))
             {
-                return (TMItem)(tms[chest.Item.Name].Clone());
+                return (TMItem)(tms[chest.Item].Clone());
             }
-            if (berryItems.ContainsKey(chest.Item.Name))
+            if (berryItems.ContainsKey(chest.Item))
             {
-                return (BerryItem)(berryItems[chest.Item.Name].Clone());
+                return (BerryItem)(berryItems[chest.Item].Clone());
             }
-            if (keyItems.ContainsKey(chest.Item.Name))
+            if (keyItems.ContainsKey(chest.Item))
             {
-                return (KeyItem)(keyItems[chest.Item.Name].Clone());
+                return (KeyItem)(keyItems[chest.Item].Clone());
             }
             return null;
         }

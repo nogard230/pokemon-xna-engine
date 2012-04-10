@@ -20,6 +20,11 @@ namespace RpgLibrary.ItemClasses
         {
         }
 
+        public KeyItem(KeyItemData data)
+            : base(data.Name, data.Type, 0, 0)
+        {
+        }
+
         #endregion
 
         #region Virtual Method Region

@@ -101,6 +101,19 @@ namespace RpgLibrary.ItemClasses
             CureAllStatuses = cureAllStatuses;
         }
 
+        public RecoveryItem(RecoveryItemData data)
+            : base(data.Name, data.Type, data.Price, data.SellPrice)
+        {
+            HealValue = data.HealValue;
+            HealPercentage = data.HealPercentage;
+            CanRevive = data.CanRevive;
+            LevelsGained = data.LevelsGained;
+            PPRestoreValue = data.PPRestoreValue;
+            MovesRestored = data.MovesRestored;
+            StatusCured = data.StatusCured;
+            CureAllStatuses = data.CureAllStatuses;
+        }
+
         #endregion
 
         #region Abstract Method Region

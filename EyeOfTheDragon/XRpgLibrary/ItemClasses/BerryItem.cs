@@ -30,6 +30,12 @@ namespace RpgLibrary.ItemClasses
 
         }
 
+        public BerryItem(BerryItemData data)
+            : base(data.Name, data.Type, data.Price, data.SellPrice)
+        {
+
+        }
+
         #endregion
 
         #region Abstract Method Region

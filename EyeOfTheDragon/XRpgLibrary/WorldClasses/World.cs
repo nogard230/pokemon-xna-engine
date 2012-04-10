@@ -33,6 +33,11 @@ namespace XRpgLibrary.WorldClasses
 
         ItemManager itemManager = new ItemManager();
 
+        public ItemManager ItemManager
+        {
+            get { return itemManager; }
+        }
+
         #endregion
 
         #region Level Field and Property Region
@@ -60,6 +65,7 @@ namespace XRpgLibrary.WorldClasses
 
                 MovementValidator.SetLevel(levels[currentLevel]);
                 ObjectInteractor.SetLevel(levels[currentLevel]);
+                ObjectInteractor.SetManager(itemManager);
             }
         }
 

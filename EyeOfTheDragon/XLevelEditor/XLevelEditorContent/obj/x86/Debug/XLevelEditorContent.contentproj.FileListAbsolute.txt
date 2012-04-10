@@ -1,3 +1,4 @@
 C:\Users\Jamie\Documents\Visual Studio 2010\Projects\RPG\EyesOfTheDragon\XLevelEditor\XLevelEditorContent\obj\x86\Debug\ResolveAssemblyReference.cache
 D:\Jamie\Visual Studio 2010\Projects\RPG\EyesOfTheDragon\EyesOfTheDragon\XLevelEditor\XLevelEditorContent\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Kevin\Documents\Visual Studio 2010\Projects\EyeOfTheDragon\XLevelEditor\XLevelEditorContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\XLevelEditor\XLevelEditorContent\obj\x86\Debug\ResolveAssemblyReference.cache

@@ -16,7 +16,7 @@ namespace RpgLibrary.ItemClasses
 
         #region Property Region
 
-        public BaseItem Item
+        public string Item
         {
             get
             {
