@@ -1,0 +1,2 @@
+C:\Users\Jamie\Documents\Visual Studio 2010\Projects\RPG\EyesOfTheDragon\EyesOfTheDragon\EyesOfTheDragonContent\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Jamie\Visual Studio 2010\Projects\RPG\EyesOfTheDragon\EyesOfTheDragon\EyesOfTheDragon\EyesOfTheDragonContent\obj\x86\Debug\ResolveAssemblyReference.cache

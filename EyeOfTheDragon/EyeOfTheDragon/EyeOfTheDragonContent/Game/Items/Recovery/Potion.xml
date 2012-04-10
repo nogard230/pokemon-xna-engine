@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ItemClasses="RpgLibrary.ItemClasses">
+  <Asset Type="ItemClasses:RecoveryItemData">
+    <Name>Potion</Name>
+    <Type>Potion</Type>
+    <Price>100</Price>
+    <SellPrice>50</SellPrice>
+    <HealValue>20</HealValue>
+    <HealPercentage>0</HealPercentage>
+    <CanRevive>false</CanRevive>
+    <LevelsGained>0</LevelsGained>
+    <PPRestoreValue>0</PPRestoreValue>
+    <MovesRestored>0</MovesRestored>
+    <StatusCured>None</StatusCured>
+    <CureAllStatuses>false</CureAllStatuses>
+  </Asset>
+</XnaContent>
