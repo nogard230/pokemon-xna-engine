@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{359E9480-4DE1-4F64-AE08-E50B7CC3C3A4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RpgLibrary</RootNamespace>
+    <AssemblyName>RpgLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CharacterClasses\AttributePair.cs" />
+    <Compile Include="CharacterClasses\Entity.cs" />
+    <Compile Include="CharacterClasses\EntityData.cs" />
+    <Compile Include="CharacterClasses\EntityDataManager.cs" />
+    <Compile Include="ConversationClasses\Conversation.cs" />
+    <Compile Include="ConversationClasses\ConversationManager.cs" />
+    <Compile Include="ConversationClasses\ConversationNode.cs" />
+    <Compile Include="ItemClasses\Armor.cs" />
+    <Compile Include="ItemClasses\ArmorData.cs" />
+    <Compile Include="ItemClasses\BaseItem.cs" />
+    <Compile Include="ItemClasses\Chest.cs" />
+    <Compile Include="ItemClasses\ChestData.cs" />
+    <Compile Include="ItemClasses\ItemDataManager.cs" />
+    <Compile Include="ItemClasses\ItemManager.cs" />
+    <Compile Include="ItemClasses\Key.cs" />
+    <Compile Include="ItemClasses\KeyData.cs" />
+    <Compile Include="ItemClasses\Reagent.cs" />
+    <Compile Include="ItemClasses\ReagentData.cs" />
+    <Compile Include="ItemClasses\Shield.cs" />
+    <Compile Include="ItemClasses\ShieldData.cs" />
+    <Compile Include="ItemClasses\Weapon.cs" />
+    <Compile Include="ItemClasses\WeaponData.cs" />
+    <Compile Include="Mechanics.cs" />
+    <Compile Include="Modifier.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quest Classes\Quest.cs" />
+    <Compile Include="Quest Classes\QuestManager.cs" />
+    <Compile Include="Quest Classes\QuestStep.cs" />
+    <Compile Include="RolePlayingGame.cs" />
+    <Compile Include="SkillClasses\Recipe.cs" />
+    <Compile Include="SkillClasses\RecipeManager.cs" />
+    <Compile Include="SkillClasses\Skill.cs" />
+    <Compile Include="SkillClasses\SkillData.cs" />
+    <Compile Include="SkillClasses\SkillDataManager.cs" />
+    <Compile Include="SpellClasses\Spell.cs" />
+    <Compile Include="SpellClasses\SpellData.cs" />
+    <Compile Include="SpellClasses\SpellDataManager.cs" />
+    <Compile Include="TalentClasses\Talent.cs" />
+    <Compile Include="TalentClasses\TalentData.cs" />
+    <Compile Include="TalentClasses\TalentDataManager.cs" />
+    <Compile Include="TrapClasses\Trap.cs" />
+    <Compile Include="TrapClasses\TrapData.cs" />
+    <Compile Include="TrapClasses\TrapManager.cs" />
+    <Compile Include="WorldClasses\LevelData.cs" />
+    <Compile Include="WorldClasses\MapData.cs" />
+    <Compile Include="WorldClasses\MapLayerData.cs" />
+    <Compile Include="WorldClasses\TilesetData.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

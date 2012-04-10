@@ -1,0 +1,69 @@
+Content\Backgrounds\titlescreen.xnb
+Content\GUI\leftarrowUp.xnb
+Content\GUI\rightarrowUp.xnb
+Content\GUI\StopBar.xnb
+Content\Tilesets\tileset1.xnb
+Content\Tilesets\tileset2.xnb
+Content\PlayerSprites\femalefighter.xnb
+Content\PlayerSprites\femalepriest.xnb
+Content\PlayerSprites\femalerogue.xnb
+Content\PlayerSprites\femalewizard.xnb
+Content\PlayerSprites\malefighter.xnb
+Content\PlayerSprites\malepriest.xnb
+Content\PlayerSprites\malerogue.xnb
+Content\PlayerSprites\malewizard.xnb
+Content\GUI\listBoxImage.xnb
+Content\ObjectSprites\containers.xnb
+Content\ObjectSprites\itemimages.xnb
+Content\Fonts\ControlFont.xnb
+Content\Game\Chests\Big Gold Chest.xnb
+Content\Game\Chests\Broken Crate.xnb
+Content\Game\Chests\Gold Chest.xnb
+Content\Game\Chests\Plain Chest.xnb
+Content\Game\Chests\Rusty Chest.xnb
+Content\Game\Classes\Fighter.xnb
+Content\Game\Classes\Priest.xnb
+Content\Game\Classes\Rogue.xnb
+Content\Game\Classes\Wizard.xnb
+Content\Game\Game.xnb
+Content\Game\Items\Armor\Chain Mail Boots.xnb
+Content\Game\Items\Armor\Chain Mail Gloves.xnb
+Content\Game\Items\Armor\Chain Mail Helm.xnb
+Content\Game\Items\Armor\Chain Mail.xnb
+Content\Game\Items\Armor\Leather Armor.xnb
+Content\Game\Items\Armor\Leather Boots.xnb
+Content\Game\Items\Armor\Leather Gloves.xnb
+Content\Game\Items\Armor\Leather Helm.xnb
+Content\Game\Items\Armor\Light Robes.xnb
+Content\Game\Items\Armor\Medium Robes.xnb
+Content\Game\Items\Armor\Studded Leather Armor.xnb
+Content\Game\Items\Armor\Studded Leather Boots.xnb
+Content\Game\Items\Armor\Studded Leather Gloves.xnb
+Content\Game\Items\Armor\Studded Leather Helm.xnb
+Content\Game\Items\Shield\Heavy Tower Shield.xnb
+Content\Game\Items\Shield\Large Kite Shield.xnb
+Content\Game\Items\Shield\Large Metal Shield.xnb
+Content\Game\Items\Shield\Large Wooden Shield.xnb
+Content\Game\Items\Shield\Medium Metal Shield.xnb
+Content\Game\Items\Shield\Medium Wooden Shield.xnb
+Content\Game\Items\Shield\Small Metal Shield.xnb
+Content\Game\Items\Shield\Small Wooded Shield.xnb
+Content\Game\Keys\Golden Key.xnb
+Content\Game\Keys\Rusty Key.xnb
+Content\Game\Skills\Bartering.xnb
+Content\Game\Skills\Herbalism.xnb
+Content\Game\Skills\Poison Making.xnb
+Content\Game\Skills\Trap Making.xnb
+Content\Game\Items\Weapon\Acolyte Staff.xnb
+Content\Game\Items\Weapon\Apprentice Staff.xnb
+Content\Game\Items\Weapon\Battle Axe.xnb
+Content\Game\Items\Weapon\Broad Sword.xnb
+Content\Game\Items\Weapon\Club.xnb
+Content\Game\Items\Weapon\Dagger.xnb
+Content\Game\Items\Weapon\Flail.xnb
+Content\Game\Items\Weapon\Great Sword.xnb
+Content\Game\Items\Weapon\Halberd.xnb
+Content\Game\Items\Weapon\Long Sword.xnb
+Content\Game\Items\Weapon\Mace.xnb
+Content\Game\Items\Weapon\Short Sword.xnb
+Content\Game\Items\Weapon\War Axe.xnb
