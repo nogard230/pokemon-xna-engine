@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\EyeOfTheDragon\XLevelEditor\XLevelEditor\bin\x86\Debug\Content\cursor.xnb</Output>
-      <Time>2011-03-07T14:13:36-07:00</Time>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\XLevelEditor\XLevelEditor\bin\x86\Debug\Content\cursor.xnb</Output>
+      <Time>2012-04-10T13:48:06.0356038-06:00</Time>
     </Item>
     <Item>
       <Source>grid.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\EyeOfTheDragon\XLevelEditor\XLevelEditor\bin\x86\Debug\Content\grid.xnb</Output>
-      <Time>2011-03-07T14:13:46-07:00</Time>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\XLevelEditor\XLevelEditor\bin\x86\Debug\Content\grid.xnb</Output>
+      <Time>2012-04-10T13:48:06.1416098-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -25,10 +25,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Kevin\documents\visual studio 2010\Projects\EyeOfTheDragon\XLevelEditor\XLevelEditorContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Kevin\documents\visual studio 2010\Projects\EyeOfTheDragon\XLevelEditor\XLevelEditor\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Kevin\documents\visual studio 2010\Projects\EyeOfTheDragon\XLevelEditor\XLevelEditorContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Kevin\documents\visual studio 2010\Projects\EyeOfTheDragon\XLevelEditor\XLevelEditor\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\XLevelEditor\XLevelEditorContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\XLevelEditor\XLevelEditor\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\XLevelEditor\XLevelEditorContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\XLevelEditor\XLevelEditor\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

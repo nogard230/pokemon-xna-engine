@@ -28,6 +28,12 @@ namespace RpgLibrary.ItemClasses
 
         }
 
+        public MiscItem(MiscItemData data)
+            : base(data.Name, data.Type, data.Price, data.SellPrice)
+        {
+
+        }
+
         #endregion
 
         #region Abstract Method Region

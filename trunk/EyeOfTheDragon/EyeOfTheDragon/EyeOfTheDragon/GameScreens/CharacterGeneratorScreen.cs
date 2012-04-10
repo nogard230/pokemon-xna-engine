@@ -304,6 +304,31 @@ namespace EyesOfTheDragon.GameScreens
             world.Levels.Add(level);
             world.CurrentLevel = 0;
 
+            foreach (MiscItemData data in DataManager.MiscData.Values)
+            {
+                world.ItemManager.AddMiscItem(new MiscItem(data));
+            }
+
+            foreach (RecoveryItemData data in DataManager.RecoveryData.Values)
+            {
+                world.ItemManager.AddRecoveryItem(new RecoveryItem(data));
+            }
+
+            foreach (TMItemData data in DataManager.TMData.Values)
+            {
+                world.ItemManager.AddTM(new TMItem(data));
+            }
+
+            foreach (BerryItemData data in DataManager.BerryData.Values)
+            {
+                world.ItemManager.AddBerryItem(new BerryItem(data));
+            }
+
+            foreach (KeyItemData data in DataManager.KeyItemData.Values)
+            {
+                world.ItemManager.AddKeyItem(new KeyItem(data));
+            }
+
             GamePlayScreen.World = world;
         }
 

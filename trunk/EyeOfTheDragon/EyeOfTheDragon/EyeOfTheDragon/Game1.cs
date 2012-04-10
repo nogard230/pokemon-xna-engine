@@ -101,11 +101,11 @@ namespace EyesOfTheDragon
 
             DataManager.ReadMiscItemData(Content);
             DataManager.ReadRecoveryItemData(Content);
-            DataManager.ReadTMItemData(Content);
-            DataManager.ReadBerryItemData(Content);
-
+            //DataManager.ReadTMItemData(Content);
+            //DataManager.ReadBerryItemData(Content);
+            //DataManager.ReadKeyItemData(Content);
             DataManager.ReadChestData(Content);
-            DataManager.ReadKeyItemData(Content);
+            
 
             DataManager.ReadSkillData(Content);
         }

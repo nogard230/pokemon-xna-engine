@@ -10,7 +10,7 @@ namespace RpgLibrary.ItemClasses
     public class ChestData
     {
         public string Name;
-        public BaseItem Item;
+        public string Item;
 
         public ChestData()
         {

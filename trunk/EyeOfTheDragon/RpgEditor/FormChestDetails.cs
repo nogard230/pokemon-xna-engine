@@ -53,15 +53,15 @@ namespace RpgEditor
             cboItem.Items.Clear();
 
             foreach (string item in FormDetails.ItemManager.MiscItemData.Keys)
-                cboItem.Items.Add(FormDetails.ItemManager.MiscItemData[item]);
+                cboItem.Items.Add(FormDetails.ItemManager.MiscItemData[item].Name);
             foreach (string item in FormDetails.ItemManager.RecoveryItemData.Keys)
-                cboItem.Items.Add(FormDetails.ItemManager.RecoveryItemData[item]);
+                cboItem.Items.Add(FormDetails.ItemManager.RecoveryItemData[item].Name);
             foreach (string item in FormDetails.ItemManager.TMItemData.Keys)
-                cboItem.Items.Add(FormDetails.ItemManager.TMItemData[item]);
+                cboItem.Items.Add(FormDetails.ItemManager.TMItemData[item].Name);
             foreach (string item in FormDetails.ItemManager.BerryItemData.Keys)
-                cboItem.Items.Add(FormDetails.ItemManager.BerryItemData[item]);
+                cboItem.Items.Add(FormDetails.ItemManager.BerryItemData[item].Name);
             foreach (string item in FormDetails.ItemManager.KeyItemData.Keys)
-                cboItem.Items.Add(FormDetails.ItemManager.KeyItemData[item]);
+                cboItem.Items.Add(FormDetails.ItemManager.KeyItemData[item].Name);
 
             if (chest != null)
             {
@@ -93,7 +93,7 @@ namespace RpgEditor
             ChestData data = new ChestData();
 
             data.Name = tbName.Text;
-            data.Item = (BaseItem)cboItem.SelectedItem;
+            data.Item = (string)cboItem.SelectedItem;
 
             chest = data;
             this.FormClosing -= FormChestDetails_FormClosing;

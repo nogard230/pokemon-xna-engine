@@ -17,10 +17,15 @@ Content\ObjectSprites\containers.xnb
 Content\ObjectSprites\itemimages.xnb
 Content\Backgrounds\pixel.xnb
 Content\Fonts\ControlFont.xnb
-Content\Game\Chests\Potion.xnb
 Content\Game\Classes\Fighter.xnb
 Content\Game\Classes\Priest.xnb
 Content\Game\Classes\Rogue.xnb
 Content\Game\Classes\Wizard.xnb
 Content\Game\Game.xnb
 Content\Game\Items\Recovery\Potion.xnb
+Content\Game\Chests\Potion.xnb
+Content\Game\Items\Misc\Thunder Stone.xnb
+Content\Game\Skills\Bartering.xnb
+Content\Game\Skills\Herbalism.xnb
+Content\Game\Skills\Poison Making.xnb
+Content\Game\Skills\Trap Making.xnb

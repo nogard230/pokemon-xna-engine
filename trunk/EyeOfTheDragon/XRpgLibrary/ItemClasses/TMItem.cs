@@ -36,6 +36,12 @@ namespace RpgLibrary.ItemClasses
             MoveTaught = moveTaught;
         }
 
+        public TMItem(TMItemData data)
+            : base(data.Name, data.Type, data.Price, data.SellPrice)
+        {
+            MoveTaught = data.MoveTaught;
+        }
+
         #endregion
 
         #region Abstract Method Region

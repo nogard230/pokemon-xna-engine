@@ -163,11 +163,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Game\Chests\Potion.xml">
-      <Name>Potion</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-    </Compile>
     <Compile Include="Game\Classes\Fighter.xml">
       <Name>Fighter</Name>
       <Importer>XmlImporter</Importer>
@@ -202,10 +197,44 @@
   <ItemGroup>
     <Folder Include="Game\Items\Berry\" />
     <Folder Include="Game\Items\Key_Item\" />
-    <Folder Include="Game\Items\Misc\" />
     <Folder Include="Game\Items\TM\" />
     <Folder Include="Game\Keys\" />
-    <Folder Include="Game\Skills\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Game\Chests\Potion.xml">
+      <Name>Potion</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Game\Items\Misc\Thunder Stone.xml">
+      <Name>Thunder Stone</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Game\Skills\Bartering.xml">
+      <Name>Bartering</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Game\Skills\Herbalism.xml">
+      <Name>Herbalism</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Game\Skills\Poison Making.xml">
+      <Name>Poison Making</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Game\Skills\Trap Making.xml">
+      <Name>Trap Making</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 

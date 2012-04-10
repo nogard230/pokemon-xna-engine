@@ -34,6 +34,11 @@ namespace XRpgLibrary.TileEngine
             ObjectInteractor.map = newLevel.Map;
         }
 
+        public static void SetManager(ItemManager manager)
+        {
+            ObjectInteractor.manager = manager;
+        }
+
         public static ItemSprite ItemAt(Point point)
         {
             foreach (ItemSprite item in level.Items)
