@@ -48,6 +48,7 @@ namespace XRpgLibrary.WorldClasses
             map = tileMap;
             characters = new List<Character>();
             items = new List<ItemSprite>();
+            characters = new List<Character>();
         }
 
         #endregion
@@ -57,10 +58,22 @@ namespace XRpgLibrary.WorldClasses
         public void Update(GameTime gameTime)
         {
             foreach (Character character in characters)
+            {
+                if (!character.Sprite.IsAnimating)
+                {
+                    WarpTile tile = map.IsWarpTile(Engine.VectorToCell(character.Sprite.Position));
+                    if (tile != null)
+                    {
+                        character.Sprite.Position = new Vector2(tile.WarpToPoint.X * 32, tile.WarpToPoint.Y * 32);
+                        character.Sprite.DirectionFacing = tile.WarpToDirection;
+                    }
+                }
                 character.Update(gameTime);
+            }
 
             foreach (ItemSprite sprite in items)
                 sprite.Update(gameTime);
+
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch, Camera camera)

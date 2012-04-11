@@ -274,10 +274,11 @@ namespace EyesOfTheDragon.GameScreens
             {
                 for (int x = 0; x < layer.Width; x++)
                 {
-                    MovementTile mTile = new MovementTile(MoveType.Normal);
-                    movement.SetTile(x, y, mTile);
+                    movement.SetTile(x, y, (MoveType.Normal));
                 }
             }
+            WarpTile warpTile = new WarpTile(new Point(6, 6), null, Direction.Left);
+            movement.SetWarpTile(2, 0, warpTile);
 
             TileMap map = new TileMap(tileset1, layer);
             map.AddTileset(tileset2);
@@ -299,6 +300,8 @@ namespace EyesOfTheDragon.GameScreens
                 chest,
                 chestSprite);
             level.Items.Add(itemSprite);
+
+            level.Characters.Add(GamePlayScreen.Player.Character);
 
             World world = new World(GameRef, GameRef.ScreenRectangle);
             world.Levels.Add(level);

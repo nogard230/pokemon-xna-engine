@@ -20,7 +20,6 @@ namespace XRpgLibrary.WorldClasses
         #region Graphic Field and Property Region
 
         Rectangle screenRect;
-        MovementValidator validator;
 
         public Rectangle ScreenRectangle
         {
@@ -85,6 +84,7 @@ namespace XRpgLibrary.WorldClasses
 
         public override void Update(GameTime gameTime)
         {
+            levels[currentLevel].Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime)

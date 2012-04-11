@@ -61,8 +61,9 @@ namespace XRpgLibrary.TileEngine
             return layer[y, x];
         }
 
-        public void SetTile(int x, int y, MovementTile tile)
+        public void SetWarpTile(int x, int y, MovementTile tile)
         {
+            WarpTile warp = (WarpTile)tile;
             layer[y, x] = tile;
         }
 
