@@ -130,12 +130,21 @@ namespace XRpgLibrary.TileEngine
             return MoveType.Blocked;
         }
 
-        public bool TileOccupied(int x, int y)
+        public WarpTile IsWarpTile(Point p)
         {
+            foreach (ILayer layer in mapLayers)
+            {
+                if (layer is MovementLayer)
+                {
+                    if (((MovementLayer)layer).GetTile(p.X, p.Y) is WarpTile)
+                    {
+                        return (WarpTile)((MovementLayer)layer).GetTile(p.X, p.Y);
+                    }
 
-            return false;
+                }
+            }
+            return null;
         }
-
 
         #endregion
     }
