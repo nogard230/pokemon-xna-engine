@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -20,6 +21,7 @@ using XRpgLibrary.CharacterClasses;
 
 using EyesOfTheDragon.Components;
 using RpgLibrary.SkillClasses;
+using RpgLibrary.WorldClasses;
 
 namespace EyesOfTheDragon.GameScreens
 {
@@ -232,74 +234,106 @@ namespace EyesOfTheDragon.GameScreens
 
         private void CreateWorld()
         {
-            Texture2D tilesetTexture = Game.Content.Load<Texture2D>(@"Tilesets\tileset1");
-            Tileset tileset1 = new Tileset(tilesetTexture, 8, 8, 32, 32);
+            //Texture2D tilesetTexture = Game.Content.Load<Texture2D>(@"Tilesets\tileset1");
+            //Tileset tileset1 = new Tileset(tilesetTexture, 8, 8, 32, 32);
 
-            tilesetTexture = Game.Content.Load<Texture2D>(@"Tilesets\tileset2");
-            Tileset tileset2 = new Tileset(tilesetTexture, 8, 8, 32, 32);
+            //tilesetTexture = Game.Content.Load<Texture2D>(@"Tilesets\tileset2");
+            //Tileset tileset2 = new Tileset(tilesetTexture, 8, 8, 32, 32);
 
-            MapLayer layer = new MapLayer(100, 100);
+            //MapLayer layer = new MapLayer(100, 100);
 
-            for (int y = 0; y < layer.Height; y++)
+            //for (int y = 0; y < layer.Height; y++)
+            //{
+            //    for (int x = 0; x < layer.Width; x++)
+            //    {
+            //        Tile tile = new Tile(0, 0);
+
+            //        layer.SetTile(x, y, tile);
+            //    }
+            //}
+
+            //MapLayer splatter = new MapLayer(100, 100);
+
+            //Random random = new Random();
+
+            //for (int i = 0; i < 100; i++)
+            //{
+            //    int x = random.Next(0, 100);
+            //    int y = random.Next(0, 100);
+            //    int index = random.Next(2, 14);
+
+            //    Tile tile = new Tile(index, 0);
+            //    splatter.SetTile(x, y, tile);
+            //}
+
+            //splatter.SetTile(1, 0, new Tile(0, 1));
+            //splatter.SetTile(2, 0, new Tile(2, 1));
+            //splatter.SetTile(3, 0, new Tile(0, 1));
+
+            //MovementLayer movement = new MovementLayer(100, 100);
+
+            //for (int y = 0; y < layer.Height; y++)
+            //{
+            //    for (int x = 0; x < layer.Width; x++)
+            //    {
+            //        movement.SetTile(x, y, (MoveType.Normal));
+            //    }
+            //}
+            //WarpTile warpTile = new WarpTile(new Point(6, 6), null, Direction.Left);
+            //movement.SetTile(2, 0, warpTile);
+
+            //TileMap map = new TileMap(tileset1, layer);
+            //map.AddTileset(tileset2);
+            //map.AddLayer(splatter);
+            //map.AddLayer(movement);
+
+            //Level level = new Level(map);
+
+            //ChestData chestData = Game.Content.Load<ChestData>(@"Game\Chests\Potion");
+
+            //Chest chest = new Chest(chestData);
+
+            //BaseSprite chestSprite = new BaseSprite(
+            //    containers,
+            //    new Rectangle(0, 0, 32, 32),
+            //    new Point(10, 10));
+
+            //ItemSprite itemSprite = new ItemSprite(
+            //    chest,
+            //    chestSprite);
+            //level.Items.Add(itemSprite);
+
+            LevelData levelData = Game.Content.Load<LevelData>(@"Game\Levels\MTest");
+            MapData mapData = Game.Content.Load<MapData>(@"Game\Levels\Maps\MTest");
+
+            List<Tileset> tilesets = new List<Tileset>();
+            List<MapLayer> layers = new List<MapLayer>();
+            TileMap map;
+
+            foreach (TilesetData tileSetData in mapData.Tilesets)
             {
-                for (int x = 0; x < layer.Width; x++)
-                {
-                    Tile tile = new Tile(0, 0);
-
-                    layer.SetTile(x, y, tile);
-                }
+                Stream stream = new FileStream(tileSetData.TilesetImageName, FileMode.Open, FileAccess.Read);
+                Texture2D image = Texture2D.FromStream(GraphicsDevice, stream);
+                Tileset tileset = new Tileset(image, tileSetData.TilesWide, tileSetData.TilesHigh, tileSetData.TileWidthInPixels, tileSetData.TileHeightInPixels);
+                tilesets.Add(tileset);
             }
 
-            MapLayer splatter = new MapLayer(100, 100);
-
-            Random random = new Random();
-
-            for (int i = 0; i < 100; i++)
+            foreach (MapLayerData layerData in mapData.Layers)
             {
-                int x = random.Next(0, 100);
-                int y = random.Next(0, 100);
-                int index = random.Next(2, 14);
-
-                Tile tile = new Tile(index, 0);
-                splatter.SetTile(x, y, tile);
+                layers.Add(MapLayer.FromMapLayerData(layerData));
             }
 
-            splatter.SetTile(1, 0, new Tile(0, 1));
-            splatter.SetTile(2, 0, new Tile(2, 1));
-            splatter.SetTile(3, 0, new Tile(0, 1));
+            map = new TileMap(tilesets[0], (MapLayer)layers[0]);
 
-            MovementLayer movement = new MovementLayer(100, 100);
+            for (int i = 1; i < tilesets.Count; i++)
+                map.AddTileset(tilesets[i]);
 
-            for (int y = 0; y < layer.Height; y++)
-            {
-                for (int x = 0; x < layer.Width; x++)
-                {
-                    movement.SetTile(x, y, (MoveType.Normal));
-                }
-            }
-            WarpTile warpTile = new WarpTile(new Point(6, 6), null, Direction.Left);
-            movement.SetWarpTile(2, 0, warpTile);
+            for (int i = 1; i < layers.Count; i++)
+                map.AddLayer(layers[i]);
 
-            TileMap map = new TileMap(tileset1, layer);
-            map.AddTileset(tileset2);
-            map.AddLayer(splatter);
-            map.AddLayer(movement);
+            map.AddLayer(MovementLayer.FromMovementLayerData(mapData.MovementLayer));
 
             Level level = new Level(map);
-
-            ChestData chestData = Game.Content.Load<ChestData>(@"Game\Chests\Potion");
-
-            Chest chest = new Chest(chestData);
-
-            BaseSprite chestSprite = new BaseSprite(
-                containers,
-                new Rectangle(0, 0, 32, 32),
-                new Point(10, 10));
-
-            ItemSprite itemSprite = new ItemSprite(
-                chest,
-                chestSprite);
-            level.Items.Add(itemSprite);
 
             level.Characters.Add(GamePlayScreen.Player.Character);
 

@@ -61,9 +61,8 @@ namespace XRpgLibrary.TileEngine
             return layer[y, x];
         }
 
-        public void SetWarpTile(int x, int y, MovementTile tile)
+        public void SetTile(int x, int y, MovementTile tile)
         {
-            WarpTile warp = (WarpTile)tile;
             layer[y, x] = tile;
         }
 
@@ -78,7 +77,6 @@ namespace XRpgLibrary.TileEngine
 
         public void Draw(SpriteBatch spriteBatch, Camera camera, List<Tileset> tilesets)
         {
-            
         }
 
         public static MovementLayer FromMovementLayerData(MovementLayerData data)
