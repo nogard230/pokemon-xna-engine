@@ -71,3 +71,5 @@ C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfThe
 C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Skills\Herbalism.xnb
 C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Skills\Poison Making.xnb
 C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Skills\Trap Making.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Levels\Maps\MTest.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Levels\MTest.xnb

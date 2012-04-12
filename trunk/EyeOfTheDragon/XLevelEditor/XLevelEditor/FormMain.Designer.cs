@@ -55,7 +55,6 @@
             this.saveLayerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.charactersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.keysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.brushesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.x1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.x2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +66,6 @@
             this.tbMapLocation = new System.Windows.Forms.TextBox();
             this.lblCursor = new System.Windows.Forms.Label();
             this.lblTilesets = new System.Windows.Forms.Label();
-            this.lbTileset = new System.Windows.Forms.ListBox();
             this.pbTilesetPreview = new System.Windows.Forms.PictureBox();
             this.lblCurrentTileset = new System.Windows.Forms.Label();
             this.nudCurrentTile = new System.Windows.Forms.NumericUpDown();
@@ -80,8 +78,11 @@
             this.clbLayers = new System.Windows.Forms.CheckedListBox();
             this.tabCharacters = new System.Windows.Forms.TabPage();
             this.tabChests = new System.Windows.Forms.TabPage();
-            this.tabKeys = new System.Windows.Forms.TabPage();
             this.controlTimer = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cboTileset = new System.Windows.Forms.ComboBox();
+            this.rbMoveType = new System.Windows.Forms.RadioButton();
+            this.cboMovementType = new System.Windows.Forms.ComboBox();
             this.mapDisplay = new XLevelEditor.MapDisplay();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -95,6 +96,7 @@
             this.gbDrawMode.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTilePreview)).BeginInit();
             this.tabLayers.SuspendLayout();
+            this.tabCharacters.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -106,12 +108,11 @@
             this.mapLayerToolStripMenuItem,
             this.charactersToolStripMenuItem,
             this.chestsToolStripMenuItem,
-            this.keysToolStripMenuItem,
             this.brushesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(758, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(910, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -293,12 +294,6 @@
             this.chestsToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.chestsToolStripMenuItem.Text = "C&hests";
             // 
-            // keysToolStripMenuItem
-            // 
-            this.keysToolStripMenuItem.Name = "keysToolStripMenuItem";
-            this.keysToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.keysToolStripMenuItem.Text = "&Keys";
-            // 
             // brushesToolStripMenuItem
             // 
             this.brushesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -340,7 +335,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 24);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -350,8 +345,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabProperties);
-            this.splitContainer1.Size = new System.Drawing.Size(758, 532);
-            this.splitContainer1.SplitterDistance = 602;
+            this.splitContainer1.Size = new System.Drawing.Size(910, 576);
+            this.splitContainer1.SplitterDistance = 640;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -361,21 +356,21 @@
             this.tabProperties.Controls.Add(this.tabLayers);
             this.tabProperties.Controls.Add(this.tabCharacters);
             this.tabProperties.Controls.Add(this.tabChests);
-            this.tabProperties.Controls.Add(this.tabKeys);
             this.tabProperties.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabProperties.Location = new System.Drawing.Point(0, 0);
-            this.tabProperties.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabProperties.Margin = new System.Windows.Forms.Padding(2);
             this.tabProperties.Name = "tabProperties";
             this.tabProperties.SelectedIndex = 0;
-            this.tabProperties.Size = new System.Drawing.Size(153, 532);
+            this.tabProperties.Size = new System.Drawing.Size(267, 576);
             this.tabProperties.TabIndex = 1;
             // 
             // tabTilesets
             // 
+            this.tabTilesets.Controls.Add(this.cboMovementType);
+            this.tabTilesets.Controls.Add(this.cboTileset);
             this.tabTilesets.Controls.Add(this.tbMapLocation);
             this.tabTilesets.Controls.Add(this.lblCursor);
             this.tabTilesets.Controls.Add(this.lblTilesets);
-            this.tabTilesets.Controls.Add(this.lbTileset);
             this.tabTilesets.Controls.Add(this.pbTilesetPreview);
             this.tabTilesets.Controls.Add(this.lblCurrentTileset);
             this.tabTilesets.Controls.Add(this.nudCurrentTile);
@@ -383,25 +378,25 @@
             this.tabTilesets.Controls.Add(this.lblTile);
             this.tabTilesets.Controls.Add(this.pbTilePreview);
             this.tabTilesets.Location = new System.Drawing.Point(4, 22);
-            this.tabTilesets.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabTilesets.Margin = new System.Windows.Forms.Padding(2);
             this.tabTilesets.Name = "tabTilesets";
-            this.tabTilesets.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabTilesets.Size = new System.Drawing.Size(145, 506);
+            this.tabTilesets.Padding = new System.Windows.Forms.Padding(2);
+            this.tabTilesets.Size = new System.Drawing.Size(259, 550);
             this.tabTilesets.TabIndex = 0;
             this.tabTilesets.Text = "Tiles";
             this.tabTilesets.UseVisualStyleBackColor = true;
             // 
             // tbMapLocation
             // 
-            this.tbMapLocation.Location = new System.Drawing.Point(6, 479);
-            this.tbMapLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMapLocation.Location = new System.Drawing.Point(6, 523);
+            this.tbMapLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tbMapLocation.Name = "tbMapLocation";
             this.tbMapLocation.Size = new System.Drawing.Size(136, 20);
             this.tbMapLocation.TabIndex = 9;
             // 
             // lblCursor
             // 
-            this.lblCursor.Location = new System.Drawing.Point(6, 461);
+            this.lblCursor.Location = new System.Drawing.Point(6, 505);
             this.lblCursor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCursor.Name = "lblCursor";
             this.lblCursor.Size = new System.Drawing.Size(135, 19);
@@ -411,7 +406,7 @@
             // 
             // lblTilesets
             // 
-            this.lblTilesets.Location = new System.Drawing.Point(5, 261);
+            this.lblTilesets.Location = new System.Drawing.Point(5, 453);
             this.lblTilesets.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTilesets.Name = "lblTilesets";
             this.lblTilesets.Size = new System.Drawing.Size(135, 19);
@@ -419,19 +414,10 @@
             this.lblTilesets.Text = "Tilesets";
             this.lblTilesets.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lbTileset
-            // 
-            this.lbTileset.FormattingEnabled = true;
-            this.lbTileset.Location = new System.Drawing.Point(5, 286);
-            this.lbTileset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.lbTileset.Name = "lbTileset";
-            this.lbTileset.Size = new System.Drawing.Size(136, 173);
-            this.lbTileset.TabIndex = 6;
-            // 
             // pbTilesetPreview
             // 
             this.pbTilesetPreview.Location = new System.Drawing.Point(5, 112);
-            this.pbTilesetPreview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbTilesetPreview.Margin = new System.Windows.Forms.Padding(2);
             this.pbTilesetPreview.Name = "pbTilesetPreview";
             this.pbTilesetPreview.Size = new System.Drawing.Size(135, 146);
             this.pbTilesetPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -451,20 +437,21 @@
             // nudCurrentTile
             // 
             this.nudCurrentTile.Location = new System.Drawing.Point(5, 67);
-            this.nudCurrentTile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudCurrentTile.Margin = new System.Windows.Forms.Padding(2);
             this.nudCurrentTile.Name = "nudCurrentTile";
             this.nudCurrentTile.Size = new System.Drawing.Size(135, 20);
             this.nudCurrentTile.TabIndex = 3;
             // 
             // gbDrawMode
             // 
+            this.gbDrawMode.Controls.Add(this.rbMoveType);
             this.gbDrawMode.Controls.Add(this.rbErase);
             this.gbDrawMode.Controls.Add(this.rbDraw);
             this.gbDrawMode.Location = new System.Drawing.Point(47, 6);
-            this.gbDrawMode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDrawMode.Margin = new System.Windows.Forms.Padding(2);
             this.gbDrawMode.Name = "gbDrawMode";
-            this.gbDrawMode.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gbDrawMode.Size = new System.Drawing.Size(96, 57);
+            this.gbDrawMode.Padding = new System.Windows.Forms.Padding(2);
+            this.gbDrawMode.Size = new System.Drawing.Size(205, 57);
             this.gbDrawMode.TabIndex = 2;
             this.gbDrawMode.TabStop = false;
             this.gbDrawMode.Text = "Draw Mode";
@@ -473,7 +460,7 @@
             // 
             this.rbErase.AutoSize = true;
             this.rbErase.Location = new System.Drawing.Point(5, 35);
-            this.rbErase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbErase.Margin = new System.Windows.Forms.Padding(2);
             this.rbErase.Name = "rbErase";
             this.rbErase.Size = new System.Drawing.Size(52, 17);
             this.rbErase.TabIndex = 1;
@@ -485,7 +472,7 @@
             this.rbDraw.AutoSize = true;
             this.rbDraw.Checked = true;
             this.rbDraw.Location = new System.Drawing.Point(5, 16);
-            this.rbDraw.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbDraw.Margin = new System.Windows.Forms.Padding(2);
             this.rbDraw.Name = "rbDraw";
             this.rbDraw.Size = new System.Drawing.Size(50, 17);
             this.rbDraw.TabIndex = 0;
@@ -506,7 +493,7 @@
             // pbTilePreview
             // 
             this.pbTilePreview.Location = new System.Drawing.Point(5, 22);
-            this.pbTilePreview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbTilePreview.Margin = new System.Windows.Forms.Padding(2);
             this.pbTilePreview.Name = "pbTilePreview";
             this.pbTilePreview.Size = new System.Drawing.Size(38, 41);
             this.pbTilePreview.TabIndex = 0;
@@ -516,10 +503,10 @@
             // 
             this.tabLayers.Controls.Add(this.clbLayers);
             this.tabLayers.Location = new System.Drawing.Point(4, 22);
-            this.tabLayers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabLayers.Margin = new System.Windows.Forms.Padding(2);
             this.tabLayers.Name = "tabLayers";
-            this.tabLayers.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabLayers.Size = new System.Drawing.Size(144, 498);
+            this.tabLayers.Padding = new System.Windows.Forms.Padding(2);
+            this.tabLayers.Size = new System.Drawing.Size(259, 550);
             this.tabLayers.TabIndex = 1;
             this.tabLayers.Text = "Map Layers";
             this.tabLayers.UseVisualStyleBackColor = true;
@@ -529,17 +516,18 @@
             this.clbLayers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.clbLayers.FormattingEnabled = true;
             this.clbLayers.Location = new System.Drawing.Point(2, 2);
-            this.clbLayers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.clbLayers.Margin = new System.Windows.Forms.Padding(2);
             this.clbLayers.Name = "clbLayers";
-            this.clbLayers.Size = new System.Drawing.Size(140, 494);
+            this.clbLayers.Size = new System.Drawing.Size(255, 546);
             this.clbLayers.TabIndex = 0;
             // 
             // tabCharacters
             // 
+            this.tabCharacters.Controls.Add(this.panel1);
             this.tabCharacters.Location = new System.Drawing.Point(4, 22);
-            this.tabCharacters.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabCharacters.Margin = new System.Windows.Forms.Padding(2);
             this.tabCharacters.Name = "tabCharacters";
-            this.tabCharacters.Size = new System.Drawing.Size(144, 498);
+            this.tabCharacters.Size = new System.Drawing.Size(259, 550);
             this.tabCharacters.TabIndex = 2;
             this.tabCharacters.Text = "Characters";
             this.tabCharacters.UseVisualStyleBackColor = true;
@@ -547,22 +535,49 @@
             // tabChests
             // 
             this.tabChests.Location = new System.Drawing.Point(4, 22);
-            this.tabChests.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabChests.Margin = new System.Windows.Forms.Padding(2);
             this.tabChests.Name = "tabChests";
-            this.tabChests.Size = new System.Drawing.Size(144, 498);
+            this.tabChests.Size = new System.Drawing.Size(259, 550);
             this.tabChests.TabIndex = 3;
             this.tabChests.Text = "Chests";
             this.tabChests.UseVisualStyleBackColor = true;
             // 
-            // tabKeys
+            // panel1
             // 
-            this.tabKeys.Location = new System.Drawing.Point(4, 22);
-            this.tabKeys.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabKeys.Name = "tabKeys";
-            this.tabKeys.Size = new System.Drawing.Size(144, 498);
-            this.tabKeys.TabIndex = 4;
-            this.tabKeys.Text = "Keys";
-            this.tabKeys.UseVisualStyleBackColor = true;
+            this.panel1.AutoScroll = true;
+            this.panel1.Location = new System.Drawing.Point(2, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(256, 365);
+            this.panel1.TabIndex = 0;
+            // 
+            // cboTileset
+            // 
+            this.cboTileset.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTileset.FormattingEnabled = true;
+            this.cboTileset.Location = new System.Drawing.Point(5, 475);
+            this.cboTileset.Name = "cboTileset";
+            this.cboTileset.Size = new System.Drawing.Size(135, 21);
+            this.cboTileset.TabIndex = 10;
+            // 
+            // rbMoveType
+            // 
+            this.rbMoveType.AutoSize = true;
+            this.rbMoveType.Location = new System.Drawing.Point(60, 16);
+            this.rbMoveType.Name = "rbMoveType";
+            this.rbMoveType.Size = new System.Drawing.Size(75, 17);
+            this.rbMoveType.TabIndex = 2;
+            this.rbMoveType.TabStop = true;
+            this.rbMoveType.Text = "Movement";
+            this.rbMoveType.UseVisualStyleBackColor = true;
+            // 
+            // cboMovementType
+            // 
+            this.cboMovementType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMovementType.FormattingEnabled = true;
+            this.cboMovementType.Location = new System.Drawing.Point(145, 66);
+            this.cboMovementType.Name = "cboMovementType";
+            this.cboMovementType.Size = new System.Drawing.Size(106, 21);
+            this.cboMovementType.TabIndex = 3;
             // 
             // mapDisplay
             // 
@@ -570,7 +585,7 @@
             this.mapDisplay.Location = new System.Drawing.Point(0, 0);
             this.mapDisplay.Margin = new System.Windows.Forms.Padding(2);
             this.mapDisplay.Name = "mapDisplay";
-            this.mapDisplay.Size = new System.Drawing.Size(602, 532);
+            this.mapDisplay.Size = new System.Drawing.Size(640, 576);
             this.mapDisplay.TabIndex = 0;
             this.mapDisplay.Text = "mapDisplay1";
             // 
@@ -578,11 +593,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 556);
+            this.ClientSize = new System.Drawing.Size(910, 600);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Level Editor";
@@ -601,6 +616,7 @@
             this.gbDrawMode.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTilePreview)).EndInit();
             this.tabLayers.ResumeLayout(false);
+            this.tabCharacters.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -624,7 +640,6 @@
         private System.Windows.Forms.ToolStripMenuItem saveLayerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem charactersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chestsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem keysToolStripMenuItem;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private MapDisplay mapDisplay;
         private System.Windows.Forms.TabControl tabProperties;
@@ -632,9 +647,7 @@
         private System.Windows.Forms.TabPage tabLayers;
         private System.Windows.Forms.TabPage tabCharacters;
         private System.Windows.Forms.TabPage tabChests;
-        private System.Windows.Forms.TabPage tabKeys;
         private System.Windows.Forms.Label lblTilesets;
-        private System.Windows.Forms.ListBox lbTileset;
         private System.Windows.Forms.PictureBox pbTilesetPreview;
         private System.Windows.Forms.Label lblCurrentTileset;
         private System.Windows.Forms.NumericUpDown nudCurrentTile;
@@ -662,5 +675,9 @@
         private System.Windows.Forms.ToolStripMenuItem yellowToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem whiteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveTilesetToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox cboTileset;
+        private System.Windows.Forms.ComboBox cboMovementType;
+        private System.Windows.Forms.RadioButton rbMoveType;
     }
 }

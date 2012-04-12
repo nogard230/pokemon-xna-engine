@@ -32,6 +32,7 @@ namespace XLevelEditor
         List<Tileset> tileSets = new List<Tileset>();
         List<TilesetData> tileSetData = new List<TilesetData>();
         List<ILayer> layers = new List<ILayer>();
+        MovementLayer movementLayer;
         List<GDIImage> tileSetImages = new List<GDIImage>();
 
         TileMap map;
@@ -52,6 +53,7 @@ namespace XLevelEditor
         Color gridColor = Color.White;
 
         Texture2D shadow;
+        Texture2D moveTint;
         Vector2 shadowPosition = Vector2.Zero;
 
         #endregion
@@ -78,7 +80,6 @@ namespace XLevelEditor
             mapLayerToolStripMenuItem.Enabled = false;
             charactersToolStripMenuItem.Enabled = false;
             chestsToolStripMenuItem.Enabled = false;
-            keysToolStripMenuItem.Enabled = false;
 
             newLevelToolStripMenuItem.Click += new EventHandler(newLevelToolStripMenuItem_Click);
             newTilesetToolStripMenuItem.Click += new EventHandler(newTilesetToolStripMenuItem_Click);
@@ -108,6 +109,10 @@ namespace XLevelEditor
 
             openTilesetToolStripMenuItem.Click += new EventHandler(openTilesetToolStripMenuItem_Click);
             openLayerToolStripMenuItem.Click += new EventHandler(openLayerToolStripMenuItem_Click);
+
+            foreach (MoveType type in Enum.GetValues(typeof(MoveType)))
+                cboMovementType.Items.Add(type);
+            cboMovementType.SelectedIndex = 0;
         }
 
         #endregion
@@ -230,7 +235,7 @@ namespace XLevelEditor
 
         void FormMain_Load(object sender, EventArgs e)
         {
-            lbTileset.SelectedIndexChanged += new EventHandler(lbTileset_SelectedIndexChanged);
+            cboTileset.SelectedIndexChanged += new EventHandler(cboTileset_SelectedIndexChanged);
             nudCurrentTile.ValueChanged += new EventHandler(nudCurrentTile_ValueChanged);
 
             Rectangle viewPort = new Rectangle(0, 0, mapDisplay.Width, mapDisplay.Height);
@@ -276,13 +281,13 @@ namespace XLevelEditor
 
         void pbTilesetPreview_MouseDown(object sender, MouseEventArgs e)
         {
-            if (lbTileset.Items.Count == 0)
+            if (cboTileset.Items.Count == 0)
                 return;
 
             if (e.Button != System.Windows.Forms.MouseButtons.Left)
                 return;
 
-            int index = lbTileset.SelectedIndex;
+            int index = cboTileset.SelectedIndex;
 
             float xScale = (float)tileSetImages[index].Width /
                 pbTilesetPreview.Width;
@@ -301,19 +306,19 @@ namespace XLevelEditor
             nudCurrentTile.Value = tile.Y * tileSets[index].TilesWide + tile.X;
         }
 
-        void lbTileset_SelectedIndexChanged(object sender, EventArgs e)
+        void cboTileset_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lbTileset.SelectedItem != null)
+            if (cboTileset.SelectedItem != null)
             {
                 nudCurrentTile.Value = 0;
-                nudCurrentTile.Maximum = tileSets[lbTileset.SelectedIndex].SourceRectangles.Length - 1;
+                nudCurrentTile.Maximum = tileSets[cboTileset.SelectedIndex].SourceRectangles.Length - 1;
                 FillPreviews();
             }
         }
 
         void nudCurrentTile_ValueChanged(object sender, EventArgs e)
         {
-            if (lbTileset.SelectedItem != null)
+            if (cboTileset.SelectedItem != null)
             {
                 FillPreviews();
             }
@@ -321,7 +326,7 @@ namespace XLevelEditor
 
         private void FillPreviews()
         {
-            int selected = lbTileset.SelectedIndex;
+            int selected = cboTileset.SelectedIndex;
             int tile = (int)nudCurrentTile.Value;
 
             GDIImage preview = (GDIImage)new GDIBitmap(pbTilePreview.Width, pbTilePreview.Height);
@@ -338,6 +343,7 @@ namespace XLevelEditor
 
             pbTilesetPreview.Image = tileSetImages[selected];
             pbTilePreview.Image = preview;
+
         }
 
         #endregion
@@ -354,6 +360,8 @@ namespace XLevelEditor
                 {
                     levelData = frmNewLevel.LevelData;
                     tilesetToolStripMenuItem.Enabled = true;
+
+                    movementLayer = new MovementLayer(levelData.MapWidth, levelData.MapHeight);
                 }
             }
         }
@@ -399,10 +407,10 @@ namespace XLevelEditor
                         return;
                     }
 
-                    lbTileset.Items.Add(data.TilesetName);
+                    cboTileset.Items.Add(data.TilesetName);
 
-                    if (lbTileset.SelectedItem == null)
-                        lbTileset.SelectedIndex = 0;
+                    if (cboTileset.SelectedItem == null)
+                        cboTileset.SelectedIndex = 0;
 
                     mapLayerToolStripMenuItem.Enabled = true;
                 }
@@ -444,7 +452,6 @@ namespace XLevelEditor
 
                     charactersToolStripMenuItem.Enabled = true;
                     chestsToolStripMenuItem.Enabled = true;
-                    keysToolStripMenuItem.Enabled = true;
                 }
             }
         }
@@ -536,16 +543,17 @@ namespace XLevelEditor
 
         private void Render()
         {
+            spriteBatch.Begin(
+                SpriteSortMode.Deferred,
+                BlendState.AlphaBlend,
+                SamplerState.PointClamp,
+                null,
+                null,
+                null,
+                camera.Transformation);
             for (int i = 0; i < layers.Count; i++)
             {
-                spriteBatch.Begin(
-                    SpriteSortMode.Deferred,
-                    BlendState.AlphaBlend,
-                    SamplerState.PointClamp,
-                    null,
-                    null,
-                    null,
-                    camera.Transformation);
+                
 
                 if (clbLayers.GetItemChecked(i))
                     layers[i].Draw(spriteBatch, camera, tileSets);
@@ -560,9 +568,54 @@ namespace XLevelEditor
                 tint.A = 1;
 
                 spriteBatch.Draw(shadow, destination, tint);
-                spriteBatch.End();
             }
 
+            if (rbMoveType.Checked)
+            {
+                for (int j = 0; j < movementLayer.Height; j++)
+                {
+                    for (int k = 0; k < movementLayer.Height; k++)
+                    {
+                        moveTint = new Texture2D(GraphicsDevice, 20, 20, false, SurfaceFormat.Color);
+                        Color[] data = new Color[moveTint.Width * moveTint.Height];
+                        MoveType type = movementLayer.GetTile(j, k).TileType;
+                        Color mTint = Color.Blue;
+                        if (type == MoveType.Normal)
+                            continue;
+                        if (type == MoveType.Grass)
+                            mTint = Color.Green;
+                        if (type == MoveType.Blocked)
+                            mTint = Color.Red;
+                        if (type == MoveType.Surf)
+                            mTint = Color.Blue;
+                        if (type == MoveType.Warp)
+                            mTint = Color.Purple;
+                        if (type == MoveType.Waterfall)
+                            mTint = Color.LightBlue;
+                        if (type == MoveType.Wirlpool)
+                            mTint = Color.LightCyan;
+                        if (type == MoveType.Dive)
+                            mTint = Color.DarkBlue;
+
+                        mTint.A = 25;
+
+                        for (int l = 0; l < moveTint.Width * moveTint.Height; l++)
+                            data[l] = mTint;
+
+                        moveTint.SetData<Color>(data);
+
+                        Rectangle destination = new Rectangle(
+                            j * Engine.TileWidth,
+                            k * Engine.TileHeight,
+                            Engine.TileWidth,
+                            Engine.TileHeight);
+
+                        spriteBatch.Draw(moveTint, destination, mTint);
+                    }
+                }
+            }
+
+            spriteBatch.End();
             DrawDisplay();
         }
 
@@ -607,9 +660,9 @@ namespace XLevelEditor
             if (rbDraw.Checked)
             {
                 spriteBatch.Draw(
-                    tileSets[lbTileset.SelectedIndex].Texture,
+                    tileSets[cboTileset.SelectedIndex].Texture,
                     destination,
-                    tileSets[lbTileset.SelectedIndex].SourceRectangles[(int)nudCurrentTile.Value],
+                    tileSets[cboTileset.SelectedIndex].SourceRectangles[(int)nudCurrentTile.Value],
                     Color.White);
             }
 
@@ -660,12 +713,20 @@ namespace XLevelEditor
                 if (isMouseDown)
                 {
                     if (rbDraw.Checked)
-                        SetTiles(tile, (int)nudCurrentTile.Value, lbTileset.SelectedIndex);
+                        SetTiles(tile, (int)nudCurrentTile.Value, cboTileset.SelectedIndex);
 
                     if (rbErase.Checked)
                         SetTiles(tile, -1, -1);
+
+                    if (rbMoveType.Checked)
+                        SetMoveType(tile, (MoveType)cboMovementType.SelectedItem);
                 }
             }
+        }
+
+        private void SetMoveType(Point tile, MoveType type)
+        {
+            movementLayer.SetTile(tile.X, tile.Y, type);
         }
 
         private void SetTiles(Point tile, int tileIndex, int tileset)
@@ -724,7 +785,14 @@ namespace XLevelEditor
                 }
             }
 
-            MapData mapData = new MapData(levelData.MapName, tileSetData, mapLayerData);
+            MovementLayerData movementData = new MovementLayerData("Movement", movementLayer.Width, movementLayer.Height);
+
+            MapData mapData = new MapData(levelData.MapName, tileSetData, mapLayerData, movementData);
+            for (int y = 0; y < movementLayer.Height; y++)
+                for (int x = 0; x < movementLayer.Width; x++)
+                    movementData.SetTile(x, y, movementLayer.GetTile(x, y).TileType);
+
+            mapData.MovementLayer = movementData;
 
             FolderBrowserDialog fbDialog = new FolderBrowserDialog();
 
@@ -775,7 +843,7 @@ namespace XLevelEditor
             {
                 XnaSerializer.Serialize<TilesetData>(
                     sfDialog.FileName,
-                    tileSetData[lbTileset.SelectedIndex]);
+                    tileSetData[cboTileset.SelectedIndex]);
             }
             catch (Exception exc)
             {
@@ -865,7 +933,7 @@ namespace XLevelEditor
             tileSetData.Clear();
             tileSets.Clear();
             layers.Clear();
-            lbTileset.Items.Clear();
+            cboTileset.Items.Clear();
             clbLayers.Items.Clear();
 
             levelData = newLevel;
@@ -875,7 +943,7 @@ namespace XLevelEditor
                 Texture2D texture = null;
 
                 tileSetData.Add(data);
-                lbTileset.Items.Add(data.TilesetName);
+                cboTileset.Items.Add(data.TilesetName);
 
                 GDIImage image = (GDIImage)GDIBitmap.FromFile(data.TilesetImageName);
                 tileSetImages.Add(image);
@@ -899,7 +967,9 @@ namespace XLevelEditor
                 layers.Add(MapLayer.FromMapLayerData(data));
             }
 
-            lbTileset.SelectedIndex = 0;
+            movementLayer = MovementLayer.FromMovementLayerData(mapData.MovementLayer);
+
+            cboTileset.SelectedIndex = 0;
             clbLayers.SelectedIndex = 0;
             nudCurrentTile.Value = 0;
 
@@ -911,11 +981,12 @@ namespace XLevelEditor
             for (int i = 1; i < layers.Count; i++)
                 map.AddLayer(layers[i]);
 
+            map.AddLayer(movementLayer);
+
             tilesetToolStripMenuItem.Enabled = true;
             mapLayerToolStripMenuItem.Enabled = true;
             charactersToolStripMenuItem.Enabled = true;
             chestsToolStripMenuItem.Enabled = true;
-            keysToolStripMenuItem.Enabled = true;
         }
 
         void openTilesetToolStripMenuItem_Click(object sender, EventArgs e)
@@ -959,9 +1030,9 @@ namespace XLevelEditor
                 return;
             }
 
-            for (int i = 0; i < lbTileset.Items.Count; i++)
+            for (int i = 0; i < cboTileset.Items.Count; i++)
             {
-                if (lbTileset.Items[i].ToString() == data.TilesetName)
+                if (cboTileset.Items[i].ToString() == data.TilesetName)
                 {
                     MessageBox.Show("Level already contains a tileset with this name.", "Existing tileset");
                     return;
@@ -971,12 +1042,11 @@ namespace XLevelEditor
             tileSetData.Add(data);
             tileSets.Add(tileset);
 
-            lbTileset.Items.Add(data.TilesetName);
-
+            cboTileset.Items.Add(data.TilesetName);
             pbTilesetPreview.Image = image;
             tileSetImages.Add(image);
 
-            lbTileset.SelectedIndex = lbTileset.Items.Count - 1;
+            cboTileset.SelectedIndex = cboTileset.Items.Count - 1;
             nudCurrentTile.Value = 0;
 
             mapLayerToolStripMenuItem.Enabled = true;

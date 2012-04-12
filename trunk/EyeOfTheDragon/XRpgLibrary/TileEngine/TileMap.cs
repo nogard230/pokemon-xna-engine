@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 using XRpgLibrary.CharacterClasses;
 
+
 namespace XRpgLibrary.TileEngine
 {
     public class TileMap

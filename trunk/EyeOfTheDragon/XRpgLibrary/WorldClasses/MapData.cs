@@ -9,17 +9,19 @@ namespace RpgLibrary.WorldClasses
     {
         public string MapName;
         public MapLayerData[] Layers;
+        public MovementLayerData MovementLayer;
         public TilesetData[] Tilesets;
 
         private MapData()
         {
         }
 
-        public MapData(string mapName, List<TilesetData> tilesets, List<MapLayerData> layers)
+        public MapData(string mapName, List<TilesetData> tilesets, List<MapLayerData> layers, MovementLayerData mLayer)
         {
             MapName = mapName;
             Tilesets = tilesets.ToArray();
             Layers = layers.ToArray();
+            MovementLayer = mLayer;
         }
     }
 }

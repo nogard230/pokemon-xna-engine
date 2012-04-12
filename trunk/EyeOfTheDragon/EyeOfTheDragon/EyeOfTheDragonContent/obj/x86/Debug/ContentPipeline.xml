@@ -179,7 +179,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Classes\Fighter.xnb</Output>
-      <Time>2012-04-10T13:47:59.9982585-06:00</Time>
+      <Time>2012-04-11T21:47:41.6642729-06:00</Time>
     </Item>
     <Item>
       <Source>Game\Classes\Priest.xml</Source>
@@ -188,7 +188,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Classes\Priest.xnb</Output>
-      <Time>2012-04-10T13:47:59.9932582-06:00</Time>
+      <Time>2012-04-11T21:47:41.665273-06:00</Time>
     </Item>
     <Item>
       <Source>Game\Classes\Rogue.xml</Source>
@@ -197,7 +197,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Classes\Rogue.xnb</Output>
-      <Time>2012-04-10T13:47:59.9862578-06:00</Time>
+      <Time>2012-04-11T21:47:41.6672731-06:00</Time>
     </Item>
     <Item>
       <Source>Game\Classes\Wizard.xml</Source>
@@ -206,7 +206,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Classes\Wizard.xnb</Output>
-      <Time>2012-04-10T13:47:59.9782573-06:00</Time>
+      <Time>2012-04-11T21:47:41.6682732-06:00</Time>
     </Item>
     <Item>
       <Source>Game\Game.xml</Source>
@@ -215,7 +215,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Game.xnb</Output>
-      <Time>2012-04-10T13:47:59.9282545-06:00</Time>
+      <Time>2012-04-11T21:47:41.6692732-06:00</Time>
     </Item>
     <Item>
       <Source>Game\Items\Recovery\Potion.xml</Source>
@@ -224,7 +224,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Items\Recovery\Potion.xnb</Output>
-      <Time>2012-04-10T13:47:59.8972527-06:00</Time>
+      <Time>2012-04-11T21:47:41.6722734-06:00</Time>
     </Item>
     <Item>
       <Source>Game\Chests\Potion.xml</Source>
@@ -233,7 +233,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Chests\Potion.xnb</Output>
-      <Time>2012-04-10T16:38:10.0642408-06:00</Time>
+      <Time>2012-04-11T21:47:40.2081896-06:00</Time>
     </Item>
     <Item>
       <Source>Game\Items\Misc\Thunder Stone.xml</Source>
@@ -242,7 +242,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Items\Misc\Thunder Stone.xnb</Output>
-      <Time>2012-04-10T16:40:05.196826-06:00</Time>
+      <Time>2012-04-11T21:47:41.6712733-06:00</Time>
     </Item>
     <Item>
       <Source>Game\Skills\Bartering.xml</Source>
@@ -251,7 +251,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Skills\Bartering.xnb</Output>
-      <Time>2012-04-10T16:41:53.2480062-06:00</Time>
+      <Time>2012-04-11T21:47:41.683274-06:00</Time>
     </Item>
     <Item>
       <Source>Game\Skills\Herbalism.xml</Source>
@@ -260,7 +260,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Skills\Herbalism.xnb</Output>
-      <Time>2012-04-10T16:41:53.2490063-06:00</Time>
+      <Time>2012-04-11T21:47:41.6842741-06:00</Time>
     </Item>
     <Item>
       <Source>Game\Skills\Poison Making.xml</Source>
@@ -269,7 +269,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Skills\Poison Making.xnb</Output>
-      <Time>2012-04-10T16:41:53.244006-06:00</Time>
+      <Time>2012-04-11T21:47:41.6862742-06:00</Time>
     </Item>
     <Item>
       <Source>Game\Skills\Trap Making.xml</Source>
@@ -278,7 +278,25 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Skills\Trap Making.xnb</Output>
-      <Time>2012-04-10T16:41:53.2470062-06:00</Time>
+      <Time>2012-04-11T21:47:41.6872742-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Levels\Maps\MTest.xml</Source>
+      <Name>Game\Levels\Maps\MTest</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Levels\Maps\MTest.xnb</Output>
+      <Time>2012-04-11T21:47:41.6752736-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Levels\MTest.xml</Source>
+      <Name>Game\Levels\MTest</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Levels\MTest.xnb</Output>
+      <Time>2012-04-11T21:47:41.6802738-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -294,7 +312,7 @@
     <Assemblies>
       <Assembly>
         <Key>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\XRpgLibrary\bin\x86\Debug\XRpgLibrary.dll</Key>
-        <Value>2012-04-10T20:08:24.3177349-06:00</Value>
+        <Value>2012-04-11T21:46:56.9057129-06:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>

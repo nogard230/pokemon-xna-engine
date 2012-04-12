@@ -10,7 +10,7 @@ using XRpgLibrary.SpriteClasses;
 
 namespace XRpgLibrary.TileEngine
 {
-    public enum MoveType {Normal, Grass, Surf, Waterfall, Wirlpool, Blocked, Warp, Drop_North, Drop_South, Drop_East, Drop_West};
+    public enum MoveType {Normal, Grass, Surf, Waterfall, Wirlpool, Dive, Blocked, Warp, Drop_North, Drop_South, Drop_East, Drop_West};
 
     public class MovementTile
     {
@@ -29,24 +29,6 @@ namespace XRpgLibrary.TileEngine
         {
             get { return tileType; }
             private set { tileType = value; }
-        }
-
-        public Point WarpToPoint
-        {
-            get { return warpToPoint; }
-            private set { warpToPoint = value; }
-        }
-
-        public Level WarpToLevel
-        {
-            get { return warpToLevel; }
-            private set { warpToLevel = value; }
-        }
-
-        public Direction WarpToDirection
-        {
-            get { return warpToDirection; }
-            private set { warpToDirection = value; }
         }
 
         #endregion
