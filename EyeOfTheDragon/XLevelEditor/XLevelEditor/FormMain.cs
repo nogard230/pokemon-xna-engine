@@ -365,6 +365,7 @@ namespace XLevelEditor
                 {
                     levelData = frmNewLevel.LevelData;
                     tilesetToolStripMenuItem.Enabled = true;
+                    gbDrawMode.Enabled = true;
 
                     movementLayer = new MovementLayer(levelData.MapWidth, levelData.MapHeight);
                 }
@@ -441,6 +442,9 @@ namespace XLevelEditor
                     MapLayer layer = MapLayer.FromMapLayerData(data);
                     clbLayers.Items.Add(data.MapLayerName, true);
                     clbLayers.SelectedIndex = clbLayers.Items.Count - 1;
+
+                    cboDrawLayer.Items.Add(data.MapLayerName);
+                    cboDrawLayer.SelectedIndex = clbLayers.Items.Count - 1;
 
                     layers.Add(layer);
 
@@ -573,6 +577,30 @@ namespace XLevelEditor
                 tint.A = 1;
 
                 spriteBatch.Draw(shadow, destination, tint);
+            }
+
+            if (rbMoveType.Checked)
+            {
+                gbMovement.Enabled = true;
+            }
+            else
+            {
+                gbMovement.Enabled = false;
+            }
+
+            if (cboMovementType.SelectedItem.ToString().Equals("Warp"))
+            {
+                mtbWarpX.Enabled = true;
+                mtbWarpY.Enabled = true;
+                tbWarpLevel.Enabled = true;
+                cboWarpDirection.Enabled = true;
+            }
+            else
+            {
+                mtbWarpX.Enabled = false;
+                mtbWarpY.Enabled = false;
+                tbWarpLevel.Enabled = false;
+                cboWarpDirection.Enabled = false;
             }
 
             if (rbMoveType.Checked)
@@ -767,7 +795,7 @@ namespace XLevelEditor
 
         private void SetTiles(Point tile, int tileIndex, int tileset)
         {
-            int selected = clbLayers.SelectedIndex;
+            int selected = cboDrawLayer.SelectedIndex;
 
             if (layers[selected] is MapLayer)
             {
@@ -1000,6 +1028,7 @@ namespace XLevelEditor
             foreach (MapLayerData data in mapData.Layers)
             {
                 clbLayers.Items.Add(data.MapLayerName, true);
+                cboDrawLayer.Items.Add(data.MapLayerName);
                 layers.Add(MapLayer.FromMapLayerData(data));
             }
 
@@ -1007,6 +1036,7 @@ namespace XLevelEditor
 
             cboTileset.SelectedIndex = 0;
             clbLayers.SelectedIndex = 0;
+            cboDrawLayer.SelectedIndex = 0;
             nudCurrentTile.Value = 0;
 
             map = new TileMap(tileSets[0], (MapLayer)layers[0]);
@@ -1023,6 +1053,7 @@ namespace XLevelEditor
             mapLayerToolStripMenuItem.Enabled = true;
             charactersToolStripMenuItem.Enabled = true;
             chestsToolStripMenuItem.Enabled = true;
+            gbDrawMode.Enabled = true;
         }
 
         void openTilesetToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1086,6 +1117,7 @@ namespace XLevelEditor
             nudCurrentTile.Value = 0;
 
             mapLayerToolStripMenuItem.Enabled = true;
+
         }
 
         void openLayerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1122,6 +1154,7 @@ namespace XLevelEditor
             }
 
             clbLayers.Items.Add(data.MapLayerName, true);
+            cboDrawLayer.Items.Add(data.MapLayerName);
 
             layers.Add(MapLayer.FromMapLayerData(data));
 
