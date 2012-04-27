@@ -86,10 +86,21 @@ namespace XRpgLibrary.TileEngine
             for (int y = 0; y < data.Height; y++)
                 for (int x = 0; x < data.Width; x++)
                 {
-                    layer.SetTile(
-                        x,
-                        y,
-                        data.GetTile(x, y).type);
+                    if (data.GetTile(x, y).type == MoveType.Warp)
+                    {
+                        RpgLibrary.WorldClasses.MovementTile tileData = data.GetTile(x, y);
+                        layer.SetTile(
+                            x,
+                            y,
+                            new WarpTile(new Point(tileData.warpX, tileData.warpY), tileData.warpLevel, tileData.warpDirection));
+                    }
+                    else
+                    {
+                        layer.SetTile(
+                            x,
+                            y,
+                            data.GetTile(x, y).type);
+                    }
                 }
 
             return layer;
