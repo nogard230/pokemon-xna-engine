@@ -62,7 +62,6 @@
             this.x8ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlTimer = new System.Windows.Forms.Timer(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.mapDisplay = new XLevelEditor.MapDisplay();
             this.tabProperties = new System.Windows.Forms.TabControl();
             this.tabTilesets = new System.Windows.Forms.TabPage();
             this.gbMovement = new System.Windows.Forms.GroupBox();
@@ -88,13 +87,15 @@
             this.rbDraw = new System.Windows.Forms.RadioButton();
             this.lblTile = new System.Windows.Forms.Label();
             this.pbTilePreview = new System.Windows.Forms.PictureBox();
-            this.tabMovement = new System.Windows.Forms.TabPage();
             this.tabLayers = new System.Windows.Forms.TabPage();
             this.clbLayers = new System.Windows.Forms.CheckedListBox();
             this.tabCharacters = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabChests = new System.Windows.Forms.TabPage();
             this.tbWarpLevel = new System.Windows.Forms.TextBox();
+            this.mapDisplay = new XLevelEditor.MapDisplay();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cboDrawLayer = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -362,20 +363,9 @@
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 1;
             // 
-            // mapDisplay
-            // 
-            this.mapDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mapDisplay.Location = new System.Drawing.Point(0, 0);
-            this.mapDisplay.Margin = new System.Windows.Forms.Padding(2);
-            this.mapDisplay.Name = "mapDisplay";
-            this.mapDisplay.Size = new System.Drawing.Size(640, 576);
-            this.mapDisplay.TabIndex = 0;
-            this.mapDisplay.Text = "mapDisplay1";
-            // 
             // tabProperties
             // 
             this.tabProperties.Controls.Add(this.tabTilesets);
-            this.tabProperties.Controls.Add(this.tabMovement);
             this.tabProperties.Controls.Add(this.tabLayers);
             this.tabProperties.Controls.Add(this.tabCharacters);
             this.tabProperties.Controls.Add(this.tabChests);
@@ -389,6 +379,8 @@
             // 
             // tabTilesets
             // 
+            this.tabTilesets.Controls.Add(this.cboDrawLayer);
+            this.tabTilesets.Controls.Add(this.label6);
             this.tabTilesets.Controls.Add(this.gbMovement);
             this.tabTilesets.Controls.Add(this.cboTileset);
             this.tabTilesets.Controls.Add(this.tbMapLocation);
@@ -421,6 +413,7 @@
             this.gbMovement.Controls.Add(this.label1);
             this.gbMovement.Controls.Add(this.label3);
             this.gbMovement.Controls.Add(this.label2);
+            this.gbMovement.Enabled = false;
             this.gbMovement.Location = new System.Drawing.Point(6, 326);
             this.gbMovement.Name = "gbMovement";
             this.gbMovement.Size = new System.Drawing.Size(245, 143);
@@ -431,6 +424,7 @@
             // cboWarpDirection
             // 
             this.cboWarpDirection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboWarpDirection.Enabled = false;
             this.cboWarpDirection.FormattingEnabled = true;
             this.cboWarpDirection.Location = new System.Drawing.Point(99, 111);
             this.cboWarpDirection.Name = "cboWarpDirection";
@@ -439,6 +433,7 @@
             // 
             // mtbWarpY
             // 
+            this.mtbWarpY.Enabled = false;
             this.mtbWarpY.Location = new System.Drawing.Point(99, 64);
             this.mtbWarpY.Mask = "0000";
             this.mtbWarpY.Name = "mtbWarpY";
@@ -447,6 +442,7 @@
             // 
             // mtbWarpX
             // 
+            this.mtbWarpX.Enabled = false;
             this.mtbWarpX.Location = new System.Drawing.Point(99, 36);
             this.mtbWarpX.Mask = "0000";
             this.mtbWarpX.Name = "mtbWarpX";
@@ -521,7 +517,7 @@
             this.tbMapLocation.Location = new System.Drawing.Point(6, 523);
             this.tbMapLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tbMapLocation.Name = "tbMapLocation";
-            this.tbMapLocation.Size = new System.Drawing.Size(136, 20);
+            this.tbMapLocation.Size = new System.Drawing.Size(249, 20);
             this.tbMapLocation.TabIndex = 9;
             // 
             // lblCursor
@@ -529,7 +525,7 @@
             this.lblCursor.Location = new System.Drawing.Point(6, 505);
             this.lblCursor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCursor.Name = "lblCursor";
-            this.lblCursor.Size = new System.Drawing.Size(135, 19);
+            this.lblCursor.Size = new System.Drawing.Size(249, 19);
             this.lblCursor.TabIndex = 8;
             this.lblCursor.Text = "Map Location";
             this.lblCursor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -569,7 +565,7 @@
             this.nudCurrentTile.Location = new System.Drawing.Point(5, 67);
             this.nudCurrentTile.Margin = new System.Windows.Forms.Padding(2);
             this.nudCurrentTile.Name = "nudCurrentTile";
-            this.nudCurrentTile.Size = new System.Drawing.Size(135, 20);
+            this.nudCurrentTile.Size = new System.Drawing.Size(97, 20);
             this.nudCurrentTile.TabIndex = 3;
             // 
             // gbDrawMode
@@ -577,6 +573,7 @@
             this.gbDrawMode.Controls.Add(this.rbMoveType);
             this.gbDrawMode.Controls.Add(this.rbErase);
             this.gbDrawMode.Controls.Add(this.rbDraw);
+            this.gbDrawMode.Enabled = false;
             this.gbDrawMode.Location = new System.Drawing.Point(47, 6);
             this.gbDrawMode.Margin = new System.Windows.Forms.Padding(2);
             this.gbDrawMode.Name = "gbDrawMode";
@@ -640,16 +637,6 @@
             this.pbTilePreview.TabIndex = 0;
             this.pbTilePreview.TabStop = false;
             // 
-            // tabMovement
-            // 
-            this.tabMovement.Location = new System.Drawing.Point(4, 22);
-            this.tabMovement.Name = "tabMovement";
-            this.tabMovement.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMovement.Size = new System.Drawing.Size(259, 550);
-            this.tabMovement.TabIndex = 4;
-            this.tabMovement.Text = "Movement";
-            this.tabMovement.UseVisualStyleBackColor = true;
-            // 
             // tabLayers
             // 
             this.tabLayers.Controls.Add(this.clbLayers);
@@ -703,10 +690,39 @@
             // 
             // tbWarpLevel
             // 
+            this.tbWarpLevel.Enabled = false;
             this.tbWarpLevel.Location = new System.Drawing.Point(99, 85);
             this.tbWarpLevel.Name = "tbWarpLevel";
             this.tbWarpLevel.Size = new System.Drawing.Size(121, 20);
             this.tbWarpLevel.TabIndex = 20;
+            // 
+            // mapDisplay
+            // 
+            this.mapDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mapDisplay.Location = new System.Drawing.Point(0, 0);
+            this.mapDisplay.Margin = new System.Windows.Forms.Padding(2);
+            this.mapDisplay.Name = "mapDisplay";
+            this.mapDisplay.Size = new System.Drawing.Size(640, 576);
+            this.mapDisplay.TabIndex = 0;
+            this.mapDisplay.Text = "mapDisplay1";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(108, 69);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Layer: ";
+            // 
+            // cboDrawLayer
+            // 
+            this.cboDrawLayer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDrawLayer.FormattingEnabled = true;
+            this.cboDrawLayer.Location = new System.Drawing.Point(143, 67);
+            this.cboDrawLayer.Name = "cboDrawLayer";
+            this.cboDrawLayer.Size = new System.Drawing.Size(108, 21);
+            this.cboDrawLayer.TabIndex = 18;
             // 
             // FormMain
             // 
@@ -809,7 +825,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TabPage tabMovement;
         private System.Windows.Forms.TextBox tbWarpLevel;
+        private System.Windows.Forms.ComboBox cboDrawLayer;
+        private System.Windows.Forms.Label label6;
     }
 }
