@@ -60,9 +60,22 @@
             this.x2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.x4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.x8ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.controlTimer = new System.Windows.Forms.Timer(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.mapDisplay = new XLevelEditor.MapDisplay();
             this.tabProperties = new System.Windows.Forms.TabControl();
             this.tabTilesets = new System.Windows.Forms.TabPage();
+            this.gbMovement = new System.Windows.Forms.GroupBox();
+            this.cboWarpDirection = new System.Windows.Forms.ComboBox();
+            this.mtbWarpY = new System.Windows.Forms.MaskedTextBox();
+            this.mtbWarpX = new System.Windows.Forms.MaskedTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cboMovementType = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cboTileset = new System.Windows.Forms.ComboBox();
             this.tbMapLocation = new System.Windows.Forms.TextBox();
             this.lblCursor = new System.Windows.Forms.Label();
             this.lblTilesets = new System.Windows.Forms.Label();
@@ -70,20 +83,18 @@
             this.lblCurrentTileset = new System.Windows.Forms.Label();
             this.nudCurrentTile = new System.Windows.Forms.NumericUpDown();
             this.gbDrawMode = new System.Windows.Forms.GroupBox();
+            this.rbMoveType = new System.Windows.Forms.RadioButton();
             this.rbErase = new System.Windows.Forms.RadioButton();
             this.rbDraw = new System.Windows.Forms.RadioButton();
             this.lblTile = new System.Windows.Forms.Label();
             this.pbTilePreview = new System.Windows.Forms.PictureBox();
+            this.tabMovement = new System.Windows.Forms.TabPage();
             this.tabLayers = new System.Windows.Forms.TabPage();
             this.clbLayers = new System.Windows.Forms.CheckedListBox();
             this.tabCharacters = new System.Windows.Forms.TabPage();
-            this.tabChests = new System.Windows.Forms.TabPage();
-            this.controlTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cboTileset = new System.Windows.Forms.ComboBox();
-            this.rbMoveType = new System.Windows.Forms.RadioButton();
-            this.cboMovementType = new System.Windows.Forms.ComboBox();
-            this.mapDisplay = new XLevelEditor.MapDisplay();
+            this.tabChests = new System.Windows.Forms.TabPage();
+            this.tbWarpLevel = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -91,6 +102,7 @@
             this.splitContainer1.SuspendLayout();
             this.tabProperties.SuspendLayout();
             this.tabTilesets.SuspendLayout();
+            this.gbMovement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTilesetPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCurrentTile)).BeginInit();
             this.gbDrawMode.SuspendLayout();
@@ -350,9 +362,20 @@
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 1;
             // 
+            // mapDisplay
+            // 
+            this.mapDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mapDisplay.Location = new System.Drawing.Point(0, 0);
+            this.mapDisplay.Margin = new System.Windows.Forms.Padding(2);
+            this.mapDisplay.Name = "mapDisplay";
+            this.mapDisplay.Size = new System.Drawing.Size(640, 576);
+            this.mapDisplay.TabIndex = 0;
+            this.mapDisplay.Text = "mapDisplay1";
+            // 
             // tabProperties
             // 
             this.tabProperties.Controls.Add(this.tabTilesets);
+            this.tabProperties.Controls.Add(this.tabMovement);
             this.tabProperties.Controls.Add(this.tabLayers);
             this.tabProperties.Controls.Add(this.tabCharacters);
             this.tabProperties.Controls.Add(this.tabChests);
@@ -366,7 +389,7 @@
             // 
             // tabTilesets
             // 
-            this.tabTilesets.Controls.Add(this.cboMovementType);
+            this.tabTilesets.Controls.Add(this.gbMovement);
             this.tabTilesets.Controls.Add(this.cboTileset);
             this.tabTilesets.Controls.Add(this.tbMapLocation);
             this.tabTilesets.Controls.Add(this.lblCursor);
@@ -385,6 +408,113 @@
             this.tabTilesets.TabIndex = 0;
             this.tabTilesets.Text = "Tiles";
             this.tabTilesets.UseVisualStyleBackColor = true;
+            // 
+            // gbMovement
+            // 
+            this.gbMovement.Controls.Add(this.tbWarpLevel);
+            this.gbMovement.Controls.Add(this.cboWarpDirection);
+            this.gbMovement.Controls.Add(this.mtbWarpY);
+            this.gbMovement.Controls.Add(this.mtbWarpX);
+            this.gbMovement.Controls.Add(this.label5);
+            this.gbMovement.Controls.Add(this.cboMovementType);
+            this.gbMovement.Controls.Add(this.label4);
+            this.gbMovement.Controls.Add(this.label1);
+            this.gbMovement.Controls.Add(this.label3);
+            this.gbMovement.Controls.Add(this.label2);
+            this.gbMovement.Location = new System.Drawing.Point(6, 326);
+            this.gbMovement.Name = "gbMovement";
+            this.gbMovement.Size = new System.Drawing.Size(245, 143);
+            this.gbMovement.TabIndex = 16;
+            this.gbMovement.TabStop = false;
+            this.gbMovement.Text = "Movement Data";
+            // 
+            // cboWarpDirection
+            // 
+            this.cboWarpDirection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboWarpDirection.FormattingEnabled = true;
+            this.cboWarpDirection.Location = new System.Drawing.Point(99, 111);
+            this.cboWarpDirection.Name = "cboWarpDirection";
+            this.cboWarpDirection.Size = new System.Drawing.Size(121, 21);
+            this.cboWarpDirection.TabIndex = 19;
+            // 
+            // mtbWarpY
+            // 
+            this.mtbWarpY.Location = new System.Drawing.Point(99, 64);
+            this.mtbWarpY.Mask = "0000";
+            this.mtbWarpY.Name = "mtbWarpY";
+            this.mtbWarpY.Size = new System.Drawing.Size(121, 20);
+            this.mtbWarpY.TabIndex = 17;
+            // 
+            // mtbWarpX
+            // 
+            this.mtbWarpX.Location = new System.Drawing.Point(99, 36);
+            this.mtbWarpX.Mask = "0000";
+            this.mtbWarpX.Name = "mtbWarpX";
+            this.mtbWarpX.Size = new System.Drawing.Size(121, 20);
+            this.mtbWarpX.TabIndex = 16;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 14);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Movement Type:";
+            // 
+            // cboMovementType
+            // 
+            this.cboMovementType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMovementType.FormattingEnabled = true;
+            this.cboMovementType.Location = new System.Drawing.Point(99, 11);
+            this.cboMovementType.Name = "cboMovementType";
+            this.cboMovementType.Size = new System.Drawing.Size(121, 21);
+            this.cboMovementType.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 114);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Warp Direction:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(47, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Warp X:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(31, 89);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Warp Level:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(47, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Warp Y:";
+            // 
+            // cboTileset
+            // 
+            this.cboTileset.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTileset.FormattingEnabled = true;
+            this.cboTileset.Location = new System.Drawing.Point(116, 475);
+            this.cboTileset.Name = "cboTileset";
+            this.cboTileset.Size = new System.Drawing.Size(135, 21);
+            this.cboTileset.TabIndex = 10;
             // 
             // tbMapLocation
             // 
@@ -406,10 +536,10 @@
             // 
             // lblTilesets
             // 
-            this.lblTilesets.Location = new System.Drawing.Point(5, 453);
+            this.lblTilesets.Location = new System.Drawing.Point(2, 476);
             this.lblTilesets.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTilesets.Name = "lblTilesets";
-            this.lblTilesets.Size = new System.Drawing.Size(135, 19);
+            this.lblTilesets.Size = new System.Drawing.Size(109, 19);
             this.lblTilesets.TabIndex = 7;
             this.lblTilesets.Text = "Tilesets";
             this.lblTilesets.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -419,7 +549,7 @@
             this.pbTilesetPreview.Location = new System.Drawing.Point(5, 112);
             this.pbTilesetPreview.Margin = new System.Windows.Forms.Padding(2);
             this.pbTilesetPreview.Name = "pbTilesetPreview";
-            this.pbTilesetPreview.Size = new System.Drawing.Size(135, 146);
+            this.pbTilesetPreview.Size = new System.Drawing.Size(247, 209);
             this.pbTilesetPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbTilesetPreview.TabIndex = 5;
             this.pbTilesetPreview.TabStop = false;
@@ -455,6 +585,17 @@
             this.gbDrawMode.TabIndex = 2;
             this.gbDrawMode.TabStop = false;
             this.gbDrawMode.Text = "Draw Mode";
+            // 
+            // rbMoveType
+            // 
+            this.rbMoveType.AutoSize = true;
+            this.rbMoveType.Location = new System.Drawing.Point(60, 16);
+            this.rbMoveType.Name = "rbMoveType";
+            this.rbMoveType.Size = new System.Drawing.Size(75, 17);
+            this.rbMoveType.TabIndex = 2;
+            this.rbMoveType.TabStop = true;
+            this.rbMoveType.Text = "Movement";
+            this.rbMoveType.UseVisualStyleBackColor = true;
             // 
             // rbErase
             // 
@@ -499,6 +640,16 @@
             this.pbTilePreview.TabIndex = 0;
             this.pbTilePreview.TabStop = false;
             // 
+            // tabMovement
+            // 
+            this.tabMovement.Location = new System.Drawing.Point(4, 22);
+            this.tabMovement.Name = "tabMovement";
+            this.tabMovement.Padding = new System.Windows.Forms.Padding(3);
+            this.tabMovement.Size = new System.Drawing.Size(259, 550);
+            this.tabMovement.TabIndex = 4;
+            this.tabMovement.Text = "Movement";
+            this.tabMovement.UseVisualStyleBackColor = true;
+            // 
             // tabLayers
             // 
             this.tabLayers.Controls.Add(this.clbLayers);
@@ -532,6 +683,14 @@
             this.tabCharacters.Text = "Characters";
             this.tabCharacters.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Location = new System.Drawing.Point(2, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(256, 365);
+            this.panel1.TabIndex = 0;
+            // 
             // tabChests
             // 
             this.tabChests.Location = new System.Drawing.Point(4, 22);
@@ -542,52 +701,12 @@
             this.tabChests.Text = "Chests";
             this.tabChests.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // tbWarpLevel
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Location = new System.Drawing.Point(2, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(256, 365);
-            this.panel1.TabIndex = 0;
-            // 
-            // cboTileset
-            // 
-            this.cboTileset.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTileset.FormattingEnabled = true;
-            this.cboTileset.Location = new System.Drawing.Point(5, 475);
-            this.cboTileset.Name = "cboTileset";
-            this.cboTileset.Size = new System.Drawing.Size(135, 21);
-            this.cboTileset.TabIndex = 10;
-            // 
-            // rbMoveType
-            // 
-            this.rbMoveType.AutoSize = true;
-            this.rbMoveType.Location = new System.Drawing.Point(60, 16);
-            this.rbMoveType.Name = "rbMoveType";
-            this.rbMoveType.Size = new System.Drawing.Size(75, 17);
-            this.rbMoveType.TabIndex = 2;
-            this.rbMoveType.TabStop = true;
-            this.rbMoveType.Text = "Movement";
-            this.rbMoveType.UseVisualStyleBackColor = true;
-            // 
-            // cboMovementType
-            // 
-            this.cboMovementType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMovementType.FormattingEnabled = true;
-            this.cboMovementType.Location = new System.Drawing.Point(145, 66);
-            this.cboMovementType.Name = "cboMovementType";
-            this.cboMovementType.Size = new System.Drawing.Size(106, 21);
-            this.cboMovementType.TabIndex = 3;
-            // 
-            // mapDisplay
-            // 
-            this.mapDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mapDisplay.Location = new System.Drawing.Point(0, 0);
-            this.mapDisplay.Margin = new System.Windows.Forms.Padding(2);
-            this.mapDisplay.Name = "mapDisplay";
-            this.mapDisplay.Size = new System.Drawing.Size(640, 576);
-            this.mapDisplay.TabIndex = 0;
-            this.mapDisplay.Text = "mapDisplay1";
+            this.tbWarpLevel.Location = new System.Drawing.Point(99, 85);
+            this.tbWarpLevel.Name = "tbWarpLevel";
+            this.tbWarpLevel.Size = new System.Drawing.Size(121, 20);
+            this.tbWarpLevel.TabIndex = 20;
             // 
             // FormMain
             // 
@@ -610,6 +729,8 @@
             this.tabProperties.ResumeLayout(false);
             this.tabTilesets.ResumeLayout(false);
             this.tabTilesets.PerformLayout();
+            this.gbMovement.ResumeLayout(false);
+            this.gbMovement.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTilesetPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCurrentTile)).EndInit();
             this.gbDrawMode.ResumeLayout(false);
@@ -679,5 +800,16 @@
         private System.Windows.Forms.ComboBox cboTileset;
         private System.Windows.Forms.ComboBox cboMovementType;
         private System.Windows.Forms.RadioButton rbMoveType;
+        private System.Windows.Forms.GroupBox gbMovement;
+        private System.Windows.Forms.ComboBox cboWarpDirection;
+        private System.Windows.Forms.MaskedTextBox mtbWarpY;
+        private System.Windows.Forms.MaskedTextBox mtbWarpX;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TabPage tabMovement;
+        private System.Windows.Forms.TextBox tbWarpLevel;
     }
 }

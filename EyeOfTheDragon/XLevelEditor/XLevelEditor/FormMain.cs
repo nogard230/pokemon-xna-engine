@@ -19,6 +19,7 @@ using GDIRectangle = System.Drawing.Rectangle;
 
 using RpgLibrary.WorldClasses;
 using XRpgLibrary.TileEngine;
+using XRpgLibrary.SpriteClasses;
 
 namespace XLevelEditor
 {
@@ -113,6 +114,10 @@ namespace XLevelEditor
             foreach (MoveType type in Enum.GetValues(typeof(MoveType)))
                 cboMovementType.Items.Add(type);
             cboMovementType.SelectedIndex = 0;
+
+            foreach (Direction direction in Enum.GetValues(typeof(Direction)))
+                cboWarpDirection.Items.Add(direction);
+            cboWarpDirection.SelectedIndex = 0;
         }
 
         #endregion
@@ -726,7 +731,38 @@ namespace XLevelEditor
 
         private void SetMoveType(Point tile, MoveType type)
         {
-            movementLayer.SetTile(tile.X, tile.Y, type);
+            if (type != MoveType.Warp)
+            {
+                movementLayer.SetTile(tile.X, tile.Y, type);
+            }
+            else
+            {
+                try
+                {
+                    int warpX = -1;
+                    int warpY = -1;
+                    if (!int.TryParse(mtbWarpX.Text, out warpX))
+                    {
+                        MessageBox.Show("Warp X must be an integer value.");
+                        return;
+                    }
+
+                    if (!int.TryParse(mtbWarpY.Text, out warpY))
+                    {
+                        MessageBox.Show("Warp Y must be an integer value.");
+                        return;
+                    }
+
+                    Direction direction = (Direction)Enum.Parse(typeof(Direction), cboWarpDirection.SelectedItem.ToString());
+                    WarpTile warpTile = new WarpTile(new Point(warpX, warpY), tbWarpLevel.Text, direction);
+                    movementLayer.SetTile(tile.X, tile.Y, warpTile);
+                }
+                catch (ArgumentException)
+                {
+
+                }
+                
+            }
         }
 
         private void SetTiles(Point tile, int tileIndex, int tileset)
@@ -790,7 +826,7 @@ namespace XLevelEditor
             MapData mapData = new MapData(levelData.MapName, tileSetData, mapLayerData, movementData);
             for (int y = 0; y < movementLayer.Height; y++)
                 for (int x = 0; x < movementLayer.Width; x++)
-                    movementData.SetTile(x, y, movementLayer.GetTile(x, y).TileType);
+                    movementData.SetTile(x, y, movementLayer.GetTile(x, y));
 
             mapData.MovementLayer = movementData;
 

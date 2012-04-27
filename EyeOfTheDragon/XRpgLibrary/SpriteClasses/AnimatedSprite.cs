@@ -43,7 +43,18 @@ namespace XRpgLibrary.SpriteClasses
         public Direction DirectionFacing
         {
             get { return movementDirection; }
-            set { movementDirection = value; }
+            set 
+            { 
+                movementDirection = value;
+                if (movementDirection == Direction.Up)
+                    CurrentAnimation = AnimationKey.Up;
+                if (movementDirection == Direction.Down)
+                    CurrentAnimation = AnimationKey.Down;
+                if (movementDirection == Direction.Left)
+                    CurrentAnimation = AnimationKey.Left;
+                if (movementDirection == Direction.Right)
+                    CurrentAnimation = AnimationKey.Right;
+            }
         }
 
         public AnimationKey CurrentAnimation

@@ -9,10 +9,27 @@ namespace RpgLibrary.WorldClasses
     public struct MovementTile
     {
         public XRpgLibrary.TileEngine.MoveType type;
+        public int warpX;
+        public int warpY;
+        public string warpLevel;
+        public XRpgLibrary.SpriteClasses.Direction warpDirection;
 
         public MovementTile(XRpgLibrary.TileEngine.MoveType mType)
         {
             type = mType;
+            warpX = -1;
+            warpY = -1;
+            warpLevel = null;
+            warpDirection = XRpgLibrary.SpriteClasses.Direction.Up;
+        }
+
+        public MovementTile(XRpgLibrary.TileEngine.WarpTile tile)
+        {
+            type = tile.TileType;
+            warpX = tile.WarpToPoint.X;
+            warpY = tile.WarpToPoint.Y;
+            warpLevel = tile.WarpToLevel;
+            warpDirection = tile.WarpToDirection;
         }
     }
 
@@ -54,6 +71,20 @@ namespace RpgLibrary.WorldClasses
         public void SetTile(int x, int y, MovementTile tile)
         {
             Layer[y * Width + x] = tile;
+        }
+
+        public void SetTile(int x, int y, XRpgLibrary.TileEngine.MovementTile tile)
+        {
+            MovementTile mTile;
+            if (tile is XRpgLibrary.TileEngine.WarpTile)
+            {
+                mTile = new MovementTile((XRpgLibrary.TileEngine.WarpTile)tile);
+            }
+            else
+            {
+                mTile = new MovementTile(tile.TileType);
+            }
+            Layer[y * Width + x] = mTile;
         }
 
         public void SetTile(int x, int y, XRpgLibrary.TileEngine.MoveType type)

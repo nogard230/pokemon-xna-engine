@@ -15,7 +15,7 @@ namespace XRpgLibrary.TileEngine
         #region Field Region
 
         Point warpToPoint;
-        Level warpToLevel;
+        String warpToLevel;
         Direction warpToDirection;
 
         #endregion
@@ -28,7 +28,7 @@ namespace XRpgLibrary.TileEngine
             private set { warpToPoint = value; }
         }
 
-        public Level WarpToLevel
+        public String WarpToLevel
         {
             get { return warpToLevel; }
             private set { warpToLevel = value; }
@@ -44,7 +44,8 @@ namespace XRpgLibrary.TileEngine
 
         #region Constructor Region
 
-        public WarpTile(Point point, Level level, Direction direction) : base(MoveType.Warp)
+        public WarpTile(Point point, String level, Direction direction)
+            : base(MoveType.Warp)
         {
             WarpToPoint = point;
 

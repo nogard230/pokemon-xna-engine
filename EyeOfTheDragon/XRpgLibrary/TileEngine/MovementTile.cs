@@ -17,9 +17,6 @@ namespace XRpgLibrary.TileEngine
         #region Field Region
 
         MoveType tileType;
-        Point warpToPoint;
-        Level warpToLevel;
-        Direction warpToDirection;
 
         #endregion
 
