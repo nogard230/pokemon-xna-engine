@@ -35,6 +35,7 @@ namespace XLevelEditor
         List<ILayer> layers = new List<ILayer>();
         MovementLayer movementLayer;
         List<GDIImage> tileSetImages = new List<GDIImage>();
+        List<GDIImage> tileListImages = new List<GDIImage>();
 
         TileMap map;
 
@@ -118,6 +119,8 @@ namespace XLevelEditor
             foreach (Direction direction in Enum.GetValues(typeof(Direction)))
                 cboWarpDirection.Items.Add(direction);
             cboWarpDirection.SelectedIndex = 0;
+
+            panel1.AutoScroll = true;
         }
 
         #endregion
@@ -348,7 +351,7 @@ namespace XLevelEditor
 
             pbTilesetPreview.Image = tileSetImages[selected];
             pbTilePreview.Image = preview;
-
+            
         }
 
         #endregion
@@ -1168,5 +1171,6 @@ namespace XLevelEditor
         }
 
         #endregion
+
     }
 }
