@@ -78,7 +78,6 @@
             this.tbMapLocation = new System.Windows.Forms.TextBox();
             this.lblCursor = new System.Windows.Forms.Label();
             this.lblTilesets = new System.Windows.Forms.Label();
-            this.pbTilesetPreview = new System.Windows.Forms.PictureBox();
             this.lblCurrentTileset = new System.Windows.Forms.Label();
             this.nudCurrentTile = new System.Windows.Forms.NumericUpDown();
             this.gbDrawMode = new System.Windows.Forms.GroupBox();
@@ -90,12 +89,14 @@
             this.tabLayers = new System.Windows.Forms.TabPage();
             this.clbLayers = new System.Windows.Forms.CheckedListBox();
             this.tabCharacters = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.tabChests = new System.Windows.Forms.TabPage();
             this.tbWarpLevel = new System.Windows.Forms.TextBox();
-            this.mapDisplay = new XLevelEditor.MapDisplay();
             this.label6 = new System.Windows.Forms.Label();
             this.cboDrawLayer = new System.Windows.Forms.ComboBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.pbTilesetPreview = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.mapDisplay = new XLevelEditor.MapDisplay();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -104,12 +105,12 @@
             this.tabProperties.SuspendLayout();
             this.tabTilesets.SuspendLayout();
             this.gbMovement.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTilesetPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCurrentTile)).BeginInit();
             this.gbDrawMode.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTilePreview)).BeginInit();
             this.tabLayers.SuspendLayout();
-            this.tabCharacters.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTilesetPreview)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -379,6 +380,7 @@
             // 
             // tabTilesets
             // 
+            this.tabTilesets.Controls.Add(this.panel1);
             this.tabTilesets.Controls.Add(this.cboDrawLayer);
             this.tabTilesets.Controls.Add(this.label6);
             this.tabTilesets.Controls.Add(this.gbMovement);
@@ -386,7 +388,6 @@
             this.tabTilesets.Controls.Add(this.tbMapLocation);
             this.tabTilesets.Controls.Add(this.lblCursor);
             this.tabTilesets.Controls.Add(this.lblTilesets);
-            this.tabTilesets.Controls.Add(this.pbTilesetPreview);
             this.tabTilesets.Controls.Add(this.lblCurrentTileset);
             this.tabTilesets.Controls.Add(this.nudCurrentTile);
             this.tabTilesets.Controls.Add(this.gbDrawMode);
@@ -540,19 +541,9 @@
             this.lblTilesets.Text = "Tilesets";
             this.lblTilesets.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pbTilesetPreview
-            // 
-            this.pbTilesetPreview.Location = new System.Drawing.Point(5, 112);
-            this.pbTilesetPreview.Margin = new System.Windows.Forms.Padding(2);
-            this.pbTilesetPreview.Name = "pbTilesetPreview";
-            this.pbTilesetPreview.Size = new System.Drawing.Size(247, 209);
-            this.pbTilesetPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbTilesetPreview.TabIndex = 5;
-            this.pbTilesetPreview.TabStop = false;
-            // 
             // lblCurrentTileset
             // 
-            this.lblCurrentTileset.Location = new System.Drawing.Point(5, 91);
+            this.lblCurrentTileset.Location = new System.Drawing.Point(64, 91);
             this.lblCurrentTileset.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCurrentTileset.Name = "lblCurrentTileset";
             this.lblCurrentTileset.Size = new System.Drawing.Size(135, 19);
@@ -661,7 +652,6 @@
             // 
             // tabCharacters
             // 
-            this.tabCharacters.Controls.Add(this.panel1);
             this.tabCharacters.Location = new System.Drawing.Point(4, 22);
             this.tabCharacters.Margin = new System.Windows.Forms.Padding(2);
             this.tabCharacters.Name = "tabCharacters";
@@ -669,14 +659,6 @@
             this.tabCharacters.TabIndex = 2;
             this.tabCharacters.Text = "Characters";
             this.tabCharacters.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Location = new System.Drawing.Point(2, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(256, 365);
-            this.panel1.TabIndex = 0;
             // 
             // tabChests
             // 
@@ -696,16 +678,6 @@
             this.tbWarpLevel.Size = new System.Drawing.Size(121, 20);
             this.tbWarpLevel.TabIndex = 20;
             // 
-            // mapDisplay
-            // 
-            this.mapDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mapDisplay.Location = new System.Drawing.Point(0, 0);
-            this.mapDisplay.Margin = new System.Windows.Forms.Padding(2);
-            this.mapDisplay.Name = "mapDisplay";
-            this.mapDisplay.Size = new System.Drawing.Size(640, 576);
-            this.mapDisplay.TabIndex = 0;
-            this.mapDisplay.Text = "mapDisplay1";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -723,6 +695,41 @@
             this.cboDrawLayer.Name = "cboDrawLayer";
             this.cboDrawLayer.Size = new System.Drawing.Size(108, 21);
             this.cboDrawLayer.TabIndex = 18;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(32, 32);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // pbTilesetPreview
+            // 
+            this.pbTilesetPreview.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pbTilesetPreview.Location = new System.Drawing.Point(2, 2);
+            this.pbTilesetPreview.Margin = new System.Windows.Forms.Padding(2);
+            this.pbTilesetPreview.Name = "pbTilesetPreview";
+            this.pbTilesetPreview.Size = new System.Drawing.Size(241, 203);
+            this.pbTilesetPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbTilesetPreview.TabIndex = 5;
+            this.pbTilesetPreview.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pbTilesetPreview);
+            this.panel1.Location = new System.Drawing.Point(6, 113);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(245, 207);
+            this.panel1.TabIndex = 19;
+            // 
+            // mapDisplay
+            // 
+            this.mapDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mapDisplay.Location = new System.Drawing.Point(0, 0);
+            this.mapDisplay.Margin = new System.Windows.Forms.Padding(2);
+            this.mapDisplay.Name = "mapDisplay";
+            this.mapDisplay.Size = new System.Drawing.Size(640, 576);
+            this.mapDisplay.TabIndex = 0;
+            this.mapDisplay.Text = "mapDisplay1";
             // 
             // FormMain
             // 
@@ -747,13 +754,14 @@
             this.tabTilesets.PerformLayout();
             this.gbMovement.ResumeLayout(false);
             this.gbMovement.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTilesetPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCurrentTile)).EndInit();
             this.gbDrawMode.ResumeLayout(false);
             this.gbDrawMode.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTilePreview)).EndInit();
             this.tabLayers.ResumeLayout(false);
-            this.tabCharacters.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbTilesetPreview)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -785,7 +793,6 @@
         private System.Windows.Forms.TabPage tabCharacters;
         private System.Windows.Forms.TabPage tabChests;
         private System.Windows.Forms.Label lblTilesets;
-        private System.Windows.Forms.PictureBox pbTilesetPreview;
         private System.Windows.Forms.Label lblCurrentTileset;
         private System.Windows.Forms.NumericUpDown nudCurrentTile;
         private System.Windows.Forms.GroupBox gbDrawMode;
@@ -812,7 +819,6 @@
         private System.Windows.Forms.ToolStripMenuItem yellowToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem whiteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveTilesetToolStripMenuItem;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cboTileset;
         private System.Windows.Forms.ComboBox cboMovementType;
         private System.Windows.Forms.RadioButton rbMoveType;
@@ -828,5 +834,8 @@
         private System.Windows.Forms.TextBox tbWarpLevel;
         private System.Windows.Forms.ComboBox cboDrawLayer;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.PictureBox pbTilesetPreview;
+        private System.Windows.Forms.Panel panel1;
     }
 }

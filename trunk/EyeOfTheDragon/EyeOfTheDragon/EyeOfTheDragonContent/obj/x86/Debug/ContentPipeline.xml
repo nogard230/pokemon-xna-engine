@@ -287,7 +287,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Levels\Maps\MTest.xnb</Output>
-      <Time>2012-04-27T15:27:45.0449716-06:00</Time>
+      <Time>2012-04-27T20:44:45.7068912-06:00</Time>
     </Item>
     <Item>
       <Source>Game\Levels\MTest.xml</Source>
@@ -296,7 +296,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Levels\MTest.xnb</Output>
-      <Time>2012-04-27T15:27:45.0459717-06:00</Time>
+      <Time>2012-04-27T20:44:45.7078913-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
