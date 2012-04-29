@@ -17,7 +17,9 @@ namespace EyesOfTheDragon.GameScreens
         #region Field region
 
         Texture2D backgroundImage;
+        Texture2D pixel;
         LinkLabel startLabel;
+        SpriteFont font;
 
         #endregion
 
@@ -37,13 +39,15 @@ namespace EyesOfTheDragon.GameScreens
             ContentManager Content = GameRef.Content;
 
             backgroundImage = Content.Load<Texture2D>(@"Backgrounds\titlescreen");
-
+            pixel = Content.Load<Texture2D>(@"Backgrounds\pixel");
+            font = Content.Load<SpriteFont>(@"Fonts\TitleFont");
             base.LoadContent();
 
             startLabel = new LinkLabel();
-            startLabel.Position = new Vector2(350, 600);
+            startLabel.Position = new Vector2(225, 600);
             startLabel.Text = "Press ENTER to begin";
             startLabel.Color = Color.White;
+            startLabel.SpriteFont = font;
             startLabel.TabStop = true;
             startLabel.HasFocus = true;
             startLabel.Selected += new EventHandler(startLabel_Selected);
@@ -68,6 +72,9 @@ namespace EyesOfTheDragon.GameScreens
                 backgroundImage,
                 GameRef.ScreenRectangle,
                 Color.White);
+
+            //GameRef.SpriteBatch.Draw(pixel, new Rectangle(0, 600, 1024, 75), Color.Black);
+            GameRef.SpriteBatch.DrawString(font, "Press ENTER to begin", new Vector2(227, 602), Color.Black);
 
             ControlManager.Draw(GameRef.SpriteBatch);
 

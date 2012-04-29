@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ItemClasses="RpgLibrary.ItemClasses">
+  <Asset Type="ItemClasses:MiscItemData">
+    <Name>Thunder Stone</Name>
+    <Type>Evolution Stone</Type>
+    <Price>500</Price>
+    <SellPrice>250</SellPrice>
+  </Asset>
+</XnaContent>
