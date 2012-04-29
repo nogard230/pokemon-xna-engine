@@ -34,6 +34,7 @@ namespace EyesOfTheDragon
         public CharacterGeneratorScreen CharacterGeneratorScreen;
         public LoadGameScreen LoadGameScreen;
         public SkillScreen SkillScreen;
+        public BattleScreen BattleScreen;
 
         #endregion
 
@@ -81,6 +82,7 @@ namespace EyesOfTheDragon
             CharacterGeneratorScreen = new CharacterGeneratorScreen(this, stateManager);
             LoadGameScreen = new LoadGameScreen(this, stateManager);
             SkillScreen = new GameScreens.SkillScreen(this, stateManager);
+            BattleScreen = new GameScreens.BattleScreen(this, stateManager);
 
             stateManager.ChangeState(TitleScreen);
 

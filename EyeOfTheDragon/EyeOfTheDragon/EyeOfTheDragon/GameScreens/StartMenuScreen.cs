@@ -17,10 +17,11 @@ namespace EyesOfTheDragon.GameScreens
     {
         #region Field region
 
-        PictureBox backgroundImage;
-        PictureBox arrowImage;
+        Texture2D backgroundImage;
+        Texture2D pixel;
         LinkLabel startGame;
         LinkLabel loadGame;
+        LinkLabel BattleTest;
         LinkLabel exitGame;
         float maxItemWidth = 0f;
 
@@ -51,38 +52,35 @@ namespace EyesOfTheDragon.GameScreens
 
             ContentManager Content = Game.Content;
 
-            backgroundImage = new PictureBox(
-                Content.Load<Texture2D>(@"Backgrounds\titlescreen"),
-                GameRef.ScreenRectangle);
-            ControlManager.Add(backgroundImage);
+            pixel = Content.Load<Texture2D>(@"Backgrounds\pixel");
 
-            Texture2D arrowTexture = Content.Load<Texture2D>(@"GUI\leftarrowUp");
-
-            arrowImage = new PictureBox(
-                arrowTexture,
-                new Rectangle(
-                    0,
-                    0,
-                    arrowTexture.Width,
-                    arrowTexture.Height));
-            ControlManager.Add(arrowImage);
+            backgroundImage = Content.Load<Texture2D>(@"Backgrounds\menubackground");
 
             startGame = new LinkLabel();
-            startGame.Text = "The story begins";
+            startGame.Text = "New Game";
             startGame.Size = startGame.SpriteFont.MeasureString(startGame.Text);
             startGame.Selected += new EventHandler(menuItem_Selected);
 
             ControlManager.Add(startGame);
 
             loadGame = new LinkLabel();
-            loadGame.Text = "The story continues";
+            loadGame.Text = "Continue";
             loadGame.Size = loadGame.SpriteFont.MeasureString(loadGame.Text);
             loadGame.Selected += menuItem_Selected;
 
             ControlManager.Add(loadGame);
 
+            BattleTest = new LinkLabel();
+            BattleTest.Text = "Test Battle System";
+            BattleTest.Size = BattleTest.SpriteFont.MeasureString(BattleTest.Text);
+            BattleTest.Selected += menuItem_Selected;
+            BattleTest.Color = Color.Gray;
+            BattleTest.Enabled = false;
+
+            ControlManager.Add(BattleTest);
+
             exitGame = new LinkLabel();
-            exitGame.Text = "The story ends";
+            exitGame.Text = "Quit";
             exitGame.Size = exitGame.SpriteFont.MeasureString(exitGame.Text);
             exitGame.Selected += menuItem_Selected;
 
@@ -92,7 +90,7 @@ namespace EyesOfTheDragon.GameScreens
 
             ControlManager.FocusChanged += new EventHandler(ControlManager_FocusChanged);
 
-            Vector2 position = new Vector2(350, 500);
+            Vector2 position = new Vector2(350, 300);
             foreach (Control c in ControlManager)
             {
                 if (c is LinkLabel)
@@ -112,7 +110,6 @@ namespace EyesOfTheDragon.GameScreens
         {
             Control control = sender as Control;
             Vector2 position = new Vector2(control.Position.X + maxItemWidth + 10f, control.Position.Y);
-            arrowImage.SetPosition(position);
         }
 
         private void menuItem_Selected(object sender, EventArgs e)
@@ -123,6 +120,9 @@ namespace EyesOfTheDragon.GameScreens
 
             if (sender == loadGame)
                 Transition(ChangeType.Push, GameRef.LoadGameScreen);
+
+            if (sender == BattleTest)
+                Transition(ChangeType.Push, GameRef.BattleScreen);
 
             if (sender == exitGame)
                 GameRef.Exit();
@@ -140,6 +140,13 @@ namespace EyesOfTheDragon.GameScreens
             GameRef.SpriteBatch.Begin();
 
             base.Draw(gameTime);
+
+            GameRef.SpriteBatch.Draw(
+                backgroundImage,
+                GameRef.ScreenRectangle,
+                Color.White);
+
+            GameRef.SpriteBatch.Draw(pixel, new Rectangle(50, 50, 924, 668), Color.LightBlue);
 
             ControlManager.Draw(GameRef.SpriteBatch);
 

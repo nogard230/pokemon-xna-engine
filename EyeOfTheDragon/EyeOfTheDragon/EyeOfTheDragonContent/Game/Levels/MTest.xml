@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:WorldClasses="RpgLibrary.WorldClasses">
+  <Asset Type="WorldClasses:LevelData">
+    <LevelName>MTest</LevelName>
+    <MapName>MTest</MapName>
+    <MapWidth>10</MapWidth>
+    <MapHeight>10</MapHeight>
+    <CharacterNames />
+    <ChestNames />
+    <TrapNames />
+  </Asset>
+</XnaContent>

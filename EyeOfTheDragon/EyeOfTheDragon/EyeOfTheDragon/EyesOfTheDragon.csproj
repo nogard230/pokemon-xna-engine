@@ -110,6 +110,7 @@
     <Compile Include="Components\DataManager.cs" />
     <Compile Include="Components\Player.cs" />
     <Compile Include="GameScreens\BaseGameState.cs" />
+    <Compile Include="GameScreens\BattleScreen.cs" />
     <Compile Include="GameScreens\CharacterGeneratorScreen.cs" />
     <Compile Include="GameScreens\GamePlayScreen.cs" />
     <Compile Include="GameScreens\LoadGameScreen.cs" />

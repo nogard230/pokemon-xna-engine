@@ -1,4 +1,3 @@
-Content\Backgrounds\titlescreen.xnb
 Content\GUI\leftarrowUp.xnb
 Content\GUI\rightarrowUp.xnb
 Content\GUI\StopBar.xnb
@@ -31,3 +30,7 @@ Content\Game\Skills\Poison Making.xnb
 Content\Game\Skills\Trap Making.xnb
 Content\Game\Levels\Maps\MTest.xnb
 Content\Game\Levels\MTest.xnb
+Content\Backgrounds\titlescreen.xnb
+Content\Fonts\TitleFont.xnb
+Content\Backgrounds\menubackground.xnb
+Content\Fonts\TitleFontOutline.xnb

@@ -2,15 +2,6 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>Backgrounds\titlescreen.png</Source>
-      <Name>Backgrounds\titlescreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Backgrounds\titlescreen.xnb</Output>
-      <Time>2012-04-10T13:47:59.2272144-06:00</Time>
-    </Item>
-    <Item>
       <Source>GUI\leftarrowUp.png</Source>
       <Name>GUI\leftarrowUp</Name>
       <Importer>TextureImporter</Importer>
@@ -170,7 +161,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Fonts\ControlFont.xnb</Output>
-      <Time>2012-04-10T13:47:59.8482499-06:00</Time>
+      <Time>2012-04-28T08:45:23.1079291-06:00</Time>
     </Item>
     <Item>
       <Source>Game\Classes\Fighter.xml</Source>
@@ -297,6 +288,42 @@
       <Options>None</Options>
       <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Levels\MTest.xnb</Output>
       <Time>2012-04-27T20:44:45.7078913-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\titlescreen.png</Source>
+      <Name>Backgrounds\titlescreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Backgrounds\titlescreen.xnb</Output>
+      <Time>2012-04-28T08:25:50.9268842-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\TitleFont.spritefont</Source>
+      <Name>Fonts\TitleFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Fonts\TitleFont.xnb</Output>
+      <Time>2012-04-28T08:52:29.8353365-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\menubackground.jpg</Source>
+      <Name>Backgrounds\menubackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Backgrounds\menubackground.xnb</Output>
+      <Time>2012-04-28T08:50:04.8710451-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\TitleFontOutline.spritefont</Source>
+      <Name>Fonts\TitleFontOutline</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Fonts\TitleFontOutline.xnb</Output>
+      <Time>2012-04-28T11:40:39.3344229-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
