@@ -8,7 +8,7 @@ using RpgLibrary.CharacterClasses;
 namespace RpgLibrary.EffectClasses
 {
     public enum StatusType { None, Burn, Poison, Bad_Poison, Confusion, Sleep, Freeze, Curse, Encore, Flinch, Indentify, 
-        Infatuation, Leech_Seed, Target, Nightmare, Trapped, Perish_Song, Taunt, Torment };
+        Infatuation, LeechSeed, Target, Nightmare, Trapped, PerishSong, Taunt, Torment };
 
     public class StatusCondition : BaseEffect
     {
