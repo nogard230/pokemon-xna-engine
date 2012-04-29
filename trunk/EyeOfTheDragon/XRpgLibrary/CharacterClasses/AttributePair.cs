@@ -51,14 +51,14 @@ namespace RpgLibrary.CharacterClasses
 
         #region Method Region
 
-        public void Heal(ushort value)
+        public void Heal(int value)
         {
             currentValue += value;
             if (currentValue > maximumValue)
                 currentValue = maximumValue;
         }
 
-        public void Damage(ushort value)
+        public void Damage(int value)
         {
             currentValue -= value;
             if (currentValue < 0)

@@ -107,6 +107,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\BattleImageLoader.cs" />
     <Compile Include="Components\DataManager.cs" />
     <Compile Include="Components\Player.cs" />
     <Compile Include="GameScreens\BaseGameState.cs" />

@@ -74,8 +74,6 @@ namespace EyesOfTheDragon.GameScreens
             BattleTest.Text = "Test Battle System";
             BattleTest.Size = BattleTest.SpriteFont.MeasureString(BattleTest.Text);
             BattleTest.Selected += menuItem_Selected;
-            BattleTest.Color = Color.Gray;
-            BattleTest.Enabled = false;
 
             ControlManager.Add(BattleTest);
 

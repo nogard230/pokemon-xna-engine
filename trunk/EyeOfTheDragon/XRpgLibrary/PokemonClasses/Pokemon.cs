@@ -8,9 +8,11 @@ using XRpgLibrary.AttackClasses;
 using RpgLibrary.EffectClasses;
 using XRpgLibrary.AbilityClasses;
 using XRpgLibrary.NatureClasses;
+using RpgLibrary.CharacterClasses;
 
 namespace XRpgLibrary.PokemonClasses
 {
+
     class Pokemon
     {
         #region Field Region
@@ -61,6 +63,18 @@ namespace XRpgLibrary.PokemonClasses
 
         decimal genderRatioMale;
         decimal genderRatioFemale;
+
+        int criticalStage = 0;
+        int attackStage = 0;
+        int defenseStage = 0;
+        int sAttackStage = 0;
+        int sDefenseStage = 0;
+        int speedStage = 0;
+        int accuracyStage = 0;
+        int evasionStage = 0;
+        AttributePair currentHP;
+
+        List<StatusType> currentConditions;
 
         #endregion
 
@@ -424,34 +438,86 @@ namespace XRpgLibrary.PokemonClasses
 
         #region Stats
 
-        public int HP
+        public int HPStat
         {
             get { return (int)Math.Floor((((HpIV + 2 * BaseHP + 100.0) * Level) / 100.0 + 10.0)); }
         }
 
-        public int Attack
+        public int AttackStat
         {
-            get { return (int)Math.Floor((((AttackIV + 2 * BaseAttack) * Level) / 100.0 + 5.0) * Nature.AttackEffect); }
+            get { return (int)Math.Floor((((AttackIV + 2 * BaseAttack * AttackStageModifier) * Level) / 100.0 + 5.0) * Nature.AttackEffect); }
         }
 
-        public int Defense
+        public int DefenseStat
         {
-            get { return (int)Math.Floor((((DefenseIV + 2 * BaseDefense) * Level) / 100.0 + 5.0) * Nature.DefenseEffect); }
+            get { return (int)Math.Floor((((DefenseIV + 2 * BaseDefense * DefenseStageModifier) * Level) / 100.0 + 5.0) * Nature.DefenseEffect); }
         }
 
-        public int SpecialAttack
+        public int SpecialAttackStat
         {
-            get { return (int)Math.Floor((((SAttackIV + 2 * BaseSAttack) * Level) / 100.0 + 5.0) * Nature.SpecialAttackEffect); }
+            get { return (int)Math.Floor((((SAttackIV + 2 * BaseSAttack * SpecialAttackStageModifier) * Level) / 100.0 + 5.0) * Nature.SpecialAttackEffect); }
         }
 
-        public int SpecialDefense
+        public int SpecialDefenseStat
         {
-            get { return (int)Math.Floor((((SDefenseIV + 2 * BaseSDefense) * Level) / 100.0 + 5.0) * Nature.SpecialDefenseEffect); }
+            get { return (int)Math.Floor((((SDefenseIV + 2 * BaseSDefense * SpecialDefenseStageModifier) * Level) / 100.0 + 5.0) * Nature.SpecialDefenseEffect); }
         }
 
-        public int Speed
+        public int SpeedStat
         {
-            get { return (int)Math.Floor((((SpeedIV + 2 * BaseSpeed) * Level) / 100.0 + 5.0) * Nature.SpeedEffect); }
+            get { return (int)Math.Floor((((SpeedIV + 2 * BaseSpeed * SpeedStageModifier) * Level) / 100.0 + 5.0) * Nature.SpeedEffect); }
+        }
+
+        public float CriticalStage
+        {
+            get 
+            {
+                switch (criticalStage)
+                {
+                    case 1:
+                        return 0.0625f;
+                        
+                    case 2:
+                        return 0.125f;
+
+                    case 3:
+                        return 0.25f;
+
+                    case 4:
+                        return 0.33f;
+
+                    case 5:
+                        return 0.5f;
+
+                    default:
+                        return 0.0625f;
+                }
+            }
+        }
+
+        public float AttackStageModifier
+        {
+            get { return statStageModifier(attackStage); }
+        }
+
+        public float DefenseStageModifier
+        {
+            get { return statStageModifier(defenseStage); }
+        }
+
+        public float SpecialAttackStageModifier
+        {
+            get { return statStageModifier(sAttackStage); }
+        }
+
+        public float SpecialDefenseStageModifier
+        {
+            get { return statStageModifier(sDefenseStage); }
+        }
+
+        public float SpeedStageModifier
+        {
+            get { return statStageModifier(speedStage); }
         }
 
         #endregion
@@ -476,17 +542,27 @@ namespace XRpgLibrary.PokemonClasses
 
         public void damage(int damage)
         {
-            
+            currentHP.Damage(damage);
         }
 
         public void heal(int heal)
         {
-
+            currentHP.Heal(heal);
         }
 
         public void applyCondition(StatusType status)
         {
+            currentConditions.Add(status);
+        }
 
+        public bool clearCondition(StatusType status)
+        {
+            if (currentConditions.Contains(status))
+            {
+                currentConditions.Remove(status);
+                return true;
+            }
+            return false;
         }
 
         public bool isType(ElementType type)
@@ -495,6 +571,54 @@ namespace XRpgLibrary.PokemonClasses
                 return true;
             else
                 return false;
+        }
+
+        public float statStageModifier(int stage)
+        {
+            switch (stage)
+            {
+                case -6:
+                    return 0.25f;
+
+                case -5:
+                    return 0.29f;
+
+                case -4:
+                    return 0.33f;
+
+                case -3:
+                    return 0.4f;
+
+                case -2:
+                    return 0.5f;
+
+                case -1:
+                    return 0.67f;
+
+                case 0:
+                    return 1;
+
+                case 1:
+                    return 1.5f;
+
+                case 2:
+                    return 2f;
+
+                case 3:
+                    return 2.5f;
+
+                case 4:
+                    return 3f;
+
+                case 5:
+                    return 3.5f;
+
+                case 6:
+                    return 4f;
+
+                default:
+                    return 1f;
+            }
         }
 
         #endregion

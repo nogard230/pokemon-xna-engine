@@ -21,26 +21,50 @@ namespace XRpgLibrary
             float stab = BattleCalculator.CalculateSTAB(attackUsed.AttackElementType, user);
             int effective = BattleCalculator.CalculateEffectiveness(attackUsed.AttackElementType, target);
 
-            double r = (new Random().Next(85, 100)) / 100.0;
-            int critical = 1;
-            int other = 1;
+            double r = (new Random().Next(85, 101)) / 100.0;
+            int critical = BattleCalculator.CalculateCritical(user);
+            int other = BattleCalculator.CalculateOtherModifier();
             double modifier = stab * effective * critical * other * r;
 
             if (attackUsed.AttackType == AttackType.Physical)
             {
-                attack = user.Attack;
-                defense = target.Defense;
+                attack = user.AttackStat;
+                defense = target.DefenseStat;
             }
 
             if (attackUsed.AttackType == AttackType.Special)
             {
-                attack = user.SpecialAttack;
-                defense = target.SpecialDefense;
+                attack = user.SpecialAttackStat;
+                defense = target.SpecialDefenseStat;
             }
 
             int totalDamage = (int)((((2 * user.Level + 10) / 250) * (attack / defense) * basePower + 2) * modifier);
 
             return totalDamage;
+        }
+
+        private static int CalculateCritical(Pokemon user)
+        {
+            if (isCritical(user))
+            {
+                //Abilities that modify critical hits?
+
+                return 2;
+            }
+            return 1;
+        }
+
+        private static int CalculateOtherModifier()
+        {
+            return 1;
+        }
+
+        private static bool isCritical(Pokemon user)
+        {
+            double r = new Random().Next(0, 101) / 100.0;
+            if (r <= user.CriticalStage)
+                return true;
+            return false;
         }
 
         static public float CalculateSTAB(ElementType attackType, Pokemon user)
