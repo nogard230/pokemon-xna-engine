@@ -227,6 +227,33 @@
       <Time>2012-04-29T16:37:21.5028659-06:00</Time>
     </Item>
     <Item>
+      <Source>Pokemon\Front\test.png</Source>
+      <Name>Pokemon\Front\test</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Pokemon\Front\test.xnb</Output>
+      <Time>2012-04-29T19:18:24.4505549-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\testback.png</Source>
+      <Name>Pokemon\Back\testback</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Pokemon\Back\testback.xnb</Output>
+      <Time>2012-04-29T19:18:26.881694-06:00</Time>
+    </Item>
+    <Item>
+      <Source>GUI\hpbars.png</Source>
+      <Name>GUI\hpbars</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\GUI\hpbars.xnb</Output>
+      <Time>2012-04-29T21:20:48.83963-06:00</Time>
+    </Item>
+    <Item>
       <Source>Game\Classes\Fighter.xml</Source>
       <Name>Game\Classes\Fighter</Name>
       <Importer>XmlImporter</Importer>
@@ -366,7 +393,7 @@
     <Assemblies>
       <Assembly>
         <Key>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\XRpgLibrary\bin\x86\Debug\XRpgLibrary.dll</Key>
-        <Value>2012-04-29T16:32:15.6463719-06:00</Value>
+        <Value>2012-04-29T20:29:11.5584756-06:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>

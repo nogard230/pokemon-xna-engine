@@ -7,9 +7,9 @@ using XRpgLibrary.PokemonClasses;
 
 namespace XRpgLibrary.AttackClasses
 {
-    enum AttackType { Physical, Special, Neutral };
+    public enum AttackType { Physical, Special, Neutral };
 
-    class Attack
+    public class Attack
     {
         #region Fields
 

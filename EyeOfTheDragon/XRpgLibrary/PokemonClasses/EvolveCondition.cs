@@ -5,7 +5,7 @@ using System.Text;
 
 namespace XRpgLibrary.PokemonClasses
 {
-    class EvolveCondition
+    public class EvolveCondition
     {
     }
 }

@@ -8,9 +8,9 @@ using XRpgLibrary.AttackClasses;
 
 namespace XRpgLibrary
 {
-    enum ElementType { Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Rock, Ghost, Dragon, Dark, Steel };
+    public enum ElementType { Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Rock, Ghost, Dragon, Dark, Steel };
 
-    class BattleCalculator
+    public class BattleCalculator
     {
 
         static public int CalculateDamage(Pokemon user, Pokemon target, Attack attackUsed, int basePower)
