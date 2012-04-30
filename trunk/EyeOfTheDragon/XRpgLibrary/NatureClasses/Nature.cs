@@ -5,7 +5,7 @@ using System.Text;
 
 namespace XRpgLibrary.NatureClasses
 {
-    class Nature
+    public class Nature
     {
         #region Private Members
         string name;

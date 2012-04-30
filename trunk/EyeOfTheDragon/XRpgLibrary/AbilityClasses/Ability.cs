@@ -5,7 +5,7 @@ using System.Text;
 
 namespace XRpgLibrary.AbilityClasses
 {
-    class Ability
+    public class Ability
     {
     }
 }

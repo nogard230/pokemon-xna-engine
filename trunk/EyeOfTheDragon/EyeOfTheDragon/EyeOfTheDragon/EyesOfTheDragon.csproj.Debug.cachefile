@@ -23,6 +23,9 @@ Content\Backgrounds\menubackground.xnb
 Content\Backgrounds\battlebgs.xnb
 Content\Backgrounds\battleTest.xnb
 Content\Backgrounds\battlefieldtest.xnb
+Content\Pokemon\Front\test.xnb
+Content\Pokemon\Back\testback.xnb
+Content\GUI\hpbars.xnb
 Content\Game\Classes\Fighter.xnb
 Content\Game\Classes\Priest.xnb
 Content\Game\Classes\Rogue.xnb

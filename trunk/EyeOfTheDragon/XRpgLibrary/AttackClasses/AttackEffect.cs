@@ -7,7 +7,7 @@ using XRpgLibrary.PokemonClasses;
 
 namespace XRpgLibrary.AttackClasses
 {
-    abstract class AttackEffect
+    public abstract class AttackEffect
     {
         protected int power;
         protected float effectPercentage;

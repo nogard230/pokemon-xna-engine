@@ -13,7 +13,7 @@ using RpgLibrary.CharacterClasses;
 namespace XRpgLibrary.PokemonClasses
 {
 
-    class Pokemon
+    public class Pokemon
     {
         #region Field Region
         

@@ -7,12 +7,15 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
+using XRpgLibrary.PokemonClasses;
+
 namespace EyesOfTheDragon.Components
 {
-    class BattleImageLoader
+    public class BattleImageLoader
     {
         ContentManager Content;
         Texture2D backgroundCollection;
+        
 
         public BattleImageLoader(Game game)
         {
@@ -37,6 +40,23 @@ namespace EyesOfTheDragon.Components
             battlefield = Content.Load<Texture2D>(@"Backgrounds/battlefieldtest");
 
             return battlefield;
+        }
+
+        public List<Texture2D> loadPokemonImages(Pokemon myPokemon, Pokemon opponentPokemon)
+        {
+            List<Texture2D> pokemon = new List<Texture2D>();
+
+            pokemon.Add(Content.Load<Texture2D>(@"Pokemon/Back/testback"));
+            pokemon.Add(Content.Load<Texture2D>(@"Pokemon/Front/test"));
+
+            return pokemon;
+        }
+
+        public Texture2D loadHPBar()
+        {
+            Texture2D bar = Content.Load<Texture2D>(@"GUI/hpbars");
+
+            return bar;
         }
     }
 }
