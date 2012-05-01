@@ -154,6 +154,7 @@
     <Compile Include="BattleCalculator.cs" />
     <Compile Include="PokemonClasses\EvolveCondition.cs" />
     <Compile Include="PokemonClasses\Pokemon.cs" />
+    <Compile Include="PokemonClasses\PokemonData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuestClasses\Quest.cs" />
     <Compile Include="QuestClasses\QuestManager.cs" />

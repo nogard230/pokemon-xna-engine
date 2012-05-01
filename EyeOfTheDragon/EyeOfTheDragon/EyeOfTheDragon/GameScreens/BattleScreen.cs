@@ -35,6 +35,11 @@ namespace EyesOfTheDragon.GameScreens
         LinkLabel pokemon;
         LinkLabel run;
 
+        LinkLabel attack1;
+        LinkLabel attack2;
+        LinkLabel attack3;
+        LinkLabel attack4;
+
         List<Texture2D> pokemonImages;
 
         static double opponentHPBarScale = 3.5;
@@ -111,6 +116,27 @@ namespace EyesOfTheDragon.GameScreens
             run.Selected += new EventHandler(menuItem_Selected);
             run.Position = new Vector2(600, 700);
 
+            attack1 = new LinkLabel();
+            attack1.Text = battleManger.MyPokemon.Moveset[0].Name;
+            attack1.Size = attack1.SpriteFont.MeasureString(attack1.Text);
+            attack1.Selected += new EventHandler(menuItem_Selected);
+            attack1.Position = new Vector2(30, 600);
+            attack1.Visible = false;
+            attack1.Enabled = false;
+
+            ControlManager.Add(attack1);
+
+            attack2 = new LinkLabel();
+            attack2.Text = battleManger.MyPokemon.Moveset[1].Name;
+            attack2.Size = attack2.SpriteFont.MeasureString(attack2.Text);
+            attack2.Selected += new EventHandler(menuItem_Selected);
+            attack2.Position = new Vector2(600, 600);
+            attack2.Visible = false;
+            attack2.Enabled = false;
+
+            ControlManager.Add(attack2);
+
+
             ControlManager.Add(run);
 
             ControlManager.NextControl();
@@ -131,12 +157,25 @@ namespace EyesOfTheDragon.GameScreens
 
             if (sender == attack)
             {
+                attack.Visible = false;
+                attack.Enabled = false;
+                item.Visible = false;
+                item.Enabled = false;
+                pokemon.Visible = false;
+                pokemon.Enabled = false;
+                run.Visible = false;
+                run.Enabled = false;
 
+                attack1.Visible = true;
+                attack1.Enabled = true;
+                attack2.Visible = true;
+                attack2.Enabled = true;
             }
 
             if (sender == item)
             {
                 //Transition(ChangeType.Push, GameRef.LoadGameScreen);
+                battleManger.MyPokemon.damage(100);
             }
 
             if (sender == pokemon)
@@ -147,6 +186,24 @@ namespace EyesOfTheDragon.GameScreens
             if (sender == run)
             {
                 Transition(ChangeType.Change, GameRef.StartMenuScreen);
+            }
+
+            if (sender == attack1)
+            {
+                battleManger.MyPokemon.Moveset[0].useAttack(battleManger.MyPokemon, battleManger.OpponentPokemon);
+                attack.Visible = true;
+                attack.Enabled = true;
+                item.Visible = true;
+                item.Enabled = true;
+                pokemon.Visible = true;
+                pokemon.Enabled = true;
+                run.Visible = true;
+                run.Enabled = true;
+
+                attack1.Visible = false;
+                attack1.Enabled = false;
+                attack2.Visible = false;
+                attack2.Enabled = false;
             }
         }
 
@@ -189,21 +246,21 @@ namespace EyesOfTheDragon.GameScreens
             GameRef.SpriteBatch.Draw(
                 hpBars,
                 new Rectangle((int)(myHPBar.X + 73 * myHPBarScale), (int)(myHPBar.Y + 27 * myHPBarScale),
-                    (int)(48 * myHPBarScale), (int)(3 * myHPBarScale)),
+                    (int)(48 * battleManger.MyPokemon.CurrentHP.CurrentValue/battleManger.MyPokemon.CurrentHP.MaximumValue * myHPBarScale), (int)(3 * myHPBarScale)),
                 new Rectangle(4, 92, 2, 2),
                 Color.White);
 
             //My Pokemon Name
-            GameRef.SpriteBatch.DrawString(attack.SpriteFont, "Pidgeot", new Vector2((int)(myHPBar.X + 22 * myHPBarScale), (int)(myHPBar.Y + 12 * myHPBarScale)), Color.Black);
+            GameRef.SpriteBatch.DrawString(attack.SpriteFont, battleManger.MyPokemon.Name, new Vector2((int)(myHPBar.X + 22 * myHPBarScale), (int)(myHPBar.Y + 12 * myHPBarScale)), Color.Black);
 
             //My Pokemon Level
-            GameRef.SpriteBatch.DrawString(attack.SpriteFont, "100", new Vector2((int)(myHPBar.X + 107 * myHPBarScale), (int)(myHPBar.Y + 12 * myHPBarScale)), Color.Black);
+            GameRef.SpriteBatch.DrawString(attack.SpriteFont, battleManger.MyPokemon.Level.ToString(), new Vector2((int)(myHPBar.X + 107 * myHPBarScale), (int)(myHPBar.Y + 12 * myHPBarScale)), Color.Black);
 
             //My Pokemon Current HP
-            GameRef.SpriteBatch.DrawString(attack.SpriteFont, "999", new Vector2((int)(myHPBar.X + 73 * myHPBarScale), (int)(myHPBar.Y + 32 * myHPBarScale)), Color.Black);
+            GameRef.SpriteBatch.DrawString(attack.SpriteFont, battleManger.MyPokemon.CurrentHP.CurrentValue.ToString(), new Vector2((int)(myHPBar.X + 73 * myHPBarScale), (int)(myHPBar.Y + 32 * myHPBarScale)), Color.Black);
 
             //My Pokemon Totl HP
-            GameRef.SpriteBatch.DrawString(attack.SpriteFont, "999", new Vector2((int)(myHPBar.X + 100 * myHPBarScale), (int)(myHPBar.Y + 32 * myHPBarScale)), Color.Black);
+            GameRef.SpriteBatch.DrawString(attack.SpriteFont, battleManger.MyPokemon.HPStat.ToString(), new Vector2((int)(myHPBar.X + 100 * myHPBarScale), (int)(myHPBar.Y + 32 * myHPBarScale)), Color.Black);
 
             //My Pokemon Gender
             GameRef.SpriteBatch.Draw(

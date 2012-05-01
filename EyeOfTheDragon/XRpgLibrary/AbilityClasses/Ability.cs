@@ -7,5 +7,9 @@ namespace XRpgLibrary.AbilityClasses
 {
     public class Ability
     {
+        public Ability()
+        {
+
+        }
     }
 }

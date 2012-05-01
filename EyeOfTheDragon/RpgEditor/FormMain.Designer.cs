@@ -40,10 +40,11 @@
             this.miscItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recoveryItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tmItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.skillsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.berryItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.keyItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skillsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pokemonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +55,8 @@
             this.classesToolStripMenuItem,
             this.itemsToolStripMenuItem,
             this.chestsToolStripMenuItem,
-            this.skillsToolStripMenuItem});
+            this.skillsToolStripMenuItem,
+            this.pokemonToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(827, 24);
@@ -76,30 +78,30 @@
             // newGameToolStripMenuItem
             // 
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.newGameToolStripMenuItem.Text = "&New Game";
             // 
             // openGameToolStripMenuItem
             // 
             this.openGameToolStripMenuItem.Name = "openGameToolStripMenuItem";
-            this.openGameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openGameToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.openGameToolStripMenuItem.Text = "&Open Game";
             // 
             // saveGameToolStripMenuItem
             // 
             this.saveGameToolStripMenuItem.Name = "saveGameToolStripMenuItem";
-            this.saveGameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveGameToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.saveGameToolStripMenuItem.Text = "&Save Game";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(134, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
             // classesToolStripMenuItem
@@ -140,6 +142,18 @@
             this.tmItemToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.tmItemToolStripMenuItem.Text = "&TMs";
             // 
+            // berryItemToolStripMenuItem
+            // 
+            this.berryItemToolStripMenuItem.Name = "berryItemToolStripMenuItem";
+            this.berryItemToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.berryItemToolStripMenuItem.Text = "Berries";
+            // 
+            // keyItemsToolStripMenuItem
+            // 
+            this.keyItemsToolStripMenuItem.Name = "keyItemsToolStripMenuItem";
+            this.keyItemsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.keyItemsToolStripMenuItem.Text = "&Key Items";
+            // 
             // chestsToolStripMenuItem
             // 
             this.chestsToolStripMenuItem.Enabled = false;
@@ -154,17 +168,12 @@
             this.skillsToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.skillsToolStripMenuItem.Text = "&Skills";
             // 
-            // berryItemToolStripMenuItem
+            // pokemonToolStripMenuItem
             // 
-            this.berryItemToolStripMenuItem.Name = "berryItemToolStripMenuItem";
-            this.berryItemToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.berryItemToolStripMenuItem.Text = "Berries";
-            // 
-            // keyItemsToolStripMenuItem
-            // 
-            this.keyItemsToolStripMenuItem.Name = "keyItemsToolStripMenuItem";
-            this.keyItemsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.keyItemsToolStripMenuItem.Text = "&Key Items";
+            this.pokemonToolStripMenuItem.Enabled = false;
+            this.pokemonToolStripMenuItem.Name = "pokemonToolStripMenuItem";
+            this.pokemonToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.pokemonToolStripMenuItem.Text = "&Pokemon";
             // 
             // FormMain
             // 
@@ -201,6 +210,7 @@
         private System.Windows.Forms.ToolStripMenuItem skillsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem berryItemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem keyItemsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pokemonToolStripMenuItem;
     }
 }
 
