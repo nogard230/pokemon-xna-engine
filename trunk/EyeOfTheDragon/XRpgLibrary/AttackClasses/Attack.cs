@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using XRpgLibrary.PokemonClasses;
+using RpgLibrary.CharacterClasses;
 
 namespace XRpgLibrary.AttackClasses
 {
@@ -15,8 +16,7 @@ namespace XRpgLibrary.AttackClasses
 
         string name;
         ElementType attackElementType;
-        int pp;
-        int maxPP;
+        AttributePair currentPP;
         decimal accuracy;
         List<AttackEffect> effects;
         AttackType attackType;
@@ -46,19 +46,10 @@ namespace XRpgLibrary.AttackClasses
         /// <summary>
         /// Gets or sets the pp.
         /// </summary>
-        public int Pp
+        public AttributePair Pp
         {
-            get { return pp; }
-            set { pp = value; }
-        }
-
-        /// <summary>
-        /// Gets or sets the maxpp.
-        /// </summary>
-        public int MaxPP
-        {
-            get { return maxPP; }
-            set { maxPP = value; }
+            get { return currentPP; }
+            set { currentPP = value; }
         }
 
         /// <summary>

@@ -34,6 +34,7 @@ namespace XRpgLibrary.BattleClasses
             wingAttack.Effects.Add(new AttackClasses.AttackEffects.BasicDamage(60, 100));
             wingAttack.AttackType = AttackClasses.AttackType.Physical;
             wingAttack.AttackElementType = ElementType.Flying;
+            wingAttack.Pp = new RpgLibrary.CharacterClasses.AttributePair(20);
             AttackClasses.Attack quickAttack = new AttackClasses.Attack("Quick Attack");
             quickAttack.Effects.Add(new AttackClasses.AttackEffects.BasicDamage(40, 100));
             quickAttack.AttackType = AttackClasses.AttackType.Physical;
