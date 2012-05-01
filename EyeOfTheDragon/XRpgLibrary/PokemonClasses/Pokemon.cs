@@ -105,6 +105,24 @@ namespace XRpgLibrary.PokemonClasses
         }
 
         /// <summary>
+        /// Gets (or sets privately) the gender.
+        /// </summary>
+        public Gender Gender
+        {
+            get { return gender; }
+            private set { gender = value; }
+        }
+
+        /// <summary>
+        /// Gets (or sets privately) the happiness.
+        /// </summary>
+        public int Happiness
+        {
+            get { return happiness; }
+            private set { happiness = value; }
+        }
+
+        /// <summary>
         /// Gets (or sets privately) the type1.
         /// </summary>
         public ElementType Type1
@@ -423,6 +441,24 @@ namespace XRpgLibrary.PokemonClasses
         }
 
         /// <summary>
+        /// Gets (or sets privately) the imagemale.
+        /// </summary>
+        public string ImageMale
+        {
+            get { return imageMale; }
+            private set { imageMale = value; }
+        }
+
+        /// <summary>
+        /// Gets (or sets privately) the imagefemale.
+        /// </summary>
+        public string ImageFemale
+        {
+            get { return imageFemale; }
+            private set { imageFemale = value; }
+        }
+
+        /// <summary>
         /// Gets (or sets privately) the genderratiomale.
         /// </summary>
         public float GenderRatioMale
@@ -440,12 +476,25 @@ namespace XRpgLibrary.PokemonClasses
             private set { genderRatioFemale = value; }
         }
 
+        /// <summary>
+        /// Gets (or sets privately) the currenthp.
+        /// </summary>
         public AttributePair CurrentHP
         {
             get { return currentHP; }
+            private set { currentHP = value; }
         }
 
         #endregion
+
+        /// <summary>
+        /// Gets (or sets privately) the currentconditions.
+        /// </summary>
+        public List<StatusType> CurrentConditions
+        {
+            get { return currentConditions; }
+            private set { currentConditions = value; }
+        }
 
         #region Stats
 
@@ -479,31 +528,77 @@ namespace XRpgLibrary.PokemonClasses
             get { return (int)Math.Floor((((SpeedIV + 2 * BaseSpeed * SpeedStageModifier) * Level) / 100.0 + 5.0) * Nature.SpeedEffect); }
         }
 
-        public float CriticalStage
+        /// <summary>
+        /// Gets (or sets privately) the criticalstage.
+        /// </summary>
+        public int CriticalStage
         {
-            get 
-            {
-                switch (criticalStage)
-                {
-                    case 1:
-                        return 0.0625f;
-                        
-                    case 2:
-                        return 0.125f;
+            get
+            { return criticalStage; }
+            private set { criticalStage = value; }
+        }
 
-                    case 3:
-                        return 0.25f;
+        /// <summary>
+        /// Gets (or sets privately) the attackstage.
+        /// </summary>
+        public int AttackStage
+        {
+            get { return attackStage; }
+            private set { attackStage = value; }
+        }
 
-                    case 4:
-                        return 0.33f;
+        /// <summary>
+        /// Gets (or sets privately) the defensestage.
+        /// </summary>
+        public int DefenseStage
+        {
+            get { return defenseStage; }
+            private set { defenseStage = value; }
+        }
 
-                    case 5:
-                        return 0.5f;
+        /// <summary>
+        /// Gets (or sets privately) the sattackstage.
+        /// </summary>
+        public int SAttackStage
+        {
+            get { return sAttackStage; }
+            private set { sAttackStage = value; }
+        }
 
-                    default:
-                        return 0.0625f;
-                }
-            }
+        /// <summary>
+        /// Gets (or sets privately) the sdefensestage.
+        /// </summary>
+        public int SDefenseStage
+        {
+            get { return sDefenseStage; }
+            private set { sDefenseStage = value; }
+        }
+
+        /// <summary>
+        /// Gets (or sets privately) the speedstage.
+        /// </summary>
+        public int SpeedStage
+        {
+            get { return speedStage; }
+            private set { speedStage = value; }
+        }
+
+        /// <summary>
+        /// Gets (or sets privately) the accuracystage.
+        /// </summary>
+        public int AccuracyStage
+        {
+            get { return accuracyStage; }
+            private set { accuracyStage = value; }
+        }
+
+        /// <summary>
+        /// Gets (or sets privately) the evasionstage.
+        /// </summary>
+        public int EvasionStage
+        {
+            get { return evasionStage; }
+            private set { evasionStage = value; }
         }
 
         public float AttackStageModifier

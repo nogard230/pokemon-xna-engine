@@ -29,8 +29,18 @@ namespace XRpgLibrary.BattleClasses
             p1.Type2 = ElementType.Normal;
             p1.Nature = new NatureClasses.Nature("Brave");
             p1.Ability = new AbilityClasses.Ability();
-            p1.Moveset.Add(new AttackClasses.Attack("Wing Attack"));
-            p1.Moveset.Add(new AttackClasses.Attack("Quick Attack"));
+
+            AttackClasses.Attack wingAttack = new AttackClasses.Attack("Wing Attack");
+            wingAttack.Effects.Add(new AttackClasses.AttackEffects.BasicDamage(60, 100));
+            wingAttack.AttackType = AttackClasses.AttackType.Physical;
+            wingAttack.AttackElementType = ElementType.Flying;
+            AttackClasses.Attack quickAttack = new AttackClasses.Attack("Quick Attack");
+            quickAttack.Effects.Add(new AttackClasses.AttackEffects.BasicDamage(40, 100));
+            quickAttack.AttackType = AttackClasses.AttackType.Physical;
+            quickAttack.AttackElementType = ElementType.Normal;
+
+            p1.Moveset.Add(wingAttack);
+            p1.Moveset.Add(quickAttack);
             p1.BaseHP = 83;
             p1.BaseAttack = 80;
             p1.BaseDefense = 75;
