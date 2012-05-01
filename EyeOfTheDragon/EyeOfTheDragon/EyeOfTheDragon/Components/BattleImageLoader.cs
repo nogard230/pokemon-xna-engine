@@ -58,5 +58,22 @@ namespace EyesOfTheDragon.Components
 
             return bar;
         }
+
+        public Texture2D loadHUD()
+        {
+            Texture2D hud = Content.Load<Texture2D>(@"GUI/battlehud");
+
+            return hud;
+        }
+
+        public Texture2D loadAttackFrame()
+        {
+            return Content.Load<Texture2D>(@"GUI/attacktile");
+        }
+
+        public Texture2D loadTypeSymbols()
+        {
+            return Content.Load<Texture2D>(@"GUI/typeicons");
+        }
     }
 }

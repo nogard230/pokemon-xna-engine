@@ -186,7 +186,6 @@ namespace EyesOfTheDragon.GameScreens
             CreatePlayer();
             CreateWorld();
 
-            GameRef.SkillScreen.SkillPoints = 10;
             Transition(ChangeType.Change, GameRef.GamePlayScreen);
         }
 

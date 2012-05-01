@@ -254,6 +254,33 @@
       <Time>2012-04-29T21:31:36.0856503-06:00</Time>
     </Item>
     <Item>
+      <Source>PlayerSprites\hero.PNG</Source>
+      <Name>PlayerSprites\hero</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\PlayerSprites\hero.xnb</Output>
+      <Time>2012-05-01T11:22:07.6690579-06:00</Time>
+    </Item>
+    <Item>
+      <Source>GUI\battlehud.png</Source>
+      <Name>GUI\battlehud</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\GUI\battlehud.xnb</Output>
+      <Time>2012-05-01T12:02:36.5489818-06:00</Time>
+    </Item>
+    <Item>
+      <Source>GUI\attacktile.png</Source>
+      <Name>GUI\attacktile</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\GUI\attacktile.xnb</Output>
+      <Time>2012-05-01T14:31:08.7647314-06:00</Time>
+    </Item>
+    <Item>
       <Source>Game\Classes\Fighter.xml</Source>
       <Name>Game\Classes\Fighter</Name>
       <Importer>XmlImporter</Importer>
@@ -379,6 +406,15 @@
       <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Levels\MTest.xnb</Output>
       <Time>2012-04-27T20:44:45.7078913-06:00</Time>
     </Item>
+    <Item>
+      <Source>GUI\typeicons.png</Source>
+      <Name>GUI\typeicons</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\GUI\typeicons.xnb</Output>
+      <Time>2012-05-01T16:50:35.5942867-06:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
@@ -393,7 +429,7 @@
     <Assemblies>
       <Assembly>
         <Key>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\XRpgLibrary\bin\x86\Debug\XRpgLibrary.dll</Key>
-        <Value>2012-04-30T21:25:41.7221792-06:00</Value>
+        <Value>2012-05-01T16:22:26.6356838-06:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>

@@ -26,6 +26,9 @@ Content\Backgrounds\battlefieldtest.xnb
 Content\Pokemon\Front\test.xnb
 Content\Pokemon\Back\testback.xnb
 Content\GUI\hpbars.xnb
+Content\PlayerSprites\hero.xnb
+Content\GUI\battlehud.xnb
+Content\GUI\attacktile.xnb
 Content\Game\Classes\Fighter.xnb
 Content\Game\Classes\Priest.xnb
 Content\Game\Classes\Rogue.xnb
@@ -40,3 +43,4 @@ Content\Game\Skills\Poison Making.xnb
 Content\Game\Skills\Trap Making.xnb
 Content\Game\Levels\Maps\MTest.xnb
 Content\Game\Levels\MTest.xnb
+Content\GUI\typeicons.xnb
