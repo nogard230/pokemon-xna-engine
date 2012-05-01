@@ -1,0 +1,166 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using RpgLibrary.ItemClasses;
+using XRpgLibrary.AttackClasses;
+using RpgLibrary.EffectClasses;
+using XRpgLibrary.AbilityClasses;
+using XRpgLibrary.NatureClasses;
+using RpgLibrary.CharacterClasses;
+
+namespace XRpgLibrary.PokemonClasses
+{
+    public class PokemonData
+    {
+
+        #region Field Region
+
+        public string Name;
+        public int Level;
+        public Gender Gender;
+        public int Happiness;
+        public ElementType Type1;
+        public ElementType Type2;
+        public Nature Nature;
+        public Ability Ability;
+        public Dictionary<int, Attack> LevelUpMoves;
+        public List<Attack> EggMoves;
+        public List<Attack> TutoredMoves;
+        public List<TMItem> LearnableTMs;
+        public List<Attack> Moveset;
+
+        public int BaseHP;
+        public int BaseAttack;
+        public int BaseDefense;
+        public int BaseSAttack;
+        public int BaseSDefense;
+        public int BaseSpeed;
+
+        public int HPIV;
+        public int AttackIV;
+        public int DefenseIV;
+        public int SAttackIV;
+        public int SDefenseIV;
+        public int SpeedIV;
+
+        public List<Pokemon> EvolveTo;
+        public Pokemon EvolveFrom;
+        public EvolveCondition EvolveCondition;
+
+        public string EggGroup;
+
+        public int PokedexNum;
+        public string PokedexClassification;
+        public string PokedexEntry;
+        public int HeightFeet;
+        public int HeightInches;
+        public float Weight;
+        public int CaputreRate;
+        public int BaseEggSteps;
+        public int BaseHappiness;
+        public int XPGrowth;
+        public int FleeFlag;
+
+        public string ImageMale;
+        public string ImageFemale;
+
+
+        public float GenderRatioMale;
+        public float GenderRatioFemale;
+
+        public AttributePair CurrentHP;
+
+        public List<StatusType> CurrentConditions;
+
+        #endregion
+
+        public PokemonData()
+        {
+            LevelUpMoves = new Dictionary<int, Attack>();
+            EggMoves = new List<Attack>();
+            TutoredMoves = new List<Attack>();
+            LearnableTMs = new List<TMItem>();
+            Moveset = new List<Attack>();
+
+            EvolveTo = new List<Pokemon>();
+
+            CurrentConditions = new List<StatusType>();
+        }
+
+        public override string ToString()
+        {
+            string toString = Name;
+            toString += ", " + Level;
+            toString += ", " + Gender.ToString();
+            toString += ", " + Happiness;
+            toString += ", " + Type1.ToString();
+            toString += ", " + Type2.ToString();
+            toString += ", " + Nature.ToString();
+            toString += ", " + Ability.ToString();
+
+            foreach (int level in LevelUpMoves.Keys)
+                toString += ", " + level + "+" + LevelUpMoves[level].ToString();
+
+            foreach (Attack attack in EggMoves)
+                toString += ", " + attack.ToString();
+
+            foreach (Attack attack in TutoredMoves)
+                toString += ", " + attack.ToString();
+
+            foreach (TMItem tm in LearnableTMs)
+                toString += ", " + tm.ToString();
+
+            foreach (Attack attack in Moveset)
+                toString += ", " + attack.ToString();
+
+            toString += ", " + BaseHP;
+            toString += ", " + BaseAttack;
+            toString += ", " + BaseDefense;
+            toString += ", " + BaseSAttack;
+            toString += ", " + BaseSDefense;
+            toString += ", " + BaseDefense;
+
+            toString += ", " + HPIV;
+            toString += ", " + AttackIV;
+            toString += ", " + DefenseIV;
+            toString += ", " + SAttackIV;
+            toString += ", " + SDefenseIV;
+            toString += ", " + SpeedIV;
+
+            foreach(Pokemon pokemon in EvolveTo)
+                toString += ", " + pokemon.ToString();
+
+            toString += ", " + EvolveFrom.ToString();
+            toString += ", " + EvolveCondition.ToString();
+
+            toString += ", " + EggGroup;
+
+            toString += ", " + PokedexNum;
+            toString += ", " + PokedexClassification;
+            toString += ", " + PokedexEntry;
+            toString += ", " + HeightFeet;
+            toString += ", " + HeightInches;
+            toString += ", " + Weight;
+            toString += ", " + CaputreRate;
+            toString += ", " + BaseEggSteps;
+            toString += ", " + BaseHappiness;
+            toString += ", " + XPGrowth;
+            toString += ", " + FleeFlag;
+
+            toString += ", " + ImageMale;
+            toString += ", " + ImageFemale;
+
+            toString += ", " + GenderRatioMale;
+            toString += ", " + GenderRatioFemale;
+            toString += ", " + CurrentHP.ToString();
+            
+            foreach(StatusType status in CurrentConditions)
+                toString += ", " + status.ToString();
+
+            return toString;
+        }
+
+    }
+}

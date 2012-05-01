@@ -12,6 +12,7 @@ using RpgLibrary.CharacterClasses;
 
 namespace XRpgLibrary.PokemonClasses
 {
+    public enum Gender { Male, Female };
 
     public class Pokemon
     {
@@ -19,6 +20,8 @@ namespace XRpgLibrary.PokemonClasses
         
         string name;
         int level;
+        Gender gender;
+        int happiness;
         ElementType type1;
         ElementType type2;
         Nature nature;
@@ -54,15 +57,18 @@ namespace XRpgLibrary.PokemonClasses
         string pokedexEntry;
         int heightFeet;
         int heightInches;
-        decimal weight;
+        float weight;
         int caputreRate;
         int baseEggSteps;
         int baseHappiness;
         int xpGrowth;
         int fleeFlag;
 
-        decimal genderRatioMale;
-        decimal genderRatioFemale;
+        string imageMale;
+        string imageFemale;
+
+        float genderRatioMale;
+        float genderRatioFemale;
 
         int criticalStage = 0;
         int attackStage = 0;
@@ -365,7 +371,7 @@ namespace XRpgLibrary.PokemonClasses
         /// <summary>
         /// Gets (or sets privately) the weight.
         /// </summary>
-        public decimal Weight
+        public float Weight
         {
             get { return weight; }
             private set { weight = value; }
@@ -419,7 +425,7 @@ namespace XRpgLibrary.PokemonClasses
         /// <summary>
         /// Gets (or sets privately) the genderratiomale.
         /// </summary>
-        public decimal GenderRatioMale
+        public float GenderRatioMale
         {
             get { return genderRatioMale; }
             private set { genderRatioMale = value; }
@@ -428,10 +434,15 @@ namespace XRpgLibrary.PokemonClasses
         /// <summary>
         /// Gets (or sets privately) the genderratiofemale.
         /// </summary>
-        public decimal GenderRatioFemale
+        public float GenderRatioFemale
         {
             get { return genderRatioFemale; }
             private set { genderRatioFemale = value; }
+        }
+
+        public AttributePair CurrentHP
+        {
+            get { return currentHP; }
         }
 
         #endregion
@@ -524,7 +535,7 @@ namespace XRpgLibrary.PokemonClasses
 
         #region Constructor
 
-        public Pokemon()
+        private Pokemon()
         {
             levelUpMoves = new Dictionary<int, Attack>();
             eggMoves = new List<Attack>();
@@ -619,6 +630,70 @@ namespace XRpgLibrary.PokemonClasses
                 default:
                     return 1f;
             }
+        }
+
+        public static Pokemon FromPokemonData(PokemonData data)
+        {
+            Pokemon pokemon = new Pokemon();
+
+            pokemon.name = data.Name;
+            pokemon.level = data.Level;
+            pokemon.gender = data.Gender;
+            pokemon.happiness = data.Happiness;
+            pokemon.type1 = data.Type1;
+            pokemon.type2 = data.Type2;
+            pokemon.nature = data.Nature;
+            pokemon.ability = data.Ability;
+            pokemon.levelUpMoves = data.LevelUpMoves;
+            pokemon.eggMoves = data.EggMoves;
+            pokemon.tutoredMoves = data.TutoredMoves;
+            pokemon.learnableTMs = data.LearnableTMs;
+            pokemon.moveset = data.Moveset;
+
+            pokemon.baseHP = data.BaseHP;
+            pokemon.baseAttack = data.BaseAttack;
+            pokemon.baseDefense = data.BaseDefense;
+            pokemon.baseSAttack = data.BaseSAttack;
+            pokemon.baseSDefense = data.BaseSDefense;
+            pokemon.baseSpeed = data.BaseSpeed;
+
+            //pokemon.hpIV = data.HPIV;
+            pokemon.hpIV = 25;
+            pokemon.attackIV = data.AttackIV;
+            pokemon.defenseIV = data.DefenseIV;
+            pokemon.sAttackIV = data.SAttackIV;
+            pokemon.sDefenseIV = data.SAttackIV;
+            pokemon.speedIV = data.SpeedIV;
+
+            pokemon.evolveTo = data.EvolveTo;
+            pokemon.evolveFrom = data.EvolveFrom;
+            pokemon.evolveCondition = data.EvolveCondition;
+
+            pokemon.eggGroup = data.EggGroup;
+
+            pokemon.pokedexNum = data.PokedexNum;
+            pokemon.pokedexEntry = data.PokedexEntry;
+            pokemon.pokedexClassification = data.PokedexClassification;
+            pokemon.heightFeet = data.HeightFeet;
+            pokemon.heightInches = data.HeightInches;
+            pokemon.weight = data.Weight;
+            pokemon.caputreRate = data.CaputreRate;
+            pokemon.baseEggSteps = data.BaseEggSteps;
+            pokemon.baseHappiness = data.BaseHappiness;
+            pokemon.xpGrowth = data.XPGrowth;
+            pokemon.fleeFlag = data.FleeFlag;
+
+            pokemon.imageMale = data.ImageMale;
+            pokemon.imageFemale = data.ImageFemale;
+
+            pokemon.genderRatioMale = data.GenderRatioMale;
+            pokemon.genderRatioFemale = data.GenderRatioFemale;
+
+            //pokemon.currentHP = data.CurrentHP;
+            pokemon.currentHP = new AttributePair(pokemon.HPStat);
+            pokemon.currentConditions = data.CurrentConditions;
+
+            return pokemon;
         }
 
         #endregion

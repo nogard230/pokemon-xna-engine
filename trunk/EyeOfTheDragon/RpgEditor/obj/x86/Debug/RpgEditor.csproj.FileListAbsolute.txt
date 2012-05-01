@@ -50,3 +50,4 @@ C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\RPGEdito
 C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\RPGEditor\obj\x86\Debug\RpgEditor.Properties.Resources.resources
 C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\RPGEditor\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\RPGEditor\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\RPGEditor\obj\x86\Debug\RpgEditor.FormPokemonDetails.resources

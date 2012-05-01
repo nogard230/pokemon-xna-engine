@@ -251,7 +251,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\GUI\hpbars.xnb</Output>
-      <Time>2012-04-29T21:20:48.83963-06:00</Time>
+      <Time>2012-04-29T21:31:36.0856503-06:00</Time>
     </Item>
     <Item>
       <Source>Game\Classes\Fighter.xml</Source>
@@ -393,7 +393,7 @@
     <Assemblies>
       <Assembly>
         <Key>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\XRpgLibrary\bin\x86\Debug\XRpgLibrary.dll</Key>
-        <Value>2012-04-29T20:29:11.5584756-06:00</Value>
+        <Value>2012-04-30T19:59:40.619981-06:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>

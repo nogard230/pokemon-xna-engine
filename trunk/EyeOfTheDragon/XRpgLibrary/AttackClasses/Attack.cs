@@ -90,14 +90,24 @@ namespace XRpgLibrary.AttackClasses
 
         #region Constructor
 
-        public Attack()
+        public Attack(string name)
         {
+            Name = name;
             effects = new List<AttackEffect>();
         }
 
         #endregion
 
         #region Methods
+
+        public bool useAttack(Pokemon user, Pokemon target)
+        {
+            foreach (AttackEffect effect in effects)
+            {
+                effect.ApplyEffect(user, target, this);
+            }
+            return true;
+        }
 
         #endregion
     }
