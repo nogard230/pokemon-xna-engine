@@ -15,6 +15,7 @@ namespace XRpgLibrary.Controls
 
         int selectedControl = 0;
         bool acceptInput = true;
+        bool visible = true;
 
         static SpriteFont spriteFont;
 
@@ -27,6 +28,19 @@ namespace XRpgLibrary.Controls
         {
             get { return acceptInput; }
             set { acceptInput = value; }
+        }
+
+        public bool Visible
+        {
+            get { return visible; }
+            set
+            {
+                foreach (Control c in this)
+                {
+                    c.Visible = value;
+                }
+                AcceptInput = value;
+            }
         }
 
         #endregion

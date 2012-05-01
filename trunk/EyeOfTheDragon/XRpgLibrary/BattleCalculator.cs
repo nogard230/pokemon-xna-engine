@@ -38,7 +38,7 @@ namespace XRpgLibrary
                 defense = target.SpecialDefenseStat;
             }
 
-            int totalDamage = (int)((((2 * user.Level + 10) / 250) * (attack / defense) * basePower + 2) * modifier);
+            int totalDamage = (int)((((2 * user.Level + 10) / 250.0) * (attack / (double) defense) * basePower + 2) * modifier);
 
             return totalDamage;
         }

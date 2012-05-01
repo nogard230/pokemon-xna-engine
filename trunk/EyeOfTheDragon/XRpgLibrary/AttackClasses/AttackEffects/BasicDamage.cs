@@ -9,8 +9,8 @@ namespace XRpgLibrary.AttackClasses.AttackEffects
 {
     public class BasicDamage : AttackEffect
     {
-        public BasicDamage(int damage, float effectPErcentage)
-            : base(damage, effectPErcentage)
+        public BasicDamage(int damage, float effectPercentage)
+            : base(damage, effectPercentage)
         {
 
         }
