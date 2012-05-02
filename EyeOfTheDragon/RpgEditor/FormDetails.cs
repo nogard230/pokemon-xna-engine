@@ -12,6 +12,7 @@ using RpgLibrary.ItemClasses;
 using RpgLibrary.CharacterClasses;
 using RpgLibrary.SkillClasses;
 using XRpgLibrary.PokemonClasses;
+using XRpgLibrary.AttackClasses;
 
 namespace RpgEditor
 {
@@ -22,6 +23,7 @@ namespace RpgEditor
         protected static ItemDataManager itemManager;
         protected static EntityDataManager entityDataManager;
         protected static SkillDataManager skillManager;
+        protected static AttackDataManager attackManager;
 
         #endregion
 
@@ -42,6 +44,11 @@ namespace RpgEditor
             get { return skillManager; }
         }
 
+        public static AttackDataManager AttackManager
+        {
+            get { return attackManager; }
+        }
+
         #endregion
 
         #region Constructor Region
@@ -58,6 +65,9 @@ namespace RpgEditor
 
             if (FormDetails.skillManager == null)
                 skillManager = new SkillDataManager();
+
+            if (FormDetails.attackManager == null)
+                attackManager = new AttackDataManager();
 
             this.FormClosing += new FormClosingEventHandler(FormDetails_FormClosing);
         }
@@ -171,6 +181,16 @@ namespace RpgEditor
             }
         }
 
+        public static void WriteAttackData()
+        {
+            foreach (string s in AttackManager.AttackData.Keys)
+            {
+                XnaSerializer.Serialize<AttackData>(
+                    FormMain.AttackPath + @"\" + s + ".xml",
+                    AttackManager.AttackData[s]);
+            }
+        }
+
         public static void ReadEntityData()
         {
             entityDataManager = new EntityDataManager();
@@ -280,6 +300,19 @@ namespace RpgEditor
             {
                 SkillData chestData = XnaSerializer.Deserialize<SkillData>(s);
                 skillManager.SkillData.Add(chestData.Name, chestData);
+            }
+        }
+
+        public static void ReadAttackData()
+        {
+            attackManager = new AttackDataManager();
+
+            string[] fileNames = Directory.GetFiles(FormMain.AttackPath, "*.xml");
+
+            foreach (string s in fileNames)
+            {
+                AttackData attackData = XnaSerializer.Deserialize<AttackData>(s);
+                attackManager.AttackData.Add(attackData.Name, attackData);
             }
         }
         #endregion

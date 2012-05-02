@@ -8,7 +8,7 @@ using XRpgLibrary.BattleClasses;
 
 namespace XRpgLibrary.AttackClasses.AttackEffects
 {
-    class ModifyStat : AttackEffect
+    public class ModifyStat : AttackEffect
     {
         Stat stat;
         int modifyAmount;

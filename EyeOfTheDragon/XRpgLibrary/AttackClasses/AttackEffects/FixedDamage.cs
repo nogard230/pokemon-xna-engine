@@ -7,7 +7,7 @@ using XRpgLibrary.PokemonClasses;
 
 namespace XRpgLibrary.AttackClasses.AttackEffects
 {
-    class FixedDamage : AttackEffect
+    public class FixedDamage : AttackEffect
     {
         public FixedDamage(int damage, float effectPercentage)
             : base(damage, effectPercentage)

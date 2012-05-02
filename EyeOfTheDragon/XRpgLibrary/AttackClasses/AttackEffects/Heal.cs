@@ -7,7 +7,7 @@ using XRpgLibrary.PokemonClasses;
 
 namespace XRpgLibrary.AttackClasses.AttackEffects
 {
-    class Heal : AttackEffect
+    public class Heal : AttackEffect
     {
         float heal;
         public Heal(float healPercentage, float effectPercentage)

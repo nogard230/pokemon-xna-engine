@@ -50,7 +50,6 @@ namespace RpgEditor
 
         void FormPokemonDetails_Load(object sender, EventArgs e)
         {
-            cboSType.Items.Add("None");
             foreach (ElementType element in Enum.GetValues(typeof(ElementType)))
             {
                 cboPType.Items.Add(element);
@@ -61,6 +60,7 @@ namespace RpgEditor
             {
                 cboExpGrowth.Items.Add(rate);
             }
+            cboSType.SelectedIndex = cboSType.Items.Count - 1;
 
             cboExpGrowth.SelectedIndex = 0;
             cboPType.SelectedIndex = 0;
@@ -70,8 +70,8 @@ namespace RpgEditor
             {
                 tbName.Text = pokemon.Name;
                 tbUniqueID.Text = pokemon.UniqueID;
-                cboPType.SelectedText = pokemon.Type1.ToString();
-                cboSType.SelectedText = pokemon.Type2.ToString();
+                cboPType.SelectedItem = pokemon.Type1;
+                cboSType.SelectedItem = pokemon.Type2;
                 mtbBaseHP.Text = pokemon.BaseHP.ToString();
                 mtbBaseAttack.Text = pokemon.BaseAttack.ToString();
                 mtbBaseDefense.Text = pokemon.BaseDefense.ToString();
@@ -86,7 +86,7 @@ namespace RpgEditor
                 mtbCaptureRate.Text = pokemon.CaputreRate.ToString();
                 mtbBaseEggSteps.Text = pokemon.BaseEggSteps.ToString();
                 mtbBaseHappiness.Text = pokemon.BaseHappiness.ToString();
-                cboExpGrowth.SelectedText = pokemon.XPGrowth.ToString();
+                cboExpGrowth.SelectedItem = pokemon.XPGrowth;
 
                 mtbPokedexNum.Text = pokemon.PokedexNum.ToString();
                 tbPokedexClassification.Text = pokemon.PokedexClassification;
@@ -107,6 +107,8 @@ namespace RpgEditor
 
         void btnOK_Click(object sender, EventArgs e)
         {
+            pokemon = new PokemonData();
+
             string name;
             int level;
             Gender gender;
@@ -283,7 +285,7 @@ namespace RpgEditor
                 return;
             }
 
-            pokemon = new PokemonData();
+            
             pokemon.Name = tbName.Text;
             pokemon.UniqueID = tbUniqueID.Text;
             
