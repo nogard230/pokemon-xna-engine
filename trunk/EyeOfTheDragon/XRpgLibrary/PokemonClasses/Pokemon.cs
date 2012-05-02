@@ -18,6 +18,25 @@ namespace XRpgLibrary.PokemonClasses
     public enum Gender { Male, Female };
     public enum EXPRate { Erratic, Fast, MediumFast, MediumSlow, Slow, Fluctuating };
 
+    public struct LevelUpMove
+    {
+        
+        public int level;
+        public string attack;
+
+        public LevelUpMove(int l, string a)
+        {
+            level = l;
+            attack = a;
+        }
+
+        public string ToString()
+        {
+            string toString = attack + ", " + level;
+            return toString;
+        }
+    }
+
     public class Pokemon
     {
         #region Field Region
@@ -32,9 +51,9 @@ namespace XRpgLibrary.PokemonClasses
         ElementType type2;
         Nature nature;
         Ability ability;
-        Dictionary<int, Attack> levelUpMoves;
-        List<Attack> eggMoves;
-        List<Attack> tutoredMoves;
+        List<LevelUpMove> levelUpMoves;
+        List<string> eggMoves;
+        List<string> tutoredMoves;
         List<int> learnableTMs;
         List<Attack> moveset;
 
@@ -52,8 +71,8 @@ namespace XRpgLibrary.PokemonClasses
         int sDefenseIV;
         int speedIV;
 
-        List<Pokemon> evolveTo;
-        Pokemon evolveFrom;
+        List<string> evolveTo;
+        string evolveFrom;
         EvolveCondition evolveCondition;
 
         string eggGroup;
@@ -161,7 +180,7 @@ namespace XRpgLibrary.PokemonClasses
         /// <summary>
         /// Gets (or sets privately) the levelupmoves.
         /// </summary>
-        public Dictionary<int, Attack> LevelUpMoves
+        public List<LevelUpMove> LevelUpMoves
         {
             get { return levelUpMoves; }
             private set { levelUpMoves = value; }
@@ -170,7 +189,7 @@ namespace XRpgLibrary.PokemonClasses
         /// <summary>
         /// Gets (or sets privately) the eggmoves.
         /// </summary>
-        public List<Attack> EggMoves
+        public List<string> EggMoves
         {
             get { return eggMoves; }
             private set { eggMoves = value; }
@@ -179,7 +198,7 @@ namespace XRpgLibrary.PokemonClasses
         /// <summary>
         /// Gets (or sets privately) the tutoredmoves.
         /// </summary>
-        public List<Attack> TutoredMoves
+        public List<string> TutoredMoves
         {
             get { return tutoredMoves; }
             private set { tutoredMoves = value; }
@@ -314,7 +333,7 @@ namespace XRpgLibrary.PokemonClasses
         /// <summary>
         /// Gets (or sets privately) the evolveto.
         /// </summary>
-        public List<Pokemon> EvolveTo
+        public List<string> EvolveTo
         {
             get { return evolveTo; }
             private set { evolveTo = value; }
@@ -323,7 +342,7 @@ namespace XRpgLibrary.PokemonClasses
         /// <summary>
         /// Gets (or sets privately) the evolvefrom.
         /// </summary>
-        public Pokemon EvolveFrom
+        public string EvolveFrom
         {
             get { return evolveFrom; }
             private set { evolveFrom = value; }
@@ -648,12 +667,12 @@ namespace XRpgLibrary.PokemonClasses
 
         private Pokemon()
         {
-            levelUpMoves = new Dictionary<int, Attack>();
-            eggMoves = new List<Attack>();
-            tutoredMoves = new List<Attack>();
+            levelUpMoves = new List<LevelUpMove>();
+            eggMoves = new List<string>();
+            tutoredMoves = new List<string>();
             learnableTMs = new List<int>();
             moveset = new List<Attack>();
-            evolveTo = new List<Pokemon>();
+            evolveTo = new List<string>();
         }
 
         #endregion

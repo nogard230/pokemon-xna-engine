@@ -28,9 +28,9 @@ namespace XRpgLibrary.PokemonClasses
         public ElementType Type2;
         public Nature Nature;
         public Ability Ability;
-        public Dictionary<int, Attack> LevelUpMoves;
-        public List<Attack> EggMoves;
-        public List<Attack> TutoredMoves;
+        public List<LevelUpMove> LevelUpMoves;
+        public List<string> EggMoves;
+        public List<string> TutoredMoves;
         public List<int> LearnableTMs;
         public List<Attack> Moveset;
 
@@ -48,8 +48,8 @@ namespace XRpgLibrary.PokemonClasses
         public int SDefenseIV;
         public int SpeedIV;
 
-        public List<Pokemon> EvolveTo;
-        public Pokemon EvolveFrom;
+        public List<string> EvolveTo;
+        public string EvolveFrom;
         public EvolveCondition EvolveCondition;
 
         public string EggGroup;
@@ -81,13 +81,13 @@ namespace XRpgLibrary.PokemonClasses
 
         public PokemonData()
         {
-            LevelUpMoves = new Dictionary<int, Attack>();
-            EggMoves = new List<Attack>();
-            TutoredMoves = new List<Attack>();
+            LevelUpMoves = new List<LevelUpMove>();
+            EggMoves = new List<string>();
+            TutoredMoves = new List<string>();
             LearnableTMs = new List<int>();
             Moveset = new List<Attack>();
 
-            EvolveTo = new List<Pokemon>();
+            EvolveTo = new List<string>();
 
             CurrentConditions = new List<StatusType>();
         }
@@ -105,13 +105,13 @@ namespace XRpgLibrary.PokemonClasses
             //toString += ", " + Nature.ToString();
             //toString += ", " + Ability.ToString();
 
-            foreach (int level in LevelUpMoves.Keys)
-                toString += ", " + level + "+" + LevelUpMoves[level].ToString();
+            foreach (LevelUpMove move in LevelUpMoves)
+                toString += ", " + move.ToString();
 
-            foreach (Attack attack in EggMoves)
+            foreach (string attack in EggMoves)
                 toString += ", " + attack.ToString();
 
-            foreach (Attack attack in TutoredMoves)
+            foreach (string attack in TutoredMoves)
                 toString += ", " + attack.ToString();
 
             foreach (int tm in LearnableTMs)
@@ -134,7 +134,7 @@ namespace XRpgLibrary.PokemonClasses
             toString += ", " + SDefenseIV;
             toString += ", " + SpeedIV;
 
-            foreach(Pokemon pokemon in EvolveTo)
+            foreach (string pokemon in EvolveTo)
                 toString += ", " + pokemon.ToString();
 
             //toString += ", " + EvolveFrom.ToString();

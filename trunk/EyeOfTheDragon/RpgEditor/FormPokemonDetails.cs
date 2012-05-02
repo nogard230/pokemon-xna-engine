@@ -22,6 +22,7 @@ namespace RpgEditor
         #region Field Region
 
         PokemonData pokemon;
+        List<LevelUpMove> levelUpMoves;
 
         #endregion
 
@@ -44,12 +45,16 @@ namespace RpgEditor
 
             btnOK.Click += new EventHandler(btnOK_Click);
             btnCancel.Click += new EventHandler(btnCancel_Click);
+
+            btnAdd.Click += new EventHandler(btnAdd_Click);
+            btnRemove.Click += new EventHandler(btnRemove_Click);
         }
 
         #region Event Handler Region
 
         void FormPokemonDetails_Load(object sender, EventArgs e)
         {
+            levelUpMoves = new List<LevelUpMove>();
             foreach (ElementType element in Enum.GetValues(typeof(ElementType)))
             {
                 cboPType.Items.Add(element);
@@ -61,6 +66,11 @@ namespace RpgEditor
                 cboExpGrowth.Items.Add(rate);
             }
             cboSType.SelectedIndex = cboSType.Items.Count - 1;
+
+            foreach (string s in FormDetails.AttackManager.AttackData.Keys)
+            {
+                lbAttacks.Items.Add(s);
+            }
 
             cboExpGrowth.SelectedIndex = 0;
             cboPType.SelectedIndex = 0;
@@ -93,6 +103,12 @@ namespace RpgEditor
                 mtbHeight.Text = (pokemon.HeightFeet * 12 + pokemon.HeightInches).ToString();
                 mtbWeight.Text = pokemon.Weight.ToString();
                 tbPokedexEntry.Text = pokemon.PokedexEntry;
+
+                foreach (LevelUpMove move in pokemon.LevelUpMoves)
+                {
+                    lbLevelUpAttacks.Items.Add(move);
+                    levelUpMoves.Add(move);
+                }
             }
         }
 
@@ -118,11 +134,6 @@ namespace RpgEditor
             ElementType type2;
             Nature nature;
             Ability ability;
-            Dictionary<int, Attack> levelUpMoves;
-            List<Attack> eggMoves;
-            List<Attack> tutoredMoves;
-            List<string> learnableTMs;
-            List<Attack> moveset;
 
             int baseHP;
             int baseAttack;
@@ -310,6 +321,8 @@ namespace RpgEditor
             pokemon.Weight = weight;
             pokemon.PokedexEntry = tbPokedexEntry.Text;
 
+            pokemon.LevelUpMoves = levelUpMoves;
+
             this.FormClosing -= FormPokemonDetails_FormClosing;
             this.Close();
         }
@@ -319,6 +332,40 @@ namespace RpgEditor
             pokemon = null;
             this.FormClosing -= FormPokemonDetails_FormClosing;
             this.Close();
+        }
+
+        void btnAdd_Click(object sender, EventArgs e)
+        {
+            string move = lbAttacks.SelectedItem.ToString();
+            int level = 1;
+            if (!int.TryParse(mtbLevelLearned.Text, out level))
+            {
+                MessageBox.Show("Level must be an integer value.");
+                return;
+            }
+            LevelUpMove levelMove = new LevelUpMove(level, move);
+
+            lbLevelUpAttacks.Items.Add(levelMove.ToString());
+            levelUpMoves.Add(levelMove);
+        }
+
+        void btnRemove_Click(object sender, EventArgs e)
+        {
+            if (lbLevelUpAttacks.SelectedItem != null)
+            {
+                string name = lbLevelUpAttacks.SelectedItem.ToString();
+
+                DialogResult result = MessageBox.Show(
+                    "Are you sure you want to delete " + name + "?",
+                    "Delete",
+                    MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    levelUpMoves.RemoveAt(lbLevelUpAttacks.SelectedIndex);
+                    lbLevelUpAttacks.Items.RemoveAt(lbLevelUpAttacks.SelectedIndex);
+                }
+            }
         }
 
         #endregion
