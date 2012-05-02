@@ -9,6 +9,7 @@ using RpgLibrary.EffectClasses;
 using XRpgLibrary.AbilityClasses;
 using XRpgLibrary.NatureClasses;
 using RpgLibrary.CharacterClasses;
+using XRpgLibrary.ItemClasses;
 
 namespace XRpgLibrary.PokemonClasses
 {
@@ -17,10 +18,12 @@ namespace XRpgLibrary.PokemonClasses
 
         #region Field Region
 
+        public string UniqueID;
         public string Name;
         public int Level;
         public Gender Gender;
         public int Happiness;
+        public GameItem HoldItem;
         public ElementType Type1;
         public ElementType Type2;
         public Nature Nature;
@@ -28,7 +31,7 @@ namespace XRpgLibrary.PokemonClasses
         public Dictionary<int, Attack> LevelUpMoves;
         public List<Attack> EggMoves;
         public List<Attack> TutoredMoves;
-        public List<TMItem> LearnableTMs;
+        public List<int> LearnableTMs;
         public List<Attack> Moveset;
 
         public int BaseHP;
@@ -60,7 +63,7 @@ namespace XRpgLibrary.PokemonClasses
         public int CaputreRate;
         public int BaseEggSteps;
         public int BaseHappiness;
-        public int XPGrowth;
+        public EXPRate XPGrowth;
         public int FleeFlag;
 
         public string ImageMale;
@@ -81,7 +84,7 @@ namespace XRpgLibrary.PokemonClasses
             LevelUpMoves = new Dictionary<int, Attack>();
             EggMoves = new List<Attack>();
             TutoredMoves = new List<Attack>();
-            LearnableTMs = new List<TMItem>();
+            LearnableTMs = new List<int>();
             Moveset = new List<Attack>();
 
             EvolveTo = new List<Pokemon>();
@@ -91,14 +94,16 @@ namespace XRpgLibrary.PokemonClasses
 
         public override string ToString()
         {
-            string toString = Name;
+            string toString = UniqueID;
+            toString += ", " + Name;
             toString += ", " + Level;
             toString += ", " + Gender.ToString();
             toString += ", " + Happiness;
+            //toString += ", " + HoldItem.ToString();
             toString += ", " + Type1.ToString();
             toString += ", " + Type2.ToString();
-            toString += ", " + Nature.ToString();
-            toString += ", " + Ability.ToString();
+            //toString += ", " + Nature.ToString();
+            //toString += ", " + Ability.ToString();
 
             foreach (int level in LevelUpMoves.Keys)
                 toString += ", " + level + "+" + LevelUpMoves[level].ToString();
@@ -109,7 +114,7 @@ namespace XRpgLibrary.PokemonClasses
             foreach (Attack attack in TutoredMoves)
                 toString += ", " + attack.ToString();
 
-            foreach (TMItem tm in LearnableTMs)
+            foreach (int tm in LearnableTMs)
                 toString += ", " + tm.ToString();
 
             foreach (Attack attack in Moveset)
@@ -132,8 +137,8 @@ namespace XRpgLibrary.PokemonClasses
             foreach(Pokemon pokemon in EvolveTo)
                 toString += ", " + pokemon.ToString();
 
-            toString += ", " + EvolveFrom.ToString();
-            toString += ", " + EvolveCondition.ToString();
+            //toString += ", " + EvolveFrom.ToString();
+            //toString += ", " + EvolveCondition.ToString();
 
             toString += ", " + EggGroup;
 
@@ -154,7 +159,7 @@ namespace XRpgLibrary.PokemonClasses
 
             toString += ", " + GenderRatioMale;
             toString += ", " + GenderRatioFemale;
-            toString += ", " + CurrentHP.ToString();
+            //toString += ", " + CurrentHP.ToString();
             
             foreach(StatusType status in CurrentConditions)
                 toString += ", " + status.ToString();

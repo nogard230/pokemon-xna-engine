@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+
+using XRpgLibrary.PokemonClasses;
 
 namespace RpgEditor
 {
@@ -15,22 +18,22 @@ namespace RpgEditor
         {
             InitializeComponent();
 
-            //btnAdd.Click += new EventHandler(btnAdd_Click);
-            //btnEdit.Click += new EventHandler(btnEdit_Click);
-            //btnDelete.Click += new EventHandler(btnDelete_Click);
+            btnAdd.Click += new EventHandler(btnAdd_Click);
+            btnEdit.Click += new EventHandler(btnEdit_Click);
+            btnDelete.Click += new EventHandler(btnDelete_Click);
         }
 
-        /*#region Button Event Handler Region
+        #region Button Event Handler Region
 
         void btnAdd_Click(object sender, EventArgs e)
         {
-            using (FormMiscItemDetails frmMiscDetails = new FormMiscItemDetails())
+            using (FormPokemonDetails frmPokemonDetails = new FormPokemonDetails())
             {
-                frmMiscDetails.ShowDialog();
+                frmPokemonDetails.ShowDialog();
 
-                if (frmMiscDetails.MiscItem != null)
+                if (frmPokemonDetails.Pokemon != null)
                 {
-                    AddMiscItem(frmMiscDetails.MiscItem);
+                    AddPokemon(frmPokemonDetails.Pokemon);
                 }
             }
         }
@@ -43,25 +46,25 @@ namespace RpgEditor
                 string[] parts = detail.Split(',');
                 string entity = parts[0].Trim();
 
-                MiscItemData data = itemManager.MiscItemData[entity];
-                MiscItemData newData = null;
+                PokemonData data = entityDataManager.PokemonData[entity];
+                PokemonData newData = null;
 
-                using (FormMiscItemDetails frmMiscItemData = new FormMiscItemDetails())
+                using (FormPokemonDetails frmPokemonDetails = new FormPokemonDetails())
                 {
-                    frmMiscItemData.MiscItem = data;
-                    frmMiscItemData.ShowDialog();
+                    frmPokemonDetails.Pokemon = data;
+                    frmPokemonDetails.ShowDialog();
 
-                    if (frmMiscItemData.MiscItem == null)
+                    if (frmPokemonDetails.Pokemon == null)
                         return;
 
-                    if (frmMiscItemData.MiscItem.Name == entity)
+                    if (frmPokemonDetails.Pokemon.UniqueID == entity)
                     {
-                        itemManager.MiscItemData[entity] = frmMiscItemData.MiscItem;
+                        entityDataManager.PokemonData[entity] = frmPokemonDetails.Pokemon;
                         FillListBox();
                         return;
                     }
 
-                    newData = frmMiscItemData.MiscItem;
+                    newData = frmPokemonDetails.Pokemon;
                 }
 
                 DialogResult result = MessageBox.Show(
@@ -72,14 +75,14 @@ namespace RpgEditor
                 if (result == DialogResult.No)
                     return;
 
-                if (itemManager.MiscItemData.ContainsKey(newData.Name))
+                if (entityDataManager.PokemonData.ContainsKey(newData.Name))
                 {
                     MessageBox.Show("Entry already exists. Use Edit to modify the entry.");
                     return;
                 }
 
                 lbDetails.Items.Add(newData);
-                itemManager.MiscItemData.Add(newData.Name, newData);
+                entityDataManager.PokemonData.Add(newData.UniqueID, newData);
             }
         }
 
@@ -99,10 +102,10 @@ namespace RpgEditor
                 if (result == DialogResult.Yes)
                 {
                     lbDetails.Items.RemoveAt(lbDetails.SelectedIndex);
-                    itemManager.MiscItemData.Remove(entity);
+                    entityDataManager.PokemonData.Remove(entity);
 
-                    if (File.Exists(FormMain.ItemPath + @"\Misc\" + entity + ".xml"))
-                        File.Delete(FormMain.ItemPath + @"\Misc\" + entity + ".xml");
+                    if (File.Exists(FormMain.ItemPath + @"\Pokemon\" + entity + ".xml"))
+                        File.Delete(FormMain.ItemPath + @"\Pokemon\" + entity + ".xml");
                 }
             }
         }
@@ -115,31 +118,31 @@ namespace RpgEditor
         {
             lbDetails.Items.Clear();
 
-            foreach (string s in FormDetails.ItemManager.MiscItemData.Keys)
-                lbDetails.Items.Add(FormDetails.ItemManager.MiscItemData[s]);
+            foreach (string s in FormDetails.entityDataManager.PokemonData.Keys)
+                lbDetails.Items.Add(FormDetails.entityDataManager.PokemonData[s]);
         }
 
-        private void AddMiscItem(MiscItemData miscItemData)
+        private void AddPokemon(PokemonData pokemonData)
         {
-            if (FormDetails.ItemManager.MiscItemData.ContainsKey(miscItemData.Name))
+            if (FormDetails.entityDataManager.PokemonData.ContainsKey(pokemonData.UniqueID))
             {
                 DialogResult result = MessageBox.Show(
-                    miscItemData.Name + " already exists. Overwrite it?",
-                    "Existing Misc Item",
+                    pokemonData.UniqueID + " already exists. Overwrite it?",
+                    "Existing Pokemon",
                     MessageBoxButtons.YesNo);
 
                 if (result == DialogResult.No)
                     return;
 
-                itemManager.MiscItemData[miscItemData.Name] = miscItemData;
+                entityDataManager.PokemonData[pokemonData.UniqueID] = pokemonData;
                 FillListBox();
                 return;
             }
 
-            itemManager.MiscItemData.Add(miscItemData.Name, miscItemData);
-            lbDetails.Items.Add(miscItemData);
+            entityDataManager.PokemonData.Add(pokemonData.UniqueID, pokemonData);
+            lbDetails.Items.Add(pokemonData);
         }
 
-        #endregion*/
+        #endregion
     }
 }

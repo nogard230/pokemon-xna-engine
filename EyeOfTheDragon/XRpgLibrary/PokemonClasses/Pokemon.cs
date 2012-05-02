@@ -9,19 +9,25 @@ using RpgLibrary.EffectClasses;
 using XRpgLibrary.AbilityClasses;
 using XRpgLibrary.NatureClasses;
 using RpgLibrary.CharacterClasses;
+using XRpgLibrary.ItemClasses;
+
+using Microsoft.Xna.Framework;
 
 namespace XRpgLibrary.PokemonClasses
 {
     public enum Gender { Male, Female };
+    public enum EXPRate { Erratic, Fast, MediumFast, MediumSlow, Slow, Fluctuating };
 
     public class Pokemon
     {
         #region Field Region
-        
+
+        string uniqueID;
         string name;
         int level;
         Gender gender;
         int happiness;
+        GameItem holdItem;
         ElementType type1;
         ElementType type2;
         Nature nature;
@@ -29,7 +35,7 @@ namespace XRpgLibrary.PokemonClasses
         Dictionary<int, Attack> levelUpMoves;
         List<Attack> eggMoves;
         List<Attack> tutoredMoves;
-        List<TMItem> learnableTMs;
+        List<int> learnableTMs;
         List<Attack> moveset;
 
         int baseHP;
@@ -61,7 +67,7 @@ namespace XRpgLibrary.PokemonClasses
         int caputreRate;
         int baseEggSteps;
         int baseHappiness;
-        int xpGrowth;
+        EXPRate xpGrowth;
         int fleeFlag;
 
         string imageMale;
@@ -182,7 +188,7 @@ namespace XRpgLibrary.PokemonClasses
         /// <summary>
         /// Gets (or sets privately) the learnabletms.
         /// </summary>
-        public List<TMItem> LearnableTMs
+        public List<int> LearnableTMs
         {
             get { return learnableTMs; }
             private set { learnableTMs = value; }
@@ -425,7 +431,7 @@ namespace XRpgLibrary.PokemonClasses
         /// <summary>
         /// Gets (or sets privately) the xpgrowth.
         /// </summary>
-        public int XpGrowth
+        public EXPRate XpGrowth
         {
             get { return xpGrowth; }
             private set { xpGrowth = value; }
@@ -535,7 +541,7 @@ namespace XRpgLibrary.PokemonClasses
         {
             get
             { return criticalStage; }
-            private set { criticalStage = value; }
+            private set { criticalStage = (int)MathHelper.Clamp(value, 1, 5); }
         }
 
         /// <summary>
@@ -544,7 +550,7 @@ namespace XRpgLibrary.PokemonClasses
         public int AttackStage
         {
             get { return attackStage; }
-            private set { attackStage = value; }
+            private set { attackStage = (int) MathHelper.Clamp(value, -6, 6); }
         }
 
         /// <summary>
@@ -553,7 +559,7 @@ namespace XRpgLibrary.PokemonClasses
         public int DefenseStage
         {
             get { return defenseStage; }
-            private set { defenseStage = value; }
+            private set { defenseStage = (int)MathHelper.Clamp(value, -6, 6); }
         }
 
         /// <summary>
@@ -562,7 +568,7 @@ namespace XRpgLibrary.PokemonClasses
         public int SAttackStage
         {
             get { return sAttackStage; }
-            private set { sAttackStage = value; }
+            private set { sAttackStage = (int)MathHelper.Clamp(value, -6, 6); }
         }
 
         /// <summary>
@@ -571,7 +577,7 @@ namespace XRpgLibrary.PokemonClasses
         public int SDefenseStage
         {
             get { return sDefenseStage; }
-            private set { sDefenseStage = value; }
+            private set { sDefenseStage = (int)MathHelper.Clamp(value, -6, 6); }
         }
 
         /// <summary>
@@ -580,7 +586,7 @@ namespace XRpgLibrary.PokemonClasses
         public int SpeedStage
         {
             get { return speedStage; }
-            private set { speedStage = value; }
+            private set { speedStage = (int)MathHelper.Clamp(value, -6, 6); }
         }
 
         /// <summary>
@@ -589,7 +595,7 @@ namespace XRpgLibrary.PokemonClasses
         public int AccuracyStage
         {
             get { return accuracyStage; }
-            private set { accuracyStage = value; }
+            private set { accuracyStage = (int)MathHelper.Clamp(value, -6, 6); }
         }
 
         /// <summary>
@@ -598,7 +604,7 @@ namespace XRpgLibrary.PokemonClasses
         public int EvasionStage
         {
             get { return evasionStage; }
-            private set { evasionStage = value; }
+            private set { evasionStage = (int)MathHelper.Clamp(value, -6, 6); }
         }
 
         public float AttackStageModifier
@@ -626,6 +632,16 @@ namespace XRpgLibrary.PokemonClasses
             get { return statStageModifier(speedStage); }
         }
 
+        public float AccuracyStageModifier
+        {
+            get { return AEStageModifier(accuracyStage); }
+        }
+
+        public float EvasionStageModifier
+        {
+            get { return AEStageModifier(evasionStage); }
+        }
+
         #endregion
 
         #region Constructor
@@ -635,7 +651,7 @@ namespace XRpgLibrary.PokemonClasses
             levelUpMoves = new Dictionary<int, Attack>();
             eggMoves = new List<Attack>();
             tutoredMoves = new List<Attack>();
-            learnableTMs = new List<TMItem>();
+            learnableTMs = new List<int>();
             moveset = new List<Attack>();
             evolveTo = new List<Pokemon>();
         }
@@ -727,11 +743,125 @@ namespace XRpgLibrary.PokemonClasses
             }
         }
 
+        public float AEStageModifier(int stage)
+        {
+            switch (stage)
+            {
+                case -6:
+                    return 0.33f;
+
+                case -5:
+                    return 0.38f;
+
+                case -4:
+                    return 0.43f;
+
+                case -3:
+                    return 0.5f;
+
+                case -2:
+                    return 0.6f;
+
+                case -1:
+                    return 0.75f;
+
+                case 0:
+                    return 1;
+
+                case 1:
+                    return 1.33f;
+
+                case 2:
+                    return 1.67f;
+
+                case 3:
+                    return 2f;
+
+                case 4:
+                    return 2.33f;
+
+                case 5:
+                    return 2.67f;
+
+                case 6:
+                    return 3f;
+
+                default:
+                    return 1f;
+            }
+        }
+
+        public float CriticalStageModifier()
+        {
+            switch (criticalStage)
+            {
+                case 1:
+                    return 0.0625f;
+
+                case 2:
+                    return 0.125f;
+
+                case 3:
+                    return 0.25f;
+
+                case 4:
+                    return 0.333f;
+
+                case 5:
+                    return 0.5f;
+
+                default:
+                    return 0.0625f;
+            }
+        }
+
+        public void modifyStatStage(Stat stat, int modifyAmount)
+        {
+            switch (stat)
+            {
+                case Stat.Attack:
+                    AttackStage += modifyAmount;
+                    return;
+
+                case Stat.Defense:
+                    DefenseStage += modifyAmount;
+                    return;
+
+                case Stat.SAttack:
+                    SAttackStage += modifyAmount;
+                    return;
+
+                case Stat.SDefense:
+                    SDefenseStage += modifyAmount;
+                    return;
+
+                case Stat.Speed:
+                    SpeedStage += modifyAmount;
+                    return;
+
+                case Stat.Accuracy:
+                    AccuracyStage += modifyAmount;
+                    return;
+
+                case Stat.Evasion:
+                    EvasionStage += modifyAmount;
+                    return;
+
+                case Stat.Critical:
+                    CriticalStage += modifyAmount;
+                    return;
+
+                default:
+                    return;
+            }
+        }
+
         public static Pokemon FromPokemonData(PokemonData data)
         {
             Pokemon pokemon = new Pokemon();
 
             pokemon.name = data.Name;
+            pokemon.uniqueID = data.UniqueID;
             pokemon.level = data.Level;
             pokemon.gender = data.Gender;
             pokemon.happiness = data.Happiness;

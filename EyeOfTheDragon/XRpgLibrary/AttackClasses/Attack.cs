@@ -17,7 +17,7 @@ namespace XRpgLibrary.AttackClasses
         string name;
         ElementType attackElementType;
         AttributePair currentPP;
-        decimal accuracy;
+        float accuracy;
         List<AttackEffect> effects;
         AttackType attackType;
 
@@ -55,7 +55,7 @@ namespace XRpgLibrary.AttackClasses
         /// <summary>
         /// Gets or sets the accuracy.
         /// </summary>
-        public decimal Accuracy
+        public float Accuracy
         {
             get { return accuracy; }
             set { accuracy = value; }
@@ -93,11 +93,23 @@ namespace XRpgLibrary.AttackClasses
 
         public bool useAttack(Pokemon user, Pokemon target)
         {
-            foreach (AttackEffect effect in effects)
+            if (BattleCalculator.DoesHit(user, target, accuracy))
             {
-                effect.ApplyEffect(user, target, this);
+                Random r = new Random();
+                foreach (AttackEffect effect in effects)
+                {
+                    int hit = r.Next(100);
+                    if (hit <= effect.EffectPercentage * 100)
+                    {
+                        effect.ApplyEffect(user, target, this);
+                    }
+                }
+                return true;
             }
-            return true;
+            else
+            {
+                return false;
+            }
         }
 
         #endregion

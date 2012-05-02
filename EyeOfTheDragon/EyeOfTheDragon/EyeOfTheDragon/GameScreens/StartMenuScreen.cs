@@ -141,7 +141,10 @@ namespace EyesOfTheDragon.GameScreens
                 Transition(ChangeType.Push, GameRef.LoadGameScreen);
 
             if (sender == BattleTest)
+            {
+                GameRef.BattleScreen = new BattleScreen(Game, StateManager);
                 Transition(ChangeType.Push, GameRef.BattleScreen);
+            }
 
             if (sender == exitGame)
                 GameRef.Exit();

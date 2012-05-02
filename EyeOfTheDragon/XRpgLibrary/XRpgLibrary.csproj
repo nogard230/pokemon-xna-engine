@@ -95,7 +95,14 @@
     <Compile Include="AbilityClasses\Ability.cs" />
     <Compile Include="AttackClasses\Attack.cs" />
     <Compile Include="AttackClasses\AttackEffect.cs" />
+    <Compile Include="AttackClasses\AttackEffects\ApplyStatus.cs" />
     <Compile Include="AttackClasses\AttackEffects\BasicDamage.cs" />
+    <Compile Include="AttackClasses\AttackEffects\FixedDamage.cs" />
+    <Compile Include="AttackClasses\AttackEffects\Heal.cs" />
+    <Compile Include="AttackClasses\AttackEffects\ModifyStat.cs" />
+    <Compile Include="AttackClasses\AttackEffects\RecoilAttack.cs" />
+    <Compile Include="AttackClasses\AttackEffects\RepeatingAttack.cs" />
+    <Compile Include="AttackClasses\AttackEffects\StealHealth.cs" />
     <Compile Include="BattleClasses\BattleManager.cs" />
     <Compile Include="CharacterClasses\AttributePair.cs" />
     <Compile Include="CharacterClasses\Character.cs" />

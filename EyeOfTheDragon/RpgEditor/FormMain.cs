@@ -26,6 +26,7 @@ namespace RpgEditor
         //FormKey frmKey;
         FormChest frmChest;
         FormSkill frmSkill;
+        FormPokemon frmPokemon;
 
         static string gamePath = "";
         static string classPath = "";
@@ -33,6 +34,7 @@ namespace RpgEditor
         static string chestPath = "";
         static string keyPath = "";
         static string skillPath = "";
+        static string pokemonPath = "";
 
         #endregion
 
@@ -68,6 +70,11 @@ namespace RpgEditor
             get { return skillPath; }
         }
 
+        public static string PokemonPath
+        {
+            get { return pokemonPath; }
+        }
+
         #endregion
 
         #region Constructor Region
@@ -93,6 +100,8 @@ namespace RpgEditor
             chestsToolStripMenuItem.Click += new EventHandler(chestsToolStripMenuItem_Click);
 
             skillsToolStripMenuItem.Click += new EventHandler(skillsToolStripMenuItem_Click);
+
+            pokemonToolStripMenuItem.Click += new EventHandler(pokemonToolStripMenuItem_Click);
         }
 
         #endregion
@@ -136,6 +145,7 @@ namespace RpgEditor
                             itemPath = Path.Combine(gamePath, "Items");
                             chestPath = Path.Combine(gamePath, "Chests");
                             skillPath = Path.Combine(gamePath, "Skills");
+                            pokemonPath = Path.Combine(gamePath, "Pokemon");
 
                             if (Directory.Exists(gamePath))
                                 throw new Exception("Selected directory already exists.");
@@ -149,6 +159,7 @@ namespace RpgEditor
                             Directory.CreateDirectory(itemPath + @"\Key_Item");
                             Directory.CreateDirectory(chestPath);
                             Directory.CreateDirectory(skillPath);
+                            Directory.CreateDirectory(pokemonPath);
 
                             rolePlayingGame = frmNewGame.RolePlayingGame;
                             XnaSerializer.Serialize<RolePlayingGame>(gamePath + @"\Game.xml", rolePlayingGame);
@@ -163,6 +174,7 @@ namespace RpgEditor
                         itemsToolStripMenuItem.Enabled = true;
                         chestsToolStripMenuItem.Enabled = true;
                         skillsToolStripMenuItem.Enabled = true;
+                        pokemonToolStripMenuItem.Enabled = true;
                     }
                 }
             }
@@ -331,6 +343,18 @@ namespace RpgEditor
             frmSkill.BringToFront();
         }
 
+        void pokemonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmPokemon == null)
+            {
+                frmPokemon = new FormPokemon();
+                frmPokemon.MdiParent = this;
+            }
+
+            frmPokemon.Show();
+            frmPokemon.BringToFront();
+        }
+
         #endregion
 
         #region Method Region
@@ -343,6 +367,7 @@ namespace RpgEditor
             keyPath = Path.Combine(gamePath, "Keys");
             chestPath = Path.Combine(gamePath, "Chests");
             skillPath = Path.Combine(gamePath, "Skills");
+            pokemonPath = Path.Combine(gamePath, "Pokemon");
 
             if (!Directory.Exists(keyPath))
             {
@@ -397,22 +422,6 @@ namespace RpgEditor
 
             frmRecoveryItem.FillListBox();
 
-            //if (frmWeapon == null)
-            //{
-            //    frmWeapon = new FormWeapon();
-            //    frmWeapon.MdiParent = this;
-            //}
-
-            //frmWeapon.FillListBox();
-
-            //if (frmKey == null)
-            //{
-            //    frmKey = new FormKey();
-            //    frmKey.MdiParent = this;
-            //}
-
-            //frmKey.FillListBox();
-
             if (frmChest == null)
             {
                 frmChest = new FormChest();
@@ -429,10 +438,19 @@ namespace RpgEditor
 
             frmSkill.FillListBox();
 
+            if (frmPokemon == null)
+            {
+                frmPokemon = new FormPokemon();
+                frmPokemon.MdiParent = this;
+            }
+
+            frmPokemon.FillListBox();
+
             classesToolStripMenuItem.Enabled = true;
             itemsToolStripMenuItem.Enabled = true;
             chestsToolStripMenuItem.Enabled = true;
             skillsToolStripMenuItem.Enabled = true;
+            pokemonToolStripMenuItem.Enabled = true;
         }
 
         #endregion
