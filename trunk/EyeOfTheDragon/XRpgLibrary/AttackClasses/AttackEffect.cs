@@ -10,28 +10,17 @@ namespace XRpgLibrary.AttackClasses
     public abstract class AttackEffect
     {
         #region Protected Members
-        protected int power;
         protected float effectPercentage;
         #endregion Protected Members
 
         #region Constructors
-        public AttackEffect(int p, float effectP)
+        public AttackEffect(float effectP)
         {
-            power = p;
             effectPercentage = effectP;
         }
         #endregion Constructors
 
         #region Public Attributes
-        /// <summary>
-        /// Gets or sets the power.
-        /// </summary>
-        public int Power
-        {
-            get { return power; }
-            set { power = value; }
-        }
-
         /// <summary>
         /// Gets or sets the effectpercentage.
         /// </summary>
