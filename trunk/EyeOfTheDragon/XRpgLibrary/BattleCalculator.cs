@@ -8,7 +8,8 @@ using XRpgLibrary.AttackClasses;
 
 namespace XRpgLibrary
 {
-    public enum ElementType { Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Rock, Ghost, Dragon, Dark, Steel };
+    public enum ElementType { Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Rock, Ghost, Dragon, Dark, Steel, Shadow, None };
+    public enum Stat { HP, Attack, Defense, SAttack, SDefense, Speed, Accuracy, Evasion, Critical };
 
     public class BattleCalculator
     {
@@ -62,7 +63,7 @@ namespace XRpgLibrary
         private static bool isCritical(Pokemon user)
         {
             double r = new Random().Next(0, 101) / 100.0;
-            if (r <= user.CriticalStage)
+            if (r <= user.CriticalStageModifier())
                 return true;
             return false;
         }
@@ -77,6 +78,21 @@ namespace XRpgLibrary
             }
 
             return stab;
+        }
+
+        static public bool DoesHit(Pokemon user, Pokemon target, float accuracy)
+        {
+            Random r = new Random();
+            int hit = r.Next(100);
+
+            if (hit <= accuracy * user.AccuracyStageModifier / target.EvasionStageModifier * 100)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         static public int CalculateEffectiveness(ElementType attackType, Pokemon target)

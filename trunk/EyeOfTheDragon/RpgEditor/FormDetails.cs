@@ -11,6 +11,7 @@ using System.IO;
 using RpgLibrary.ItemClasses;
 using RpgLibrary.CharacterClasses;
 using RpgLibrary.SkillClasses;
+using XRpgLibrary.PokemonClasses;
 
 namespace RpgEditor
 {
@@ -91,6 +92,13 @@ namespace RpgEditor
                 XnaSerializer.Serialize<EntityData>(
                     FormMain.ClassPath + @"\" + s + ".xml",
                     EntityDataManager.EntityData[s]);
+            }
+
+            foreach (string s in EntityDataManager.PokemonData.Keys)
+            {
+                XnaSerializer.Serialize<PokemonData>(
+                    FormMain.PokemonPath + @"\" + s + ".xml",
+                    EntityDataManager.PokemonData[s]);
             }
         }
 
@@ -173,6 +181,14 @@ namespace RpgEditor
             {
                 EntityData entityData = XnaSerializer.Deserialize<EntityData>(s);
                 entityDataManager.EntityData.Add(entityData.EntityName, entityData);
+            }
+
+            fileNames = Directory.GetFiles(FormMain.PokemonPath, "*.xml");
+
+            foreach (string s in fileNames)
+            {
+                PokemonData pokemonData = XnaSerializer.Deserialize<PokemonData>(s);
+                entityDataManager.PokemonData.Add(pokemonData.UniqueID, pokemonData);
             }
         }
 
