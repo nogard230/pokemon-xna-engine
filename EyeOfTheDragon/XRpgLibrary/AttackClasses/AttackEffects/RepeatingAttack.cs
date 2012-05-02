@@ -9,13 +9,21 @@ namespace XRpgLibrary.AttackClasses.AttackEffects
 {
     public class RepeatingAttack : AttackEffect
     {
+        int power;
         int times;
         bool guarenteed;
         public RepeatingAttack(int damage, int maxNumTimes, bool guarenteedMax, float effectPercentage)
-            : base(damage, effectPercentage)
+            : base(effectPercentage)
         {
             times = maxNumTimes;
             guarenteed = guarenteedMax;
+            power = damage;
+        }
+
+        public RepeatingAttack()
+            : base(1f)
+        {
+
         }
 
         public override void ApplyEffect(Pokemon user, Pokemon target, Attack attack)
@@ -55,6 +63,17 @@ namespace XRpgLibrary.AttackClasses.AttackEffects
                     target.damage(BattleCalculator.CalculateDamage(user, target, attack, power));
                 }
             }
+        }
+
+        public override string ToString()
+        {
+            string toString = "Repeating Attack";
+            toString += ", " + power;
+            toString += ", " + times;
+            toString += ", " + guarenteed;
+            toString += ", " + effectPercentage;
+
+            return toString;
         }
     }
 }

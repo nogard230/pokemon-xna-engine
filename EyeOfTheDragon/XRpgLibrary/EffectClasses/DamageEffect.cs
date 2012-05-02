@@ -12,7 +12,7 @@ namespace RpgLibrary.EffectClasses
         #region Field Region
 
         DamageType damageType;
-        AttackType attackType;
+        //AttackType attackType;
         DieType dieType;
         int numberOfDice;
         int modifier;
@@ -37,7 +37,7 @@ namespace RpgLibrary.EffectClasses
             DamageEffect effect = new DamageEffect();
 
             effect.damageType = data.DamageType;
-            effect.attackType = data.AttackType;
+            //effect.attackType = data.AttackType;
             effect.dieType = data.DieType;
             effect.numberOfDice = data.NumberOfDice;
             effect.modifier = data.Modifier;
@@ -67,18 +67,18 @@ namespace RpgLibrary.EffectClasses
             if (amount < 1)
                 amount = 1;
 
-            switch (attackType)
-            {
-                case AttackType.Health:
-                    entity.Health.Damage((ushort)amount);
-                    break;
-                case AttackType.Mana:
-                    entity.Mana.Damage((ushort)amount);
-                    break;
-                case AttackType.Stamina:
-                    entity.Stamina.Damage((ushort)amount);
-                    break;
-            }
+            //switch (attackType)
+            //{
+            //    case AttackType.Health:
+            //        entity.Health.Damage((ushort)amount);
+            //        break;
+            //    case AttackType.Mana:
+            //        entity.Mana.Damage((ushort)amount);
+            //        break;
+            //    case AttackType.Stamina:
+            //        entity.Stamina.Damage((ushort)amount);
+            //        break;
+            //}
         }
 
         #endregion

@@ -6,14 +6,13 @@ using System.Text;
 namespace RpgLibrary.EffectClasses
 {
     public enum DamageType { Weapon, Poison, Disease, Fire, Earth, Water, Air }
-    public enum AttackType { Health, Mana, Stamina }
 
     public class DamageEffectData : BaseEffectData
     {
         #region Field Region
 
         public DamageType DamageType;
-        public AttackType AttackType;
+        //public AttackType AttackType;
         public DieType DieType;
         public int NumberOfDice;
         public int Modifier;
@@ -34,7 +33,7 @@ namespace RpgLibrary.EffectClasses
         public override string ToString()
         {
             string toString = Name + ", " + DamageType.ToString() + ", ";
-            toString += AttackType.ToString() + ", ";
+            //toString += AttackType.ToString() + ", ";
             toString += DieType.ToString() + ", ";
             toString += NumberOfDice.ToString() + ", ";
             toString += Modifier.ToString();
