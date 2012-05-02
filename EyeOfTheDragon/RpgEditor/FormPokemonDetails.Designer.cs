@@ -84,8 +84,17 @@
             this.tbPokedexClassification = new System.Windows.Forms.TextBox();
             this.mtbHeight = new System.Windows.Forms.MaskedTextBox();
             this.mtbWeight = new System.Windows.Forms.MaskedTextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.lbAttacks = new System.Windows.Forms.ListBox();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.lbLevelUpAttacks = new System.Windows.Forms.ListBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.mtbLevelLearned = new System.Windows.Forms.MaskedTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -482,6 +491,14 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.mtbLevelLearned);
+            this.tabPage2.Controls.Add(this.label28);
+            this.tabPage2.Controls.Add(this.label25);
+            this.tabPage2.Controls.Add(this.label27);
+            this.tabPage2.Controls.Add(this.lbAttacks);
+            this.tabPage2.Controls.Add(this.btnRemove);
+            this.tabPage2.Controls.Add(this.btnAdd);
+            this.tabPage2.Controls.Add(this.lbLevelUpAttacks);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -621,6 +638,75 @@
             this.mtbWeight.Size = new System.Drawing.Size(100, 20);
             this.mtbWeight.TabIndex = 42;
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(271, 259);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(81, 13);
+            this.label25.TabIndex = 11;
+            this.label25.Text = "Remove Attack";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(282, 175);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(60, 13);
+            this.label27.TabIndex = 10;
+            this.label27.Text = "Add Attack";
+            // 
+            // lbAttacks
+            // 
+            this.lbAttacks.FormattingEnabled = true;
+            this.lbAttacks.Location = new System.Drawing.Point(6, 6);
+            this.lbAttacks.Name = "lbAttacks";
+            this.lbAttacks.Size = new System.Drawing.Size(262, 394);
+            this.lbAttacks.TabIndex = 9;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Location = new System.Drawing.Point(274, 275);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(75, 23);
+            this.btnRemove.TabIndex = 8;
+            this.btnRemove.Text = "<<<";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(275, 191);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 7;
+            this.btnAdd.Text = ">>>";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // lbLevelUpAttacks
+            // 
+            this.lbLevelUpAttacks.FormattingEnabled = true;
+            this.lbLevelUpAttacks.Location = new System.Drawing.Point(358, 6);
+            this.lbLevelUpAttacks.Name = "lbLevelUpAttacks";
+            this.lbLevelUpAttacks.Size = new System.Drawing.Size(258, 394);
+            this.lbLevelUpAttacks.TabIndex = 6;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(282, 51);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(62, 13);
+            this.label28.TabIndex = 12;
+            this.label28.Text = "Learned At:";
+            // 
+            // mtbLevelLearned
+            // 
+            this.mtbLevelLearned.Location = new System.Drawing.Point(274, 67);
+            this.mtbLevelLearned.Mask = "000";
+            this.mtbLevelLearned.Name = "mtbLevelLearned";
+            this.mtbLevelLearned.Size = new System.Drawing.Size(81, 20);
+            this.mtbLevelLearned.TabIndex = 13;
+            // 
             // FormPokemonDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -634,6 +720,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -696,5 +784,13 @@
         private System.Windows.Forms.MaskedTextBox mtbWeight;
         private System.Windows.Forms.MaskedTextBox mtbHeight;
         private System.Windows.Forms.TextBox tbPokedexClassification;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ListBox lbAttacks;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.ListBox lbLevelUpAttacks;
+        private System.Windows.Forms.MaskedTextBox mtbLevelLearned;
+        private System.Windows.Forms.Label label28;
     }
 }
