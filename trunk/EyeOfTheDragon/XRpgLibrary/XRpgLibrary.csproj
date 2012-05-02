@@ -94,6 +94,8 @@
   <ItemGroup>
     <Compile Include="AbilityClasses\Ability.cs" />
     <Compile Include="AttackClasses\Attack.cs" />
+    <Compile Include="AttackClasses\AttackData.cs" />
+    <Compile Include="AttackClasses\AttackDataManager.cs" />
     <Compile Include="AttackClasses\AttackEffect.cs" />
     <Compile Include="AttackClasses\AttackEffects\ApplyStatus.cs" />
     <Compile Include="AttackClasses\AttackEffects\BasicDamage.cs" />

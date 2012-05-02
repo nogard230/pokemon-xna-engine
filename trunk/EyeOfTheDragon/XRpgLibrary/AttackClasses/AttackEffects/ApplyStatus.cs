@@ -8,7 +8,7 @@ using RpgLibrary.EffectClasses;
 
 namespace XRpgLibrary.AttackClasses.AttackEffects
 {
-    class ApplyStatus : AttackEffect
+    public class ApplyStatus : AttackEffect
     {
         StatusType status;
         Pokemon pokemonAffected;

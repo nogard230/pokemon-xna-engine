@@ -27,6 +27,7 @@ namespace RpgEditor
         FormChest frmChest;
         FormSkill frmSkill;
         FormPokemon frmPokemon;
+        FormAttack frmAttack;
 
         static string gamePath = "";
         static string classPath = "";
@@ -35,6 +36,7 @@ namespace RpgEditor
         static string keyPath = "";
         static string skillPath = "";
         static string pokemonPath = "";
+        static string attackPath = "";
 
         #endregion
 
@@ -75,6 +77,11 @@ namespace RpgEditor
             get { return pokemonPath; }
         }
 
+        public static string AttackPath
+        {
+            get { return attackPath; }
+        }
+
         #endregion
 
         #region Constructor Region
@@ -102,6 +109,7 @@ namespace RpgEditor
             skillsToolStripMenuItem.Click += new EventHandler(skillsToolStripMenuItem_Click);
 
             pokemonToolStripMenuItem.Click += new EventHandler(pokemonToolStripMenuItem_Click);
+            attacksToolStripMenuItem.Click += new EventHandler(attacksToolStripMenuItem_Click);
         }
 
         #endregion
@@ -146,6 +154,7 @@ namespace RpgEditor
                             chestPath = Path.Combine(gamePath, "Chests");
                             skillPath = Path.Combine(gamePath, "Skills");
                             pokemonPath = Path.Combine(gamePath, "Pokemon");
+                            attackPath = Path.Combine(gamePath, "Attacks");
 
                             if (Directory.Exists(gamePath))
                                 throw new Exception("Selected directory already exists.");
@@ -160,6 +169,7 @@ namespace RpgEditor
                             Directory.CreateDirectory(chestPath);
                             Directory.CreateDirectory(skillPath);
                             Directory.CreateDirectory(pokemonPath);
+                            Directory.CreateDirectory(attackPath);
 
                             rolePlayingGame = frmNewGame.RolePlayingGame;
                             XnaSerializer.Serialize<RolePlayingGame>(gamePath + @"\Game.xml", rolePlayingGame);
@@ -175,6 +185,7 @@ namespace RpgEditor
                         chestsToolStripMenuItem.Enabled = true;
                         skillsToolStripMenuItem.Enabled = true;
                         pokemonToolStripMenuItem.Enabled = true;
+                        attacksToolStripMenuItem.Enabled = true;
                     }
                 }
             }
@@ -246,6 +257,7 @@ namespace RpgEditor
                     FormDetails.WriteChestData();
                     FormDetails.WriteKeyData();
                     FormDetails.WriteSkillData();
+                    FormDetails.WriteAttackData();
                 }
                 catch (Exception ex)
                 {
@@ -354,6 +366,18 @@ namespace RpgEditor
             frmPokemon.Show();
             frmPokemon.BringToFront();
         }
+        void attacksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmAttack == null)
+            {
+                frmAttack = new FormAttack();
+                frmAttack.MdiParent = this;
+            }
+
+            frmAttack.Show();
+            frmAttack.BringToFront();
+        }
+        
 
         #endregion
 
@@ -368,6 +392,7 @@ namespace RpgEditor
             chestPath = Path.Combine(gamePath, "Chests");
             skillPath = Path.Combine(gamePath, "Skills");
             pokemonPath = Path.Combine(gamePath, "Pokemon");
+            attackPath = Path.Combine(gamePath, "Attacks");
 
             if (!Directory.Exists(keyPath))
             {
@@ -384,6 +409,16 @@ namespace RpgEditor
                 Directory.CreateDirectory(skillPath);
             }
 
+            if (!Directory.Exists(pokemonPath))
+            {
+                Directory.CreateDirectory(pokemonPath);
+            }
+
+            if (!Directory.Exists(attackPath))
+            {
+                Directory.CreateDirectory(attackPath);
+            }
+
             rolePlayingGame = XnaSerializer.Deserialize<RolePlayingGame>(
                 gamePath + @"\Game.xml");
 
@@ -392,6 +427,7 @@ namespace RpgEditor
             FormDetails.ReadKeyData();
             FormDetails.ReadChestData();
             FormDetails.ReadSkillData();
+            FormDetails.ReadAttackData();
 
             PrepareForms();
         }
@@ -446,11 +482,20 @@ namespace RpgEditor
 
             frmPokemon.FillListBox();
 
+            if (frmAttack == null)
+            {
+                frmAttack = new FormAttack();
+                frmAttack.MdiParent = this;
+            }
+
+            frmAttack.FillListBox();
+
             classesToolStripMenuItem.Enabled = true;
             itemsToolStripMenuItem.Enabled = true;
             chestsToolStripMenuItem.Enabled = true;
             skillsToolStripMenuItem.Enabled = true;
             pokemonToolStripMenuItem.Enabled = true;
+            attacksToolStripMenuItem.Enabled = true;
         }
 
         #endregion

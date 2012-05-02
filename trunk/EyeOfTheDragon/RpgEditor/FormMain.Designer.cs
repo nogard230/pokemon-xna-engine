@@ -45,6 +45,7 @@
             this.chestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.skillsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pokemonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.attacksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +57,8 @@
             this.itemsToolStripMenuItem,
             this.chestsToolStripMenuItem,
             this.skillsToolStripMenuItem,
-            this.pokemonToolStripMenuItem});
+            this.pokemonToolStripMenuItem,
+            this.attacksToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(827, 24);
@@ -175,6 +177,13 @@
             this.pokemonToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.pokemonToolStripMenuItem.Text = "&Pokemon";
             // 
+            // attacksToolStripMenuItem
+            // 
+            this.attacksToolStripMenuItem.Enabled = false;
+            this.attacksToolStripMenuItem.Name = "attacksToolStripMenuItem";
+            this.attacksToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.attacksToolStripMenuItem.Text = "&Attacks";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,6 +220,7 @@
         private System.Windows.Forms.ToolStripMenuItem berryItemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem keyItemsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pokemonToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem attacksToolStripMenuItem;
     }
 }
 
