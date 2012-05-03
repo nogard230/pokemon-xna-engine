@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:AttackClasses="XRpgLibrary.AttackClasses" xmlns:AttackEffects="XRpgLibrary.AttackClasses.AttackEffects">
+  <Asset Type="AttackClasses:AttackData">
+    <Name>Sand-attack</Name>
+    <AttackElementType>Ground</AttackElementType>
+    <CurrentPP>
+      <CurrentValue>15</CurrentValue>
+      <MaximumValue>15</MaximumValue>
+    </CurrentPP>
+    <Accuracy>0.01</Accuracy>
+    <Effects>
+      <Item Type="AttackEffects:ModifyStat">
+        <EffectPercentage>1</EffectPercentage>
+        <Stat>Accuracy</Stat>
+        <ModifyAmount>-1</ModifyAmount>
+        <ModifySelf>false</ModifySelf>
+      </Item>
+    </Effects>
+    <AttackType>Neutral</AttackType>
+    <Contact>false</Contact>
+    <Priority>0</Priority>
+    <Sound>false</Sound>
+    <Punch>false</Punch>
+    <Snatchable>false</Snatchable>
+    <Groundable>false</Groundable>
+    <Defrosts>false</Defrosts>
+    <Reflectable>false</Reflectable>
+    <Blockable>true</Blockable>
+    <Copyable>true</Copyable>
+    <Description>Sand is hurled in the target's face, reducing its accuracy.</Description>
+  </Asset>
+</XnaContent>

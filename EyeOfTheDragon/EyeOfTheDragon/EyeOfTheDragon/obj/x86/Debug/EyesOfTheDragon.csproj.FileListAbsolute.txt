@@ -86,3 +86,26 @@ C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfThe
 C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\GUI\battlehud.xnb
 C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\GUI\attacktile.xnb
 C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\GUI\typeicons.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Pokemon\Back\018.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Pokemon\Front\022.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Agility.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Air Slash.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Brave Bird.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Drill Peck.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Featherdance.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Fury Attack.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Growl.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Gust.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Hurricane.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Leer.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Peck.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Quick Attack.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Roost.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Sand-attack.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Tackle.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Twister.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Wing Attack.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Pokemon\18.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Pokemon\22.xnb
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\GifAnimation.dll
+C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\GifAnimation.pdb

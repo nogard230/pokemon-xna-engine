@@ -17,6 +17,7 @@ using XRpgLibrary.Controls;
 using XRpgLibrary.PokemonClasses;
 
 using XRpgLibrary.BattleClasses;
+using RpgLibrary.CharacterClasses;
 
 namespace EyesOfTheDragon.GameScreens
 {
@@ -52,7 +53,7 @@ namespace EyesOfTheDragon.GameScreens
         SelectedControl selectedAttack = SelectedControl.Attack1;
         SelectedMenu selectedMenu = SelectedMenu.Main;
 
-        List<Texture2D> pokemonImages;
+        List<GifAnimation.GifAnimation> pokemonImages;
 
         static double opponentHPBarScale = 3.5;
         static double myHPBarScale = 4;
@@ -102,6 +103,9 @@ namespace EyesOfTheDragon.GameScreens
             typeSymbols = battleImageLoader.loadTypeSymbols();
             pixel = Game.Content.Load<Texture2D>(@"Backgrounds/pixel");
 
+            battleManger.MyPokemon = EntityDataManager.GetGenericPokemonFromData("18", 100);
+            battleManger.OpponentPokemon = EntityDataManager.GetGenericPokemonFromData("22", 100);
+
             pokemonImages = battleImageLoader.loadPokemonImages(battleManger.MyPokemon, battleManger.OpponentPokemon);
 
             hpBars = battleImageLoader.loadHPBar();
@@ -115,6 +119,9 @@ namespace EyesOfTheDragon.GameScreens
         {
 
             UpdateControls();
+
+            pokemonImages[0].Update(gameTime.ElapsedGameTime.Ticks);
+            pokemonImages[1].Update(gameTime.ElapsedGameTime.Ticks);
 
             base.Update(gameTime);
         }
@@ -298,11 +305,12 @@ namespace EyesOfTheDragon.GameScreens
                 new Rectangle(0, 576, 1024, 192),
                 Color.Gray);
 
-            drawHUD();
 
             drawMyPokemon();
 
             drawOpponentPokemon();
+
+            drawHUD();
 
             base.Draw(gameTime);
 
@@ -378,41 +386,16 @@ namespace EyesOfTheDragon.GameScreens
                     Color.White);
 
                 //Attack 1
-                GameRef.SpriteBatch.Draw(
-                    attackFrame,
-                    new Rectangle(270, 581, 205, 90),
-                    attack1Highlight);
-
-                GameRef.SpriteBatch.DrawString(ControlManager.SpriteFont, battleManger.MyPokemon.Moveset[0].Name, 
-                    new Vector2(285, 585), Color.Black);
-
-                GameRef.SpriteBatch.Draw(
-                    typeSymbols,
-                    new Rectangle(290, 625, 64, 32),
-                    new Rectangle(240, 0, 32, 16),
-                    attack1Highlight);
-
-                GameRef.SpriteBatch.DrawString(ControlManager.SpriteFont,
-                    battleManger.MyPokemon.Moveset[0].Pp.CurrentValue.ToString() + "/" + battleManger.MyPokemon.Moveset[0].Pp.MaximumValue.ToString(),
-                    new Vector2(375, 620), Color.Black);
+                DrawAttack(new Rectangle(270, 581, 205, 90), 1, attack1Highlight);
 
                 //Attack 2
-                GameRef.SpriteBatch.Draw(
-                    attackFrame,
-                    new Rectangle(577, 581, 205, 90),
-                    attack2Highlight);
+                DrawAttack(new Rectangle(577, 581, 205, 90), 2, attack2Highlight);
 
                 //Attack 3
-                GameRef.SpriteBatch.Draw(
-                    attackFrame,
-                    new Rectangle(270, 674, 205, 90),
-                    attack3Highlight);
+                DrawAttack(new Rectangle(270, 674, 205, 90), 3, attack3Highlight);
 
                 //Attack 4
-                GameRef.SpriteBatch.Draw(
-                    attackFrame,
-                    new Rectangle(577, 674, 205, 90),
-                    attack4Highlight);
+                DrawAttack(new Rectangle(577, 674, 205, 90), 4, attack4Highlight);
 
                 //Back
                 GameRef.SpriteBatch.Draw(
@@ -421,6 +404,32 @@ namespace EyesOfTheDragon.GameScreens
                 new Rectangle(696, 220, 78, 60),
                 backHighlight);
             }
+        }
+
+        private Rectangle DrawAttack(Rectangle attackLocation, int num, Color highlight)
+        {
+            int attack = num - 1;
+            GameRef.SpriteBatch.Draw(
+                attackFrame,
+                attackLocation,
+                highlight);
+            //new Rectangle(270, 581, 205, 90)
+            if (battleManger.MyPokemon.Moveset.Count >= 1)
+            {
+                GameRef.SpriteBatch.DrawString(ControlManager.SpriteFont, battleManger.MyPokemon.Moveset[attack].Name,
+                    new Vector2(attackLocation.X + 15, attackLocation.Y + 4), Color.Black);
+
+                GameRef.SpriteBatch.Draw(
+                    typeSymbols,
+                    new Rectangle(attackLocation.X + 20, attackLocation.Y + 44, 64, 32),
+                    new Rectangle(240, 0, 32, 16),
+                    highlight);
+
+                GameRef.SpriteBatch.DrawString(ControlManager.SpriteFont,
+                    battleManger.MyPokemon.Moveset[0].Pp.CurrentValue.ToString() + "/" + battleManger.MyPokemon.Moveset[attack].Pp.MaximumValue.ToString(),
+                    new Vector2(attackLocation.X + 105, attackLocation.Y + 39), Color.Black);
+            }
+            return attackLocation;
         }
 
         private void drawOpponentPokemon()
@@ -453,10 +462,7 @@ namespace EyesOfTheDragon.GameScreens
             }
 
             //Opponent Pokemon
-            GameRef.SpriteBatch.Draw(
-                pokemonImages[1],
-                new Rectangle(600, 300 - 250, 250, 250),
-                Color.White);
+            GameRef.SpriteBatch.Draw(pokemonImages[1].GetTexture(), new Rectangle(600, 300 - 300, 300, 300), Color.White);
 
             //Opponent Status Bar
             GameRef.SpriteBatch.Draw(
@@ -520,10 +526,7 @@ namespace EyesOfTheDragon.GameScreens
             }
 
             //My Pokemon
-            GameRef.SpriteBatch.Draw(
-                pokemonImages[0],
-                new Rectangle(150, 605 - 250, 250, 250),
-                Color.White);
+            GameRef.SpriteBatch.Draw(pokemonImages[0].GetTexture(), new Rectangle(150, 605 - 300, 300, 300), Color.White);
 
             //My Status Bar
             GameRef.SpriteBatch.Draw(

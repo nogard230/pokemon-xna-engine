@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:PokemonClasses="XRpgLibrary.PokemonClasses">
+  <Asset Type="PokemonClasses:PokemonData">
+    <UniqueID>18</UniqueID>
+    <Name>Pidgeot</Name>
+    <Level>0</Level>
+    <Gender>Male</Gender>
+    <Happiness>0</Happiness>
+    <HoldItem Null="true" />
+    <Type1>Normal</Type1>
+    <Type2>Flying</Type2>
+    <Nature Null="true" />
+    <Ability Null="true" />
+    <LevelUpMoves>
+      <Item>
+        <level>0</level>
+        <attack>Tackle</attack>
+      </Item>
+      <Item>
+        <level>0</level>
+        <attack>Sand-attack</attack>
+      </Item>
+      <Item>
+        <level>0</level>
+        <attack>Gust</attack>
+      </Item>
+      <Item>
+        <level>0</level>
+        <attack>Quick Attack</attack>
+      </Item>
+      <Item>
+        <level>5</level>
+        <attack>Sand-attack</attack>
+      </Item>
+      <Item>
+        <level>9</level>
+        <attack>Gust</attack>
+      </Item>
+      <Item>
+        <level>13</level>
+        <attack>Quick Attack</attack>
+      </Item>
+      <Item>
+        <level>22</level>
+        <attack>Twister</attack>
+      </Item>
+      <Item>
+        <level>27</level>
+        <attack>Featherdance</attack>
+      </Item>
+      <Item>
+        <level>32</level>
+        <attack>Agility</attack>
+      </Item>
+      <Item>
+        <level>38</level>
+        <attack>Wing Attack</attack>
+      </Item>
+      <Item>
+        <level>44</level>
+        <attack>Roost</attack>
+      </Item>
+      <Item>
+        <level>62</level>
+        <attack>Air Slash</attack>
+      </Item>
+      <Item>
+        <level>68</level>
+        <attack>Hurricane</attack>
+      </Item>
+    </LevelUpMoves>
+    <EggMoves />
+    <TutoredMoves />
+    <LearnableTMs />
+    <Moveset />
+    <BaseHP>83</BaseHP>
+    <BaseAttack>80</BaseAttack>
+    <BaseDefense>75</BaseDefense>
+    <BaseSAttack>70</BaseSAttack>
+    <BaseSDefense>70</BaseSDefense>
+    <BaseSpeed>91</BaseSpeed>
+    <HPIV>0</HPIV>
+    <AttackIV>0</AttackIV>
+    <DefenseIV>0</DefenseIV>
+    <SAttackIV>0</SAttackIV>
+    <SDefenseIV>0</SDefenseIV>
+    <SpeedIV>0</SpeedIV>
+    <EvolveTo>
+      <Item></Item>
+    </EvolveTo>
+    <EvolveFrom>17</EvolveFrom>
+    <EvolveCondition>
+      <Type>Level</Type>
+      <Gender>Both</Gender>
+      <Level>36</Level>
+      <Item Null="true" />
+      <Attack></Attack>
+      <PokemonID></PokemonID>
+      <Friendship>-1</Friendship>
+      <Location></Location>
+    </EvolveCondition>
+    <EggGroup>Flying</EggGroup>
+    <PokedexNum>18</PokedexNum>
+    <PokedexClassification>Bird Pokemon</PokedexClassification>
+    <PokedexEntry>By flapping its wings with all its might, Pidgeot can make a gust of wind capable of bending tall trees.</PokedexEntry>
+    <HeightFeet>4</HeightFeet>
+    <HeightInches>11</HeightInches>
+    <Weight>87.1</Weight>
+    <CaputreRate>45</CaputreRate>
+    <BaseEggSteps>3840</BaseEggSteps>
+    <BaseHappiness>70</BaseHappiness>
+    <XPGrowth>MediumSlow</XPGrowth>
+    <FleeFlag>0</FleeFlag>
+    <ImageMale>018</ImageMale>
+    <ImageFemale></ImageFemale>
+    <GenderRatioMale>0.5</GenderRatioMale>
+    <GenderRatioFemale>0.5</GenderRatioFemale>
+    <CurrentHP Null="true" />
+    <CurrentConditions />
+  </Asset>
+</XnaContent>

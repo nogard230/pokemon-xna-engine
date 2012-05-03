@@ -16,14 +16,22 @@ namespace RpgLibrary.CharacterClasses
 
         #region Property Region
 
+        /// <summary>
+        /// Gets or sets the currentvalue.
+        /// </summary>
         public int CurrentValue
         {
             get { return currentValue; }
+            set { currentValue = value; }
         }
 
+        /// <summary>
+        /// Gets or sets the maximumvalue.
+        /// </summary>
         public int MaximumValue
         {
             get { return maximumValue; }
+            set { maximumValue = value; }
         }
 
         public static AttributePair Zero

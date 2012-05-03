@@ -34,19 +34,9 @@ namespace RpgEditor
             get { return itemManager; }
         }
 
-        public static EntityDataManager EntityDataManager
-        {
-            get { return entityDataManager; }
-        }
-
         public static SkillDataManager SkillManager
         {
             get { return skillManager; }
-        }
-
-        public static AttackDataManager AttackManager
-        {
-            get { return attackManager; }
         }
 
         #endregion
@@ -183,11 +173,11 @@ namespace RpgEditor
 
         public static void WriteAttackData()
         {
-            foreach (string s in AttackManager.AttackData.Keys)
+            foreach (string s in AttackDataManager.AttackData.Keys)
             {
                 XnaSerializer.Serialize<AttackData>(
                     FormMain.AttackPath + @"\" + s + ".xml",
-                    AttackManager.AttackData[s]);
+                    AttackDataManager.AttackData[s]);
             }
         }
 
@@ -200,7 +190,7 @@ namespace RpgEditor
             foreach (string s in fileNames)
             {
                 EntityData entityData = XnaSerializer.Deserialize<EntityData>(s);
-                entityDataManager.EntityData.Add(entityData.EntityName, entityData);
+                EntityDataManager.EntityData.Add(entityData.EntityName, entityData);
             }
 
             fileNames = Directory.GetFiles(FormMain.PokemonPath, "*.xml");
@@ -208,7 +198,7 @@ namespace RpgEditor
             foreach (string s in fileNames)
             {
                 PokemonData pokemonData = XnaSerializer.Deserialize<PokemonData>(s);
-                entityDataManager.PokemonData.Add(pokemonData.UniqueID, pokemonData);
+                EntityDataManager.PokemonData.Add(pokemonData.UniqueID, pokemonData);
             }
         }
 
@@ -312,7 +302,7 @@ namespace RpgEditor
             foreach (string s in fileNames)
             {
                 AttackData attackData = XnaSerializer.Deserialize<AttackData>(s);
-                attackManager.AttackData.Add(attackData.Name, attackData);
+                AttackDataManager.AttackData.Add(attackData.Name, attackData);
             }
         }
         #endregion

@@ -23,6 +23,7 @@ namespace RpgEditor
 
         PokemonData pokemon;
         List<LevelUpMove> levelUpMoves;
+        EvolveCondition EvolveCondition;
 
         #endregion
 
@@ -48,6 +49,8 @@ namespace RpgEditor
 
             btnAdd.Click += new EventHandler(btnAdd_Click);
             btnRemove.Click += new EventHandler(btnRemove_Click);
+
+            
         }
 
         #region Event Handler Region
@@ -65,16 +68,21 @@ namespace RpgEditor
             {
                 cboExpGrowth.Items.Add(rate);
             }
-            cboSType.SelectedIndex = cboSType.Items.Count - 1;
+            
 
-            foreach (string s in FormDetails.AttackManager.AttackData.Keys)
+            foreach (string s in AttackDataManager.AttackData.Keys)
             {
                 lbAttacks.Items.Add(s);
             }
 
+            foreach (EvolutionType type in Enum.GetValues(typeof(EvolutionType)))
+            {
+                cboEvolveCondition.Items.Add(type);
+            }
+
             cboExpGrowth.SelectedIndex = 0;
             cboPType.SelectedIndex = 0;
-            cboSType.SelectedIndex = 0;
+            cboSType.SelectedIndex = cboSType.Items.Count - 1;
 
             if (pokemon != null)
             {
@@ -89,8 +97,26 @@ namespace RpgEditor
                 mtbBaseSDefense.Text = pokemon.BaseSDefense.ToString();
                 mtbBaseSpeed.Text = pokemon.BaseSpeed.ToString();
 
+                mtbPercentMale.Text = (pokemon.GenderRatioMale * 100).ToString();
+                mtbPercentFemale.Text = (pokemon.GenderRatioFemale * 100).ToString();
                 tbMaleImage.Text = pokemon.ImageMale;
                 tbFemaleImage.Text = pokemon.ImageFemale;
+
+                tbEvolveFrom.Text = pokemon.EvolveFrom;
+
+                foreach (string p in pokemon.EvolveTo)
+                {
+                    if (tbEvolveTo.Text == "")
+                    {
+                        tbEvolveTo.Text += p;
+                    }
+                    else
+                    {
+                        tbEvolveTo.Text += ", " + p;
+                    }
+                }
+                cboEvolveCondition.SelectedItem = pokemon.EvolveCondition.Type;
+                EvolveCondition = pokemon.EvolveCondition;
 
                 tbEggGroup.Text = pokemon.EggGroup;
                 mtbCaptureRate.Text = pokemon.CaputreRate.ToString();
@@ -106,10 +132,12 @@ namespace RpgEditor
 
                 foreach (LevelUpMove move in pokemon.LevelUpMoves)
                 {
-                    lbLevelUpAttacks.Items.Add(move);
+                    lbLevelUpAttacks.Items.Add(move.ToString());
                     levelUpMoves.Add(move);
                 }
             }
+
+            cboEvolveCondition.SelectedIndexChanged += new EventHandler(cboEvolveCondition_SelectedIndexChanged);
         }
 
         void FormPokemonDetails_FormClosing(object sender, FormClosingEventArgs e)
@@ -149,9 +177,8 @@ namespace RpgEditor
             int sDefenseIV;
             int speedIV;
 
-            List<Pokemon> evolveTo;
-            Pokemon evolveFrom;
-            EvolveCondition evolveCondition;
+            List<string> evolveTo = new List<string>();
+            string evolveFrom;
 
             string eggGroup;
 
@@ -170,8 +197,8 @@ namespace RpgEditor
             string imageMale;
             string imageFemale;
 
-            float genderRatioMale;
-            float genderRatioFemale;
+            int genderRatioMale;
+            int genderRatioFemale;
 
             if (string.IsNullOrEmpty(tbName.Text))
             {
@@ -194,6 +221,13 @@ namespace RpgEditor
             {
 
             }
+
+            string[] parts = tbEvolveTo.Text.Split(',');
+            foreach (string p in parts)
+            {
+                evolveTo.Add(p.Trim());
+            }
+            evolveFrom = tbEvolveFrom.Text;
 
             if (cboSType.SelectedIndex != 0)
             {
@@ -239,6 +273,18 @@ namespace RpgEditor
             }
 
             if (!int.TryParse(mtbBaseSpeed.Text, out baseSpeed))
+            {
+                MessageBox.Show("Base Speed must be an integer value.");
+                return;
+            }
+
+            if (!int.TryParse(mtbPercentMale.Text, out genderRatioMale))
+            {
+                MessageBox.Show("Base Speed must be an integer value.");
+                return;
+            }
+
+            if (!int.TryParse(mtbPercentFemale.Text, out genderRatioFemale))
             {
                 MessageBox.Show("Base Speed must be an integer value.");
                 return;
@@ -299,13 +345,20 @@ namespace RpgEditor
             
             pokemon.Name = tbName.Text;
             pokemon.UniqueID = tbUniqueID.Text;
-            
+            pokemon.EvolveFrom = evolveFrom;
+            pokemon.EvolveTo = evolveTo;
+            pokemon.EvolveCondition = EvolveCondition;
+
             pokemon.BaseHP = baseHP;
             pokemon.BaseAttack = baseAttack;
             pokemon.BaseDefense = baseDefense;
             pokemon.BaseSAttack = baseSAttack;
             pokemon.BaseSDefense = baseSDefense;
             pokemon.BaseSpeed = baseSpeed;
+
+            pokemon.GenderRatioMale = genderRatioMale / 100f;
+            pokemon.GenderRatioFemale = genderRatioFemale / 100f;
+
             pokemon.ImageMale = tbMaleImage.Text;
             pokemon.ImageFemale = tbFemaleImage.Text;
 
@@ -365,6 +418,32 @@ namespace RpgEditor
                     levelUpMoves.RemoveAt(lbLevelUpAttacks.SelectedIndex);
                     lbLevelUpAttacks.Items.RemoveAt(lbLevelUpAttacks.SelectedIndex);
                 }
+            }
+        }
+
+        void cboEvolveCondition_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            EvolutionType type;
+            try
+            {
+                type = (EvolutionType)Enum.Parse(typeof(EvolutionType), cboEvolveCondition.SelectedItem.ToString());
+
+                using (FormEvolutionCondition frmEvolveCondition = new FormEvolutionCondition())
+                {
+                    frmEvolveCondition.EvolveType = type;
+                    frmEvolveCondition.ShowDialog();
+
+                    if (frmEvolveCondition.Condition != null)
+                    {
+                        EvolveCondition = frmEvolveCondition.Condition;
+                    }
+                }
+                
+                
+            }
+            catch (ArgumentException)
+            {
+
             }
         }
 

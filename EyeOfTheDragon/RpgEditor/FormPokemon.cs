@@ -9,6 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 
 using XRpgLibrary.PokemonClasses;
+using RpgLibrary.CharacterClasses;
 
 namespace RpgEditor
 {
@@ -46,7 +47,7 @@ namespace RpgEditor
                 string[] parts = detail.Split(',');
                 string entity = parts[0].Trim();
 
-                PokemonData data = entityDataManager.PokemonData[entity];
+                PokemonData data = EntityDataManager.PokemonData[entity];
                 PokemonData newData = null;
 
                 using (FormPokemonDetails frmPokemonDetails = new FormPokemonDetails())
@@ -59,7 +60,7 @@ namespace RpgEditor
 
                     if (frmPokemonDetails.Pokemon.UniqueID == entity)
                     {
-                        entityDataManager.PokemonData[entity] = frmPokemonDetails.Pokemon;
+                        EntityDataManager.PokemonData[entity] = frmPokemonDetails.Pokemon;
                         FillListBox();
                         return;
                     }
@@ -75,14 +76,14 @@ namespace RpgEditor
                 if (result == DialogResult.No)
                     return;
 
-                if (entityDataManager.PokemonData.ContainsKey(newData.Name))
+                if (EntityDataManager.PokemonData.ContainsKey(newData.Name))
                 {
                     MessageBox.Show("Entry already exists. Use Edit to modify the entry.");
                     return;
                 }
 
                 lbDetails.Items.Add(newData);
-                entityDataManager.PokemonData.Add(newData.UniqueID, newData);
+                EntityDataManager.PokemonData.Add(newData.UniqueID, newData);
             }
         }
 
@@ -102,7 +103,7 @@ namespace RpgEditor
                 if (result == DialogResult.Yes)
                 {
                     lbDetails.Items.RemoveAt(lbDetails.SelectedIndex);
-                    entityDataManager.PokemonData.Remove(entity);
+                    EntityDataManager.PokemonData.Remove(entity);
 
                     if (File.Exists(FormMain.ItemPath + @"\Pokemon\" + entity + ".xml"))
                         File.Delete(FormMain.ItemPath + @"\Pokemon\" + entity + ".xml");
@@ -118,13 +119,13 @@ namespace RpgEditor
         {
             lbDetails.Items.Clear();
 
-            foreach (string s in FormDetails.entityDataManager.PokemonData.Keys)
-                lbDetails.Items.Add(FormDetails.entityDataManager.PokemonData[s]);
+            foreach (string s in EntityDataManager.PokemonData.Keys)
+                lbDetails.Items.Add(EntityDataManager.PokemonData[s]);
         }
 
         private void AddPokemon(PokemonData pokemonData)
         {
-            if (FormDetails.entityDataManager.PokemonData.ContainsKey(pokemonData.UniqueID))
+            if (EntityDataManager.PokemonData.ContainsKey(pokemonData.UniqueID))
             {
                 DialogResult result = MessageBox.Show(
                     pokemonData.UniqueID + " already exists. Overwrite it?",
@@ -134,12 +135,12 @@ namespace RpgEditor
                 if (result == DialogResult.No)
                     return;
 
-                entityDataManager.PokemonData[pokemonData.UniqueID] = pokemonData;
+                EntityDataManager.PokemonData[pokemonData.UniqueID] = pokemonData;
                 FillListBox();
                 return;
             }
 
-            entityDataManager.PokemonData.Add(pokemonData.UniqueID, pokemonData);
+            EntityDataManager.PokemonData.Add(pokemonData.UniqueID, pokemonData);
             lbDetails.Items.Add(pokemonData);
         }
 

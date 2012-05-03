@@ -137,8 +137,8 @@ namespace XRpgLibrary.PokemonClasses
             foreach (string pokemon in EvolveTo)
                 toString += ", " + pokemon.ToString();
 
-            //toString += ", " + EvolveFrom.ToString();
-            //toString += ", " + EvolveCondition.ToString();
+            toString += ", " + EvolveFrom.ToString();
+            toString += ", " + EvolveCondition.ToString();
 
             toString += ", " + EggGroup;
 

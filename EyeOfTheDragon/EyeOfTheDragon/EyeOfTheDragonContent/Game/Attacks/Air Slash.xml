@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:AttackClasses="XRpgLibrary.AttackClasses" xmlns:AttackEffects="XRpgLibrary.AttackClasses.AttackEffects">
+  <Asset Type="AttackClasses:AttackData">
+    <Name>Air Slash</Name>
+    <AttackElementType>Flying</AttackElementType>
+    <CurrentPP>
+      <CurrentValue>20</CurrentValue>
+      <MaximumValue>20</MaximumValue>
+    </CurrentPP>
+    <Accuracy>0.95</Accuracy>
+    <Effects>
+      <Item Type="AttackEffects:BasicDamage">
+        <EffectPercentage>1</EffectPercentage>
+        <Power>75</Power>
+      </Item>
+      <Item Type="AttackEffects:ApplyStatus">
+        <EffectPercentage>0.1</EffectPercentage>
+        <Status>Flinch</Status>
+        <TargetAffected>true</TargetAffected>
+      </Item>
+    </Effects>
+    <AttackType>Special</AttackType>
+    <Contact>false</Contact>
+    <Priority>0</Priority>
+    <Sound>false</Sound>
+    <Punch>false</Punch>
+    <Snatchable>false</Snatchable>
+    <Groundable>false</Groundable>
+    <Defrosts>false</Defrosts>
+    <Reflectable>false</Reflectable>
+    <Blockable>true</Blockable>
+    <Copyable>true</Copyable>
+    <Description>The user attacks with a blade of air that slices even the sky. It may also make the target flinch.</Description>
+  </Asset>
+</XnaContent>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:AttackClasses="XRpgLibrary.AttackClasses" xmlns:AttackEffects="XRpgLibrary.AttackClasses.AttackEffects">
+  <Asset Type="AttackClasses:AttackData">
+    <Name>Brave Bird</Name>
+    <AttackElementType>Flying</AttackElementType>
+    <CurrentPP>
+      <CurrentValue>15</CurrentValue>
+      <MaximumValue>15</MaximumValue>
+    </CurrentPP>
+    <Accuracy>1</Accuracy>
+    <Effects>
+      <Item Type="AttackEffects:RecoilAttack">
+        <EffectPercentage>1</EffectPercentage>
+        <Recoil>0.33</Recoil>
+        <Power>120</Power>
+      </Item>
+    </Effects>
+    <AttackType>Physical</AttackType>
+    <Contact>true</Contact>
+    <Priority>0</Priority>
+    <Sound>false</Sound>
+    <Punch>false</Punch>
+    <Snatchable>false</Snatchable>
+    <Groundable>false</Groundable>
+    <Defrosts>false</Defrosts>
+    <Reflectable>false</Reflectable>
+    <Blockable>true</Blockable>
+    <Copyable>true</Copyable>
+    <Description>The user tucks in its wings and charges from a low altitude. The user also takes serious damage.</Description>
+  </Asset>
+</XnaContent>

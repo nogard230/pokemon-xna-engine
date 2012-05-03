@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:AttackClasses="XRpgLibrary.AttackClasses" xmlns:AttackEffects="XRpgLibrary.AttackClasses.AttackEffects">
+  <Asset Type="AttackClasses:AttackData">
+    <Name>Quick Attack</Name>
+    <AttackElementType>Normal</AttackElementType>
+    <CurrentPP>
+      <CurrentValue>30</CurrentValue>
+      <MaximumValue>30</MaximumValue>
+    </CurrentPP>
+    <Accuracy>0.01</Accuracy>
+    <Effects>
+      <Item Type="AttackEffects:BasicDamage">
+        <EffectPercentage>1</EffectPercentage>
+        <Power>40</Power>
+      </Item>
+    </Effects>
+    <AttackType>Physical</AttackType>
+    <Contact>true</Contact>
+    <Priority>1</Priority>
+    <Sound>false</Sound>
+    <Punch>false</Punch>
+    <Snatchable>false</Snatchable>
+    <Groundable>false</Groundable>
+    <Defrosts>false</Defrosts>
+    <Reflectable>false</Reflectable>
+    <Blockable>true</Blockable>
+    <Copyable>true</Copyable>
+    <Description>The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first.</Description>
+  </Asset>
+</XnaContent>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -9,6 +10,12 @@ using Microsoft.Xna.Framework.Graphics;
 
 using XRpgLibrary;
 using XRpgLibrary.Controls;
+
+using XRpgLibrary.AttackClasses;
+using XRpgLibrary.PokemonClasses;
+using RpgLibrary.CharacterClasses;
+
+using EyeOfTheDragon.Components;
 
 namespace EyesOfTheDragon.GameScreens
 {
@@ -37,7 +44,6 @@ namespace EyesOfTheDragon.GameScreens
         protected override void LoadContent()
         {
             ContentManager Content = GameRef.Content;
-
             backgroundImage = Content.Load<Texture2D>(@"Backgrounds\titlescreen");
             pixel = Content.Load<Texture2D>(@"Backgrounds\pixel");
             font = Content.Load<SpriteFont>(@"Fonts\TitleFont");
@@ -53,6 +59,27 @@ namespace EyesOfTheDragon.GameScreens
             startLabel.Selected += new EventHandler(startLabel_Selected);
 
             ControlManager.Add(startLabel);
+
+            LoadGameData(Content);
+        }
+
+        private void LoadGameData(ContentManager Content)
+        {
+            //Load Attack Data
+            Dictionary<string, AttackData> attackData = ContentLoader.LoadContent<AttackData>(Content, "Game\\Attacks");
+            foreach (string s in attackData.Keys)
+            {
+                AttackDataManager.AttackData.Add(s, attackData[s]);
+            }
+
+            //Load Pokemon Data
+            Dictionary<string, PokemonData> pokemonData = ContentLoader.LoadContent<PokemonData>(Content, "Game\\Pokemon");
+            foreach (string s in pokemonData.Keys)
+            {
+                EntityDataManager.PokemonData.Add(s, pokemonData[s]);
+            }
+
+            //Load Item Data
         }
 
         public override void Update(GameTime gameTime)
@@ -97,5 +124,6 @@ namespace EyesOfTheDragon.GameScreens
         }
 
         #endregion
+
     }
 }

@@ -6,6 +6,7 @@ using System.Text;
 using Microsoft.Xna.Framework.Content;
 
 using XRpgLibrary.PokemonClasses;
+using RpgLibrary.CharacterClasses;
 
 namespace XRpgLibrary.BattleClasses
 {
@@ -20,14 +21,6 @@ namespace XRpgLibrary.BattleClasses
         #region Constructors
         public BattleManager()
         {
-            PokemonData p1 = new PokemonData();
-
-            PokemonData p2 = new PokemonData();
-
-            p2.BaseSpeed = 100;
-
-            MyPokemon = Pokemon.FromPokemonData(p1);
-            OpponentPokemon = Pokemon.FromPokemonData(p2);
 
         }
         #endregion Constructors

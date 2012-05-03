@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:AttackClasses="XRpgLibrary.AttackClasses" xmlns:AttackEffects="XRpgLibrary.AttackClasses.AttackEffects">
+  <Asset Type="AttackClasses:AttackData">
+    <Name>Fury Attack</Name>
+    <AttackElementType>Normal</AttackElementType>
+    <CurrentPP>
+      <CurrentValue>20</CurrentValue>
+      <MaximumValue>20</MaximumValue>
+    </CurrentPP>
+    <Accuracy>0.85</Accuracy>
+    <Effects>
+      <Item Type="AttackEffects:RepeatingAttack">
+        <EffectPercentage>1</EffectPercentage>
+        <Power>15</Power>
+        <Times>5</Times>
+        <Guarenteed>false</Guarenteed>
+        <EffectPercentage>1</EffectPercentage>
+      </Item>
+    </Effects>
+    <AttackType>Physical</AttackType>
+    <Contact>true</Contact>
+    <Priority>0</Priority>
+    <Sound>false</Sound>
+    <Punch>false</Punch>
+    <Snatchable>false</Snatchable>
+    <Groundable>false</Groundable>
+    <Defrosts>false</Defrosts>
+    <Reflectable>false</Reflectable>
+    <Blockable>true</Blockable>
+    <Copyable>true</Copyable>
+    <Description>The target is jabbed repeatedly with a horn or beak two to five times in a row.</Description>
+  </Asset>
+</XnaContent>

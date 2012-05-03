@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:AttackClasses="XRpgLibrary.AttackClasses" xmlns:AttackEffects="XRpgLibrary.AttackClasses.AttackEffects">
+  <Asset Type="AttackClasses:AttackData">
+    <Name>Drill Peck</Name>
+    <AttackElementType>Flying</AttackElementType>
+    <CurrentPP>
+      <CurrentValue>20</CurrentValue>
+      <MaximumValue>20</MaximumValue>
+    </CurrentPP>
+    <Accuracy>1</Accuracy>
+    <Effects>
+      <Item Type="AttackEffects:BasicDamage">
+        <EffectPercentage>1</EffectPercentage>
+        <Power>80</Power>
+      </Item>
+    </Effects>
+    <AttackType>Physical</AttackType>
+    <Contact>true</Contact>
+    <Priority>0</Priority>
+    <Sound>false</Sound>
+    <Punch>false</Punch>
+    <Snatchable>false</Snatchable>
+    <Groundable>false</Groundable>
+    <Defrosts>false</Defrosts>
+    <Reflectable>false</Reflectable>
+    <Blockable>true</Blockable>
+    <Copyable>true</Copyable>
+    <Description>A corkscrewing attack with the sharp beak acting as a drill.</Description>
+  </Asset>
+</XnaContent>
