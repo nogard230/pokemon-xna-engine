@@ -23,7 +23,7 @@ namespace XRpgLibrary.PokemonClasses
         public int Level;
         public Gender Gender;
         public int Happiness;
-        public GameItem HoldItem;
+        public BaseItem HoldItem;
         public ElementType Type1;
         public ElementType Type2;
         public Nature Nature;
