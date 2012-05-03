@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:PokemonClasses="XRpgLibrary.PokemonClasses">
+  <Asset Type="PokemonClasses:PokemonData">
+    <UniqueID>22</UniqueID>
+    <Name>Fearow</Name>
+    <Level>0</Level>
+    <Gender>Male</Gender>
+    <Happiness>0</Happiness>
+    <HoldItem Null="true" />
+    <Type1>Normal</Type1>
+    <Type2>Flying</Type2>
+    <Nature Null="true" />
+    <Ability Null="true" />
+    <LevelUpMoves>
+      <Item>
+        <level>0</level>
+        <attack>Peck</attack>
+      </Item>
+      <Item>
+        <level>0</level>
+        <attack>Growl</attack>
+      </Item>
+      <Item>
+        <level>0</level>
+        <attack>Leer</attack>
+      </Item>
+      <Item>
+        <level>0</level>
+        <attack>Fury Attack</attack>
+      </Item>
+      <Item>
+        <level>9</level>
+        <attack>Leer</attack>
+      </Item>
+      <Item>
+        <level>9</level>
+        <attack>Fury Attack</attack>
+      </Item>
+      <Item>
+        <level>29</level>
+        <attack>Agility</attack>
+      </Item>
+      <Item>
+        <level>41</level>
+        <attack>Roost</attack>
+      </Item>
+      <Item>
+        <level>47</level>
+        <attack>Drill Peck</attack>
+      </Item>
+    </LevelUpMoves>
+    <EggMoves />
+    <TutoredMoves />
+    <LearnableTMs />
+    <Moveset />
+    <BaseHP>65</BaseHP>
+    <BaseAttack>90</BaseAttack>
+    <BaseDefense>65</BaseDefense>
+    <BaseSAttack>61</BaseSAttack>
+    <BaseSDefense>61</BaseSDefense>
+    <BaseSpeed>100</BaseSpeed>
+    <HPIV>0</HPIV>
+    <AttackIV>0</AttackIV>
+    <DefenseIV>0</DefenseIV>
+    <SAttackIV>0</SAttackIV>
+    <SDefenseIV>0</SDefenseIV>
+    <SpeedIV>0</SpeedIV>
+    <EvolveTo>
+      <Item></Item>
+    </EvolveTo>
+    <EvolveFrom>21</EvolveFrom>
+    <EvolveCondition>
+      <Type>Level</Type>
+      <Gender>Both</Gender>
+      <Level>20</Level>
+      <Item Null="true" />
+      <Attack></Attack>
+      <PokemonID></PokemonID>
+      <Friendship>-1</Friendship>
+      <Location></Location>
+    </EvolveCondition>
+    <EggGroup>Flying</EggGroup>
+    <PokedexNum>22</PokedexNum>
+    <PokedexClassification>Beak Pokemon</PokedexClassification>
+    <PokedexEntry>It has the stamina to fly all day on its broad wings. It fights by using its sharp beak.</PokedexEntry>
+    <HeightFeet>3</HeightFeet>
+    <HeightInches>11</HeightInches>
+    <Weight>83.8</Weight>
+    <CaputreRate>90</CaputreRate>
+    <BaseEggSteps>3840</BaseEggSteps>
+    <BaseHappiness>70</BaseHappiness>
+    <XPGrowth>MediumFast</XPGrowth>
+    <FleeFlag>0</FleeFlag>
+    <ImageMale>022</ImageMale>
+    <ImageFemale></ImageFemale>
+    <GenderRatioMale>0.5</GenderRatioMale>
+    <GenderRatioFemale>0.5</GenderRatioFemale>
+    <CurrentHP Null="true" />
+    <CurrentConditions />
+  </Asset>
+</XnaContent>

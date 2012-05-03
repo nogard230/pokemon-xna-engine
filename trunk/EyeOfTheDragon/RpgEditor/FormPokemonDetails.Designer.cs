@@ -92,6 +92,13 @@
             this.lbLevelUpAttacks = new System.Windows.Forms.ListBox();
             this.label28 = new System.Windows.Forms.Label();
             this.mtbLevelLearned = new System.Windows.Forms.MaskedTextBox();
+            this.cboEvolveCondition = new System.Windows.Forms.ComboBox();
+            this.tbEvolveFrom = new System.Windows.Forms.TextBox();
+            this.tbEvolveTo = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.mtbPercentMale = new System.Windows.Forms.MaskedTextBox();
+            this.mtbPercentFemale = new System.Windows.Forms.MaskedTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -113,6 +120,13 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.mtbPercentFemale);
+            this.tabPage1.Controls.Add(this.mtbPercentMale);
+            this.tabPage1.Controls.Add(this.label30);
+            this.tabPage1.Controls.Add(this.label29);
+            this.tabPage1.Controls.Add(this.tbEvolveTo);
+            this.tabPage1.Controls.Add(this.tbEvolveFrom);
+            this.tabPage1.Controls.Add(this.cboEvolveCondition);
             this.tabPage1.Controls.Add(this.mtbWeight);
             this.tabPage1.Controls.Add(this.mtbHeight);
             this.tabPage1.Controls.Add(this.tbPokedexClassification);
@@ -707,6 +721,63 @@
             this.mtbLevelLearned.Size = new System.Drawing.Size(81, 20);
             this.mtbLevelLearned.TabIndex = 13;
             // 
+            // cboEvolveCondition
+            // 
+            this.cboEvolveCondition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEvolveCondition.FormattingEnabled = true;
+            this.cboEvolveCondition.Location = new System.Drawing.Point(436, 57);
+            this.cboEvolveCondition.Name = "cboEvolveCondition";
+            this.cboEvolveCondition.Size = new System.Drawing.Size(121, 21);
+            this.cboEvolveCondition.TabIndex = 43;
+            // 
+            // tbEvolveFrom
+            // 
+            this.tbEvolveFrom.Location = new System.Drawing.Point(436, 30);
+            this.tbEvolveFrom.Name = "tbEvolveFrom";
+            this.tbEvolveFrom.Size = new System.Drawing.Size(100, 20);
+            this.tbEvolveFrom.TabIndex = 44;
+            // 
+            // tbEvolveTo
+            // 
+            this.tbEvolveTo.Location = new System.Drawing.Point(436, 8);
+            this.tbEvolveTo.Name = "tbEvolveTo";
+            this.tbEvolveTo.Size = new System.Drawing.Size(100, 20);
+            this.tbEvolveTo.TabIndex = 45;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(53, 276);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(76, 13);
+            this.label29.TabIndex = 46;
+            this.label29.Text = "Percent Male: ";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(42, 300);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(87, 13);
+            this.label30.TabIndex = 47;
+            this.label30.Text = "Percent Female: ";
+            // 
+            // mtbPercentMale
+            // 
+            this.mtbPercentMale.Location = new System.Drawing.Point(136, 273);
+            this.mtbPercentMale.Mask = "000";
+            this.mtbPercentMale.Name = "mtbPercentMale";
+            this.mtbPercentMale.Size = new System.Drawing.Size(100, 20);
+            this.mtbPercentMale.TabIndex = 48;
+            // 
+            // mtbPercentFemale
+            // 
+            this.mtbPercentFemale.Location = new System.Drawing.Point(135, 297);
+            this.mtbPercentFemale.Mask = "000";
+            this.mtbPercentFemale.Name = "mtbPercentFemale";
+            this.mtbPercentFemale.Size = new System.Drawing.Size(100, 20);
+            this.mtbPercentFemale.TabIndex = 49;
+            // 
             // FormPokemonDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -792,5 +863,12 @@
         private System.Windows.Forms.ListBox lbLevelUpAttacks;
         private System.Windows.Forms.MaskedTextBox mtbLevelLearned;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox tbEvolveTo;
+        private System.Windows.Forms.TextBox tbEvolveFrom;
+        private System.Windows.Forms.ComboBox cboEvolveCondition;
+        private System.Windows.Forms.MaskedTextBox mtbPercentFemale;
+        private System.Windows.Forms.MaskedTextBox mtbPercentMale;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
     }
 }

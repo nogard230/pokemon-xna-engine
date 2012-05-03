@@ -53,7 +53,7 @@ namespace RpgEditor
                 string[] parts = detail.Split(',');
                 string entity = parts[0].Trim();
 
-                EntityData data = entityDataManager.EntityData[entity];
+                EntityData data = EntityDataManager.EntityData[entity];
                 EntityData newData = null;
 
                 using (FormEntityData frmEntityData = new FormEntityData())
@@ -66,7 +66,7 @@ namespace RpgEditor
 
                     if (frmEntityData.EntityData.EntityName == entity)
                     {
-                        entityDataManager.EntityData[entity] = frmEntityData.EntityData;
+                        EntityDataManager.EntityData[entity] = frmEntityData.EntityData;
                         FillListBox();
                         return;
                     }
@@ -82,14 +82,14 @@ namespace RpgEditor
                 if (result == DialogResult.No)
                     return;
 
-                if (entityDataManager.EntityData.ContainsKey(newData.EntityName))
+                if (EntityDataManager.EntityData.ContainsKey(newData.EntityName))
                 {
                     MessageBox.Show("Entry already exists. Use Edit to modify the entry.");
                     return;
                 }
 
                 lbDetails.Items.Add(newData);
-                entityDataManager.EntityData.Add(newData.EntityName, newData);
+                EntityDataManager.EntityData.Add(newData.EntityName, newData);
             }
         }
 
@@ -109,7 +109,7 @@ namespace RpgEditor
                 if (result == DialogResult.Yes)
                 {
                     lbDetails.Items.RemoveAt(lbDetails.SelectedIndex);
-                    entityDataManager.EntityData.Remove(entity);
+                    EntityDataManager.EntityData.Remove(entity);
 
                     if (File.Exists(FormMain.ClassPath + @"\" + entity + ".xml"))
                         File.Delete(FormMain.ClassPath + @"\" + entity + ".xml");
@@ -123,7 +123,7 @@ namespace RpgEditor
 
         private void AddEntity(EntityData entityData)
         {
-            if (FormDetails.EntityDataManager.EntityData.ContainsKey(entityData.EntityName))
+            if (EntityDataManager.EntityData.ContainsKey(entityData.EntityName))
             {
                 DialogResult result = MessageBox.Show(
                     entityData.EntityName + " already exists. Do you want to overwrite it?",
@@ -133,7 +133,7 @@ namespace RpgEditor
                 if (result == DialogResult.No)
                     return;
 
-                FormDetails.EntityDataManager.EntityData[entityData.EntityName] = entityData;
+                EntityDataManager.EntityData[entityData.EntityName] = entityData;
 
                 FillListBox();
                 return;
@@ -141,7 +141,7 @@ namespace RpgEditor
 
             lbDetails.Items.Add(entityData.ToString());
 
-            FormDetails.EntityDataManager.EntityData.Add(
+            EntityDataManager.EntityData.Add(
                 entityData.EntityName,
                 entityData);
         }
@@ -150,8 +150,8 @@ namespace RpgEditor
         {
             lbDetails.Items.Clear();
 
-            foreach (string s in FormDetails.EntityDataManager.EntityData.Keys)
-                lbDetails.Items.Add(FormDetails.EntityDataManager.EntityData[s]);
+            foreach (string s in EntityDataManager.EntityData.Keys)
+                lbDetails.Items.Add(EntityDataManager.EntityData[s]);
         }
 
         #endregion

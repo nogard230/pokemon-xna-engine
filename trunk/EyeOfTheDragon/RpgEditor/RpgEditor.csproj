@@ -91,6 +91,12 @@
     <Compile Include="FormEntityData.Designer.cs">
       <DependentUpon>FormEntityData.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEvolutionCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEvolutionCondition.Designer.cs">
+      <DependentUpon>FormEvolutionCondition.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEntityData.resx">
       <DependentUpon>FormEntityData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEvolutionCondition.resx">
+      <DependentUpon>FormEvolutionCondition.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

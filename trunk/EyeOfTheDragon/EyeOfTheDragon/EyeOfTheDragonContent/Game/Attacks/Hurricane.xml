@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:AttackClasses="XRpgLibrary.AttackClasses" xmlns:AttackEffects="XRpgLibrary.AttackClasses.AttackEffects">
+  <Asset Type="AttackClasses:AttackData">
+    <Name>Hurricane</Name>
+    <AttackElementType>Flying</AttackElementType>
+    <CurrentPP>
+      <CurrentValue>10</CurrentValue>
+      <MaximumValue>10</MaximumValue>
+    </CurrentPP>
+    <Accuracy>0.7</Accuracy>
+    <Effects>
+      <Item Type="AttackEffects:BasicDamage">
+        <EffectPercentage>1</EffectPercentage>
+        <Power>120</Power>
+      </Item>
+      <Item Type="AttackEffects:ApplyStatus">
+        <EffectPercentage>0.3</EffectPercentage>
+        <Status>Confusion</Status>
+        <TargetAffected>true</TargetAffected>
+      </Item>
+    </Effects>
+    <AttackType>Special</AttackType>
+    <Contact>false</Contact>
+    <Priority>0</Priority>
+    <Sound>false</Sound>
+    <Punch>false</Punch>
+    <Snatchable>false</Snatchable>
+    <Groundable>false</Groundable>
+    <Defrosts>false</Defrosts>
+    <Reflectable>false</Reflectable>
+    <Blockable>true</Blockable>
+    <Copyable>true</Copyable>
+    <Description>The user attacks by wrapping its opponent in a fierce wind that flies up into the sky. It may also confuse the target.</Description>
+  </Asset>
+</XnaContent>

@@ -9,9 +9,12 @@ namespace XRpgLibrary.AttackClasses.AttackEffects
 {
     public class RepeatingAttack : AttackEffect
     {
+        #region Private Members
         int power;
         int times;
         bool guarenteed;
+        #endregion Private Members
+        #region Constructors
         public RepeatingAttack(int damage, int maxNumTimes, bool guarenteedMax, float effectPercentage)
             : base(effectPercentage)
         {
@@ -25,6 +28,45 @@ namespace XRpgLibrary.AttackClasses.AttackEffects
         {
 
         }
+        #endregion Constructors
+
+        #region Public Attributes
+        /// <summary>
+        /// Gets or sets the power.
+        /// </summary>
+        public int Power
+        {
+            get { return power; }
+            set { power = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets the times.
+        /// </summary>
+        public int Times
+        {
+            get { return times; }
+            set { times = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets the guarenteed.
+        /// </summary>
+        public bool Guarenteed
+        {
+            get { return guarenteed; }
+            set { guarenteed = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets the effectpercentage.
+        /// </summary>
+        public float EffectPercentage
+        {
+            get { return effectPercentage; }
+            set { effectPercentage = value; }
+        }
+        #endregion Public Attributes
 
         public override void ApplyEffect(Pokemon user, Pokemon target, Attack attack)
         {

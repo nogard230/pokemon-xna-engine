@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
 using XRpgLibrary.PokemonClasses;
+using XRpgLibrary.SpriteClasses;
 
 namespace EyesOfTheDragon.Components
 {
@@ -42,12 +43,12 @@ namespace EyesOfTheDragon.Components
             return battlefield;
         }
 
-        public List<Texture2D> loadPokemonImages(Pokemon myPokemon, Pokemon opponentPokemon)
+        public List<GifAnimation.GifAnimation> loadPokemonImages(Pokemon myPokemon, Pokemon opponentPokemon)
         {
-            List<Texture2D> pokemon = new List<Texture2D>();
+            List<GifAnimation.GifAnimation> pokemon = new List<GifAnimation.GifAnimation>();
 
-            pokemon.Add(Content.Load<Texture2D>(@"Pokemon/Back/testback"));
-            pokemon.Add(Content.Load<Texture2D>(@"Pokemon/Front/test"));
+            pokemon.Add(Content.Load<GifAnimation.GifAnimation>(@"Pokemon/Back/" + myPokemon.ImageMale));
+            pokemon.Add(Content.Load<GifAnimation.GifAnimation>(@"Pokemon/Front/" + opponentPokemon.ImageMale));
 
             return pokemon;
         }

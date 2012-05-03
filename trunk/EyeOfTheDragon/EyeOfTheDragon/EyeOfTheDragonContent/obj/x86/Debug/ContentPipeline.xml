@@ -415,6 +415,193 @@
       <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Levels\MTest.xnb</Output>
       <Time>2012-04-27T20:44:45.7078913-06:00</Time>
     </Item>
+    <Item>
+      <Source>Game\Attacks\Agility.xml</Source>
+      <Name>Game\Attacks\Agility</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Agility.xnb</Output>
+      <Time>2012-05-03T14:47:45.6283434-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Air Slash.xml</Source>
+      <Name>Game\Attacks\Air Slash</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Air Slash.xnb</Output>
+      <Time>2012-05-03T14:47:45.6293435-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Brave Bird.xml</Source>
+      <Name>Game\Attacks\Brave Bird</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Brave Bird.xnb</Output>
+      <Time>2012-05-03T14:47:45.6303435-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Drill Peck.xml</Source>
+      <Name>Game\Attacks\Drill Peck</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Drill Peck.xnb</Output>
+      <Time>2012-05-03T14:47:45.6313436-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Featherdance.xml</Source>
+      <Name>Game\Attacks\Featherdance</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Featherdance.xnb</Output>
+      <Time>2012-05-03T14:47:45.6323436-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Fury Attack.xml</Source>
+      <Name>Game\Attacks\Fury Attack</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Fury Attack.xnb</Output>
+      <Time>2012-05-03T14:47:45.6333437-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Growl.xml</Source>
+      <Name>Game\Attacks\Growl</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Growl.xnb</Output>
+      <Time>2012-05-03T14:47:45.6343438-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Gust.xml</Source>
+      <Name>Game\Attacks\Gust</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Gust.xnb</Output>
+      <Time>2012-05-03T14:47:45.6353438-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Hurricane.xml</Source>
+      <Name>Game\Attacks\Hurricane</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Hurricane.xnb</Output>
+      <Time>2012-05-03T14:47:45.6353438-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Leer.xml</Source>
+      <Name>Game\Attacks\Leer</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Leer.xnb</Output>
+      <Time>2012-05-03T14:47:45.6363439-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Peck.xml</Source>
+      <Name>Game\Attacks\Peck</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Peck.xnb</Output>
+      <Time>2012-05-03T14:47:45.6373439-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Quick Attack.xml</Source>
+      <Name>Game\Attacks\Quick Attack</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Quick Attack.xnb</Output>
+      <Time>2012-05-03T14:47:45.638344-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Roost.xml</Source>
+      <Name>Game\Attacks\Roost</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Roost.xnb</Output>
+      <Time>2012-05-03T14:47:45.639344-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Sand-attack.xml</Source>
+      <Name>Game\Attacks\Sand-attack</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Sand-attack.xnb</Output>
+      <Time>2012-05-03T14:47:45.6403441-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Tackle.xml</Source>
+      <Name>Game\Attacks\Tackle</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Tackle.xnb</Output>
+      <Time>2012-05-03T14:47:45.6413442-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Twister.xml</Source>
+      <Name>Game\Attacks\Twister</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Twister.xnb</Output>
+      <Time>2012-05-03T14:47:45.6413442-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Wing Attack.xml</Source>
+      <Name>Game\Attacks\Wing Attack</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Attacks\Wing Attack.xnb</Output>
+      <Time>2012-05-03T14:47:45.6423442-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Pokemon\18.xml</Source>
+      <Name>Game\Pokemon\18</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Pokemon\18.xnb</Output>
+      <Time>2012-05-03T14:47:45.6443443-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Pokemon\22.xml</Source>
+      <Name>Game\Pokemon\22</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Game\Pokemon\22.xnb</Output>
+      <Time>2012-05-03T14:47:45.6453444-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022.gif</Source>
+      <Name>Pokemon\Front\022</Name>
+      <Importer>GifAminationImporter</Importer>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Pokemon\Front\022.xnb</Output>
+      <Time>2012-05-03T16:07:16.5312235-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018.gif</Source>
+      <Name>Pokemon\Back\018</Name>
+      <Importer>GifAminationImporter</Importer>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Pokemon\Back\018.xnb</Output>
+      <Time>2012-05-03T16:07:29.075941-06:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
@@ -429,7 +616,7 @@
     <Assemblies>
       <Assembly>
         <Key>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\XRpgLibrary\bin\x86\Debug\XRpgLibrary.dll</Key>
-        <Value>2012-05-02T17:30:50.6592178-06:00</Value>
+        <Value>2012-05-03T17:23:52.2650844-06:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
@@ -454,6 +641,10 @@
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
         <Value>2010-08-23T13:41:18-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\GifAnimation.Pipeline\bin\x86\Debug\GifAnimation.Pipeline.dll</Key>
+        <Value>2012-05-03T16:02:04.7543908-06:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>

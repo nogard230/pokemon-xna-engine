@@ -15,7 +15,7 @@ using Microsoft.Xna.Framework;
 
 namespace XRpgLibrary.PokemonClasses
 {
-    public enum Gender { Male, Female };
+    public enum Gender { Male, Female, None };
     public enum EXPRate { Erratic, Fast, MediumFast, MediumSlow, Slow, Fluctuating };
 
     public struct LevelUpMove
@@ -121,7 +121,7 @@ namespace XRpgLibrary.PokemonClasses
         public string Name
         {
             get { return name; }
-            private set { name = value; }
+            set { name = value; }
         }
 
         /// <summary>
@@ -130,7 +130,7 @@ namespace XRpgLibrary.PokemonClasses
         public int Level
         {
             get { return level; }
-            private set { level = value; }
+            set { level = value; }
         }
 
         /// <summary>
@@ -139,7 +139,7 @@ namespace XRpgLibrary.PokemonClasses
         public Gender Gender
         {
             get { return gender; }
-            private set { gender = value; }
+            set { gender = value; }
         }
 
         /// <summary>
@@ -148,7 +148,7 @@ namespace XRpgLibrary.PokemonClasses
         public int Happiness
         {
             get { return happiness; }
-            private set { happiness = value; }
+            set { happiness = value; }
         }
 
         /// <summary>
@@ -166,7 +166,7 @@ namespace XRpgLibrary.PokemonClasses
         public ElementType Type1
         {
             get { return type1; }
-            private set { type1 = value; }
+            set { type1 = value; }
         }
 
         /// <summary>
@@ -175,19 +175,19 @@ namespace XRpgLibrary.PokemonClasses
         public ElementType Type2
         {
             get { return type2; }
-            private set { type2 = value; }
+            set { type2 = value; }
         }
 
         public Nature Nature
         {
             get { return nature; }
-            private set { nature = value; }
+            set { nature = value; }
         }
 
         public Ability Ability
         {
             get { return ability; }
-            private set { ability = value; }
+            set { ability = value; }
         }
 
         /// <summary>
@@ -196,7 +196,7 @@ namespace XRpgLibrary.PokemonClasses
         public List<LevelUpMove> LevelUpMoves
         {
             get { return levelUpMoves; }
-            private set { levelUpMoves = value; }
+            set { levelUpMoves = value; }
         }
 
         /// <summary>
@@ -205,7 +205,7 @@ namespace XRpgLibrary.PokemonClasses
         public List<string> EggMoves
         {
             get { return eggMoves; }
-            private set { eggMoves = value; }
+            set { eggMoves = value; }
         }
 
         /// <summary>
@@ -214,7 +214,7 @@ namespace XRpgLibrary.PokemonClasses
         public List<string> TutoredMoves
         {
             get { return tutoredMoves; }
-            private set { tutoredMoves = value; }
+            set { tutoredMoves = value; }
         }
 
         /// <summary>
@@ -223,7 +223,7 @@ namespace XRpgLibrary.PokemonClasses
         public List<int> LearnableTMs
         {
             get { return learnableTMs; }
-            private set { learnableTMs = value; }
+            set { learnableTMs = value; }
         }
 
         /// <summary>
@@ -232,7 +232,7 @@ namespace XRpgLibrary.PokemonClasses
         public List<Attack> Moveset
         {
             get { return moveset; }
-            private set { moveset = value; }
+            set { moveset = value; }
         }
 
         /// <summary>
@@ -241,7 +241,7 @@ namespace XRpgLibrary.PokemonClasses
         public int BaseHP
         {
             get { return baseHP; }
-            private set { baseHP = value; }
+            set { baseHP = value; }
         }
 
         /// <summary>
@@ -250,7 +250,7 @@ namespace XRpgLibrary.PokemonClasses
         public int BaseAttack
         {
             get { return baseAttack; }
-            private set { baseAttack = value; }
+            set { baseAttack = value; }
         }
 
         /// <summary>
@@ -259,7 +259,7 @@ namespace XRpgLibrary.PokemonClasses
         public int BaseDefense
         {
             get { return baseDefense; }
-            private set { baseDefense = value; }
+            set { baseDefense = value; }
         }
 
         /// <summary>
@@ -268,7 +268,7 @@ namespace XRpgLibrary.PokemonClasses
         public int BaseSAttack
         {
             get { return baseSAttack; }
-            private set { baseSAttack = value; }
+            set { baseSAttack = value; }
         }
 
         /// <summary>
@@ -277,7 +277,7 @@ namespace XRpgLibrary.PokemonClasses
         public int BaseSDefense
         {
             get { return baseSDefense; }
-            private set { baseSDefense = value; }
+            set { baseSDefense = value; }
         }
 
         /// <summary>
@@ -286,7 +286,7 @@ namespace XRpgLibrary.PokemonClasses
         public int BaseSpeed
         {
             get { return baseSpeed; }
-            private set { baseSpeed = value; }
+            set { baseSpeed = value; }
         }
 
         /// <summary>
@@ -295,7 +295,7 @@ namespace XRpgLibrary.PokemonClasses
         public int HpIV
         {
             get { return hpIV; }
-            private set { hpIV = value; }
+            set { hpIV = value; }
         }
 
         /// <summary>
@@ -304,7 +304,7 @@ namespace XRpgLibrary.PokemonClasses
         public int AttackIV
         {
             get { return attackIV; }
-            private set { attackIV = value; }
+            set { attackIV = value; }
         }
 
         /// <summary>
@@ -313,7 +313,7 @@ namespace XRpgLibrary.PokemonClasses
         public int DefenseIV
         {
             get { return defenseIV; }
-            private set { defenseIV = value; }
+            set { defenseIV = value; }
         }
 
         /// <summary>
@@ -322,7 +322,7 @@ namespace XRpgLibrary.PokemonClasses
         public int SAttackIV
         {
             get { return sAttackIV; }
-            private set { sAttackIV = value; }
+            set { sAttackIV = value; }
         }
 
         /// <summary>
@@ -331,7 +331,7 @@ namespace XRpgLibrary.PokemonClasses
         public int SDefenseIV
         {
             get { return sDefenseIV; }
-            private set { sDefenseIV = value; }
+            set { sDefenseIV = value; }
         }
 
         /// <summary>
@@ -340,7 +340,7 @@ namespace XRpgLibrary.PokemonClasses
         public int SpeedIV
         {
             get { return speedIV; }
-            private set { speedIV = value; }
+            set { speedIV = value; }
         }
 
         /// <summary>
@@ -349,7 +349,7 @@ namespace XRpgLibrary.PokemonClasses
         public List<string> EvolveTo
         {
             get { return evolveTo; }
-            private set { evolveTo = value; }
+            set { evolveTo = value; }
         }
 
         /// <summary>
@@ -358,7 +358,7 @@ namespace XRpgLibrary.PokemonClasses
         public string EvolveFrom
         {
             get { return evolveFrom; }
-            private set { evolveFrom = value; }
+            set { evolveFrom = value; }
         }
 
         /// <summary>
@@ -367,7 +367,7 @@ namespace XRpgLibrary.PokemonClasses
         public EvolveCondition EvolveCondition
         {
             get { return evolveCondition; }
-            private set { evolveCondition = value; }
+            set { evolveCondition = value; }
         }
 
         /// <summary>
@@ -376,7 +376,7 @@ namespace XRpgLibrary.PokemonClasses
         public string EggGroup
         {
             get { return eggGroup; }
-            private set { eggGroup = value; }
+            set { eggGroup = value; }
         }
 
         /// <summary>
@@ -385,7 +385,7 @@ namespace XRpgLibrary.PokemonClasses
         public int PokedexNum
         {
             get { return pokedexNum; }
-            private set { pokedexNum = value; }
+            set { pokedexNum = value; }
         }
 
         /// <summary>
@@ -394,7 +394,7 @@ namespace XRpgLibrary.PokemonClasses
         public string PokedexClassification
         {
             get { return pokedexClassification; }
-            private set { pokedexClassification = value; }
+            set { pokedexClassification = value; }
         }
 
         /// <summary>
@@ -403,7 +403,7 @@ namespace XRpgLibrary.PokemonClasses
         public string PokedexEntry
         {
             get { return pokedexEntry; }
-            private set { pokedexEntry = value; }
+            set { pokedexEntry = value; }
         }
 
         /// <summary>
@@ -412,7 +412,7 @@ namespace XRpgLibrary.PokemonClasses
         public int HeightFeet
         {
             get { return heightFeet; }
-            private set { heightFeet = value; }
+            set { heightFeet = value; }
         }
 
         /// <summary>
@@ -421,7 +421,7 @@ namespace XRpgLibrary.PokemonClasses
         public int HeightInches
         {
             get { return heightInches; }
-            private set { heightInches = value; }
+            set { heightInches = value; }
         }
 
         /// <summary>
@@ -430,7 +430,7 @@ namespace XRpgLibrary.PokemonClasses
         public float Weight
         {
             get { return weight; }
-            private set { weight = value; }
+            set { weight = value; }
         }
 
         /// <summary>
@@ -439,7 +439,7 @@ namespace XRpgLibrary.PokemonClasses
         public int CaputreRate
         {
             get { return caputreRate; }
-            private set { caputreRate = value; }
+            set { caputreRate = value; }
         }
 
         /// <summary>
@@ -448,7 +448,7 @@ namespace XRpgLibrary.PokemonClasses
         public int BaseEggSteps
         {
             get { return baseEggSteps; }
-            private set { baseEggSteps = value; }
+            set { baseEggSteps = value; }
         }
 
         /// <summary>
@@ -457,7 +457,7 @@ namespace XRpgLibrary.PokemonClasses
         public int BaseHappiness
         {
             get { return baseHappiness; }
-            private set { baseHappiness = value; }
+            set { baseHappiness = value; }
         }
 
         /// <summary>
@@ -466,7 +466,7 @@ namespace XRpgLibrary.PokemonClasses
         public EXPRate XpGrowth
         {
             get { return xpGrowth; }
-            private set { xpGrowth = value; }
+            set { xpGrowth = value; }
         }
 
         /// <summary>
@@ -475,7 +475,7 @@ namespace XRpgLibrary.PokemonClasses
         public int FleeFlag
         {
             get { return fleeFlag; }
-            private set { fleeFlag = value; }
+            set { fleeFlag = value; }
         }
 
         /// <summary>
@@ -484,7 +484,7 @@ namespace XRpgLibrary.PokemonClasses
         public string ImageMale
         {
             get { return imageMale; }
-            private set { imageMale = value; }
+            set { imageMale = value; }
         }
 
         /// <summary>
@@ -493,7 +493,7 @@ namespace XRpgLibrary.PokemonClasses
         public string ImageFemale
         {
             get { return imageFemale; }
-            private set { imageFemale = value; }
+            set { imageFemale = value; }
         }
 
         /// <summary>
@@ -502,7 +502,7 @@ namespace XRpgLibrary.PokemonClasses
         public float GenderRatioMale
         {
             get { return genderRatioMale; }
-            private set { genderRatioMale = value; }
+            set { genderRatioMale = value; }
         }
 
         /// <summary>
@@ -511,7 +511,7 @@ namespace XRpgLibrary.PokemonClasses
         public float GenderRatioFemale
         {
             get { return genderRatioFemale; }
-            private set { genderRatioFemale = value; }
+            set { genderRatioFemale = value; }
         }
 
         /// <summary>
@@ -520,7 +520,7 @@ namespace XRpgLibrary.PokemonClasses
         public AttributePair CurrentHP
         {
             get { return currentHP; }
-            private set { currentHP = value; }
+            set { currentHP = value; }
         }
 
         #endregion
@@ -531,7 +531,7 @@ namespace XRpgLibrary.PokemonClasses
         public List<StatusType> CurrentConditions
         {
             get { return currentConditions; }
-            private set { currentConditions = value; }
+            set { currentConditions = value; }
         }
 
         #region Stats
@@ -730,7 +730,7 @@ namespace XRpgLibrary.PokemonClasses
 
         public bool isType(ElementType type)
         {
-            if (Type1 == type || Type1 == type)
+            if (Type1 == type || Type2 == type)
                 return true;
             else
                 return false;
@@ -897,13 +897,16 @@ namespace XRpgLibrary.PokemonClasses
             }
         }
 
-        public static Pokemon FromPokemonData(PokemonData data)
+        public static Pokemon FromPokemonData(PokemonData data, int level = 5)
         {
             Pokemon pokemon = new Pokemon();
 
             pokemon.name = data.Name;
             pokemon.uniqueID = data.UniqueID;
-            pokemon.level = data.Level;
+            if (data.Level == 0)
+            {
+                pokemon.level = level;
+            }
             pokemon.gender = data.Gender;
             pokemon.happiness = data.Happiness;
             pokemon.type1 = data.Type1;
@@ -923,8 +926,7 @@ namespace XRpgLibrary.PokemonClasses
             pokemon.baseSDefense = data.BaseSDefense;
             pokemon.baseSpeed = data.BaseSpeed;
 
-            //pokemon.hpIV = data.HPIV;
-            pokemon.hpIV = 25;
+            pokemon.hpIV = data.HPIV;
             pokemon.attackIV = data.AttackIV;
             pokemon.defenseIV = data.DefenseIV;
             pokemon.sAttackIV = data.SAttackIV;
@@ -955,7 +957,6 @@ namespace XRpgLibrary.PokemonClasses
             pokemon.genderRatioMale = data.GenderRatioMale;
             pokemon.genderRatioFemale = data.GenderRatioFemale;
 
-            //pokemon.currentHP = data.CurrentHP;
             pokemon.currentHP = new AttributePair(pokemon.HPStat);
             pokemon.currentConditions = data.CurrentConditions;
 

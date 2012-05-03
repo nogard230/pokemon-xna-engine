@@ -86,7 +86,7 @@ namespace RpgEditor
                 tbName.Text = Attack.Name;
                 cboElement.SelectedItem = Attack.AttackElementType;
                 mtbPP.Text = Attack.CurrentPP.MaximumValue.ToString();
-                mtbAccuracy.Text = attack.Accuracy.ToString();
+                mtbAccuracy.Text = (attack.Accuracy * 100).ToString();
                 cboType.SelectedItem = attack.AttackType;
 
                 cbContact.Checked = attack.Contact;

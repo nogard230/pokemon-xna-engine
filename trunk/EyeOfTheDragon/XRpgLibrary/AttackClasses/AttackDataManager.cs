@@ -9,13 +9,13 @@ namespace XRpgLibrary.AttackClasses
     {
         #region Field Region
 
-        readonly Dictionary<string, AttackData> attackData;
+        readonly static Dictionary<string, AttackData> attackData = new Dictionary<string, AttackData>();
 
         #endregion
 
         #region Property Region
 
-        public Dictionary<string, AttackData> AttackData
+        public static Dictionary<string, AttackData> AttackData
         {
             get { return attackData; }
         }
@@ -26,12 +26,16 @@ namespace XRpgLibrary.AttackClasses
 
         public AttackDataManager()
         {
-            attackData = new Dictionary<string, AttackData>();
         }
 
         #endregion
 
         #region Method Region
+        public static Attack GetAttack(string attackName)
+        {
+            Attack attack = Attack.AttackFromData(AttackData[attackName]);
+            return attack;
+        }
         #endregion
 
         #region Virtual Method region

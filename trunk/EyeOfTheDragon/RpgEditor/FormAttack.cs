@@ -47,7 +47,7 @@ namespace RpgEditor
                 string[] parts = detail.Split(',');
                 string entity = parts[0].Trim();
 
-                AttackData data = attackManager.AttackData[entity];
+                AttackData data = AttackDataManager.AttackData[entity];
                 AttackData newData = null;
 
                 using (FormAttackDetails frmAttackDetails = new FormAttackDetails())
@@ -60,7 +60,7 @@ namespace RpgEditor
 
                     if (frmAttackDetails.Attack.Name == entity)
                     {
-                        attackManager.AttackData[entity] = frmAttackDetails.Attack;
+                        AttackDataManager.AttackData[entity] = frmAttackDetails.Attack;
                         FillListBox();
                         return;
                     }
@@ -76,14 +76,14 @@ namespace RpgEditor
                 if (result == DialogResult.No)
                     return;
 
-                if (attackManager.AttackData.ContainsKey(newData.Name))
+                if (AttackDataManager.AttackData.ContainsKey(newData.Name))
                 {
                     MessageBox.Show("Entry already exists. Use Edit to modify the entry.");
                     return;
                 }
 
                 lbDetails.Items.Add(newData);
-                attackManager.AttackData.Add(newData.Name, newData);
+                AttackDataManager.AttackData.Add(newData.Name, newData);
             }
         }
 
@@ -119,13 +119,13 @@ namespace RpgEditor
         {
             lbDetails.Items.Clear();
 
-            foreach (string s in FormDetails.AttackManager.AttackData.Keys)
-                lbDetails.Items.Add(FormDetails.AttackManager.AttackData[s]);
+            foreach (string s in AttackDataManager.AttackData.Keys)
+                lbDetails.Items.Add(AttackDataManager.AttackData[s]);
         }
 
         private void AddAttack(AttackData attackData)
         {
-            if (FormDetails.AttackManager.AttackData.ContainsKey(attackData.Name))
+            if (AttackDataManager.AttackData.ContainsKey(attackData.Name))
             {
                 DialogResult result = MessageBox.Show(
                     attackData.Name + " already exists. Overwrite it?",
@@ -135,12 +135,12 @@ namespace RpgEditor
                 if (result == DialogResult.No)
                     return;
 
-                attackManager.AttackData[attackData.Name] = attackData;
+                AttackDataManager.AttackData[attackData.Name] = attackData;
                 FillListBox();
                 return;
             }
 
-            attackManager.AttackData.Add(attackData.Name, attackData);
+            AttackDataManager.AttackData.Add(attackData.Name, attackData);
             lbDetails.Items.Add(attackData);
         }
 

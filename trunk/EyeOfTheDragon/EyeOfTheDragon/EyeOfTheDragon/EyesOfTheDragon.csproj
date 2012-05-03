@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Components\BattleImageLoader.cs" />
+    <Compile Include="Components\ContentLoader.cs" />
     <Compile Include="Components\DataManager.cs" />
     <Compile Include="Components\Player.cs" />
     <Compile Include="GameScreens\BaseGameState.cs" />
@@ -127,6 +128,14 @@
     <Content Include="GameThumbnail.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\GifAnimation.Pipeline\GifAnimation.Pipeline.csproj">
+      <Project>{9C683759-D9CF-423E-87B1-153097BE2820}</Project>
+      <Name>GifAnimation.Pipeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GifAnimation\GifAnimation.csproj">
+      <Project>{76B7215D-8172-4FF9-A1A9-4989B0D4C15B}</Project>
+      <Name>GifAnimation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\XRpgLibrary\XRpgLibrary.csproj">
       <Project>{12D814C5-88B9-4311-A245-3D391BBA10E5}</Project>
       <Name>XRpgLibrary</Name>
