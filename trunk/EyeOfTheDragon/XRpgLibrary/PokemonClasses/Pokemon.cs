@@ -21,14 +21,18 @@ namespace XRpgLibrary.PokemonClasses
     public struct LevelUpMove
     {
         
+        #region Public Members
         public int level;
         public string attack;
+        #endregion Public Members
 
+        #region Constructors
         public LevelUpMove(int l, string a)
         {
             level = l;
             attack = a;
         }
+        #endregion Constructors
 
         public string ToString()
         {
@@ -46,7 +50,7 @@ namespace XRpgLibrary.PokemonClasses
         int level;
         Gender gender;
         int happiness;
-        GameItem holdItem;
+        BaseItem holdItem;
         ElementType type1;
         ElementType type2;
         Nature nature;
@@ -145,6 +149,15 @@ namespace XRpgLibrary.PokemonClasses
         {
             get { return happiness; }
             private set { happiness = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets the holditem.
+        /// </summary>
+        public BaseItem HoldItem
+        {
+            get { return holdItem; }
+            set { holdItem = value; }
         }
 
         /// <summary>
@@ -676,6 +689,15 @@ namespace XRpgLibrary.PokemonClasses
         }
 
         #endregion
+
+        /// <summary>
+        /// Gets or sets the uniqueid.
+        /// </summary>
+        public string UniqueID
+        {
+            get { return uniqueID; }
+            set { uniqueID = value; }
+        }
 
         
 
