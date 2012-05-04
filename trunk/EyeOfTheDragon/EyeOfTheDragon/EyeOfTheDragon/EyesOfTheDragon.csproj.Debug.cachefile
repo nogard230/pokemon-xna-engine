@@ -23,8 +23,6 @@ Content\Backgrounds\menubackground.xnb
 Content\Backgrounds\battlebgs.xnb
 Content\Backgrounds\battleTest.xnb
 Content\Backgrounds\battlefieldtest.xnb
-Content\Pokemon\Front\test.xnb
-Content\Pokemon\Back\testback.xnb
 Content\GUI\hpbars.xnb
 Content\PlayerSprites\hero.xnb
 Content\GUI\battlehud.xnb
@@ -63,5 +61,5 @@ Content\Game\Attacks\Twister.xnb
 Content\Game\Attacks\Wing Attack.xnb
 Content\Game\Pokemon\18.xnb
 Content\Game\Pokemon\22.xnb
-Content\Pokemon\Front\022.xnb
 Content\Pokemon\Back\018.xnb
+Content\Pokemon\Front\022.xnb

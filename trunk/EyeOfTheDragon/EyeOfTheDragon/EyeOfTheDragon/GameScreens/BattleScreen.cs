@@ -282,6 +282,36 @@ namespace EyesOfTheDragon.GameScreens
                         selectedMenu = SelectedMenu.Main;
                         HighlightControl(selectedControl);
                     }
+
+                    if (selectedAttack == SelectedControl.Attack2)
+                    {
+                        if (battleManger.MyPokemon.Moveset.Count >= 2)
+                        {
+                            battleManger.MyPokemon.Moveset[1].useAttack(battleManger.MyPokemon, battleManger.OpponentPokemon);
+                            selectedMenu = SelectedMenu.Main;
+                            HighlightControl(selectedControl);
+                        }
+                    }
+
+                    if (selectedAttack == SelectedControl.Attack3)
+                    {
+                        if (battleManger.MyPokemon.Moveset.Count >= 3)
+                        {
+                            battleManger.MyPokemon.Moveset[2].useAttack(battleManger.MyPokemon, battleManger.OpponentPokemon);
+                            selectedMenu = SelectedMenu.Main;
+                            HighlightControl(selectedControl);
+                        }
+                    }
+
+                    if (selectedAttack == SelectedControl.Attack4)
+                    {
+                        if (battleManger.MyPokemon.Moveset.Count >= 4)
+                        {
+                            battleManger.MyPokemon.Moveset[3].useAttack(battleManger.MyPokemon, battleManger.OpponentPokemon);
+                            selectedMenu = SelectedMenu.Main;
+                            HighlightControl(selectedControl);
+                        }
+                    }
                 }
             }
         }

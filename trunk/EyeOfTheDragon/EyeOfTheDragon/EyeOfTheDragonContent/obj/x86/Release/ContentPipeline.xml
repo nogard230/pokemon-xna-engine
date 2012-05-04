@@ -1,0 +1,1035 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Fonts\ControlFont.spritefont</Source>
+      <Name>Fonts\ControlFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Fonts\ControlFont.xnb</Output>
+      <Time>2012-04-28T08:45:23.1079291-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\TitleFont.spritefont</Source>
+      <Name>Fonts\TitleFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Fonts\TitleFont.xnb</Output>
+      <Time>2012-04-28T08:52:29.8353365-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\TitleFontOutline.spritefont</Source>
+      <Name>Fonts\TitleFontOutline</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Fonts\TitleFontOutline.xnb</Output>
+      <Time>2012-04-28T11:40:39.3344229-06:00</Time>
+    </Item>
+    <Item>
+      <Source>GUI\leftarrowUp.png</Source>
+      <Name>GUI\leftarrowUp</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\GUI\leftarrowUp.xnb</Output>
+      <Time>2012-04-10T13:47:59.5282316-06:00</Time>
+    </Item>
+    <Item>
+      <Source>GUI\rightarrowUp.png</Source>
+      <Name>GUI\rightarrowUp</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\GUI\rightarrowUp.xnb</Output>
+      <Time>2012-04-10T13:47:59.5132307-06:00</Time>
+    </Item>
+    <Item>
+      <Source>GUI\StopBar.png</Source>
+      <Name>GUI\StopBar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\GUI\StopBar.xnb</Output>
+      <Time>2012-04-10T13:47:59.5232313-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Tilesets\tileset2.png</Source>
+      <Name>Tilesets\tileset2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Tilesets\tileset2.xnb</Output>
+      <Time>2012-04-10T13:48:00.1242657-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Tilesets\tileset1.png</Source>
+      <Name>Tilesets\tileset1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Tilesets\tileset1.xnb</Output>
+      <Time>2012-04-10T13:48:00.1192654-06:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayerSprites\femalefighter.png</Source>
+      <Name>PlayerSprites\femalefighter</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\PlayerSprites\femalefighter.xnb</Output>
+      <Time>2012-04-10T13:47:59.7922467-06:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayerSprites\femalepriest.png</Source>
+      <Name>PlayerSprites\femalepriest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\PlayerSprites\femalepriest.xnb</Output>
+      <Time>2012-04-10T13:47:59.763245-06:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayerSprites\femalerogue.png</Source>
+      <Name>PlayerSprites\femalerogue</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\PlayerSprites\femalerogue.xnb</Output>
+      <Time>2012-04-10T13:47:59.8112478-06:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayerSprites\femalewizard.png</Source>
+      <Name>PlayerSprites\femalewizard</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\PlayerSprites\femalewizard.xnb</Output>
+      <Time>2012-04-10T13:47:59.8062475-06:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayerSprites\malefighter.png</Source>
+      <Name>PlayerSprites\malefighter</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\PlayerSprites\malefighter.xnb</Output>
+      <Time>2012-04-10T13:47:59.8012472-06:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayerSprites\malepriest.png</Source>
+      <Name>PlayerSprites\malepriest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\PlayerSprites\malepriest.xnb</Output>
+      <Time>2012-04-10T13:47:59.7962469-06:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayerSprites\malerogue.png</Source>
+      <Name>PlayerSprites\malerogue</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\PlayerSprites\malerogue.xnb</Output>
+      <Time>2012-04-10T13:47:59.7582447-06:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayerSprites\malewizard.png</Source>
+      <Name>PlayerSprites\malewizard</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\PlayerSprites\malewizard.xnb</Output>
+      <Time>2012-04-10T13:47:59.7522444-06:00</Time>
+    </Item>
+    <Item>
+      <Source>GUI\listBoxImage.png</Source>
+      <Name>GUI\listBoxImage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\GUI\listBoxImage.xnb</Output>
+      <Time>2012-04-10T13:47:59.518231-06:00</Time>
+    </Item>
+    <Item>
+      <Source>ObjectSprites\containers.png</Source>
+      <Name>ObjectSprites\containers</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\ObjectSprites\containers.xnb</Output>
+      <Time>2012-04-10T13:47:58.6011786-06:00</Time>
+    </Item>
+    <Item>
+      <Source>ObjectSprites\itemimages.png</Source>
+      <Name>ObjectSprites\itemimages</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\ObjectSprites\itemimages.xnb</Output>
+      <Time>2012-04-10T13:47:58.5971783-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\pixel.png</Source>
+      <Name>Backgrounds\pixel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Backgrounds\pixel.xnb</Output>
+      <Time>2012-04-10T13:47:59.220214-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\titlescreen.png</Source>
+      <Name>Backgrounds\titlescreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Backgrounds\titlescreen.xnb</Output>
+      <Time>2012-04-28T08:25:50.9268842-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\menubackground.jpg</Source>
+      <Name>Backgrounds\menubackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Backgrounds\menubackground.xnb</Output>
+      <Time>2012-04-28T08:50:04.8710451-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\battlebgs.png</Source>
+      <Name>Backgrounds\battlebgs</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Backgrounds\battlebgs.xnb</Output>
+      <Time>2012-04-29T16:01:31.852913-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\battleTest.png</Source>
+      <Name>Backgrounds\battleTest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Backgrounds\battleTest.xnb</Output>
+      <Time>2012-04-29T16:16:00.7766126-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\battlefieldtest.png</Source>
+      <Name>Backgrounds\battlefieldtest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Backgrounds\battlefieldtest.xnb</Output>
+      <Time>2012-04-29T16:37:21.5028659-06:00</Time>
+    </Item>
+    <Item>
+      <Source>GUI\hpbars.png</Source>
+      <Name>GUI\hpbars</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\GUI\hpbars.xnb</Output>
+      <Time>2012-04-29T21:31:36.0856503-06:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayerSprites\hero.PNG</Source>
+      <Name>PlayerSprites\hero</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\PlayerSprites\hero.xnb</Output>
+      <Time>2012-05-01T11:22:07.6690579-06:00</Time>
+    </Item>
+    <Item>
+      <Source>GUI\battlehud.png</Source>
+      <Name>GUI\battlehud</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\GUI\battlehud.xnb</Output>
+      <Time>2012-05-01T12:02:36.5489818-06:00</Time>
+    </Item>
+    <Item>
+      <Source>GUI\attacktile.png</Source>
+      <Name>GUI\attacktile</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\GUI\attacktile.xnb</Output>
+      <Time>2012-05-01T14:31:08.7647314-06:00</Time>
+    </Item>
+    <Item>
+      <Source>GUI\typeicons.png</Source>
+      <Name>GUI\typeicons</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\GUI\typeicons.xnb</Output>
+      <Time>2012-05-01T16:50:35.5942867-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_0.png</Source>
+      <Name>Pokemon\Back\018\018_0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_0.xnb</Output>
+      <Time>2012-05-04T06:15:27.6010261-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_1.png</Source>
+      <Name>Pokemon\Back\018\018_1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_1.xnb</Output>
+      <Time>2012-05-04T06:15:27.6230274-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_10.png</Source>
+      <Name>Pokemon\Back\018\018_10</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_10.xnb</Output>
+      <Time>2012-05-04T06:15:27.6240275-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_11.png</Source>
+      <Name>Pokemon\Back\018\018_11</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_11.xnb</Output>
+      <Time>2012-05-04T06:15:27.6250275-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_12.png</Source>
+      <Name>Pokemon\Back\018\018_12</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_12.xnb</Output>
+      <Time>2012-05-04T06:15:27.6250275-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_13.png</Source>
+      <Name>Pokemon\Back\018\018_13</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_13.xnb</Output>
+      <Time>2012-05-04T06:15:27.6260276-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_14.png</Source>
+      <Name>Pokemon\Back\018\018_14</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_14.xnb</Output>
+      <Time>2012-05-04T06:15:27.6280277-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_15.png</Source>
+      <Name>Pokemon\Back\018\018_15</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_15.xnb</Output>
+      <Time>2012-05-04T06:15:27.6290277-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_16.png</Source>
+      <Name>Pokemon\Back\018\018_16</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_16.xnb</Output>
+      <Time>2012-05-04T06:15:27.6290277-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_17.png</Source>
+      <Name>Pokemon\Back\018\018_17</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_17.xnb</Output>
+      <Time>2012-05-04T06:15:27.6300278-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_18.png</Source>
+      <Name>Pokemon\Back\018\018_18</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_18.xnb</Output>
+      <Time>2012-05-04T06:15:27.6310279-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_19.png</Source>
+      <Name>Pokemon\Back\018\018_19</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_19.xnb</Output>
+      <Time>2012-05-04T06:15:27.634028-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_2.png</Source>
+      <Name>Pokemon\Back\018\018_2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_2.xnb</Output>
+      <Time>2012-05-04T06:15:27.6350281-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_20.png</Source>
+      <Name>Pokemon\Back\018\018_20</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_20.xnb</Output>
+      <Time>2012-05-04T06:15:27.6360281-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_21.png</Source>
+      <Name>Pokemon\Back\018\018_21</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_21.xnb</Output>
+      <Time>2012-05-04T06:15:27.6370282-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_22.png</Source>
+      <Name>Pokemon\Back\018\018_22</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_22.xnb</Output>
+      <Time>2012-05-04T06:15:27.6380283-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_23.png</Source>
+      <Name>Pokemon\Back\018\018_23</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_23.xnb</Output>
+      <Time>2012-05-04T06:15:27.6390283-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_3.png</Source>
+      <Name>Pokemon\Back\018\018_3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_3.xnb</Output>
+      <Time>2012-05-04T06:15:27.6470288-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_4.png</Source>
+      <Name>Pokemon\Back\018\018_4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_4.xnb</Output>
+      <Time>2012-05-04T06:15:27.6480288-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_5.png</Source>
+      <Name>Pokemon\Back\018\018_5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_5.xnb</Output>
+      <Time>2012-05-04T06:15:27.6490289-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_6.png</Source>
+      <Name>Pokemon\Back\018\018_6</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_6.xnb</Output>
+      <Time>2012-05-04T06:15:27.650029-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_7.png</Source>
+      <Name>Pokemon\Back\018\018_7</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_7.xnb</Output>
+      <Time>2012-05-04T06:15:27.651029-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_8.png</Source>
+      <Name>Pokemon\Back\018\018_8</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_8.xnb</Output>
+      <Time>2012-05-04T06:15:27.6520291-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018\018_9.png</Source>
+      <Name>Pokemon\Back\018\018_9</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018\018_9.xnb</Output>
+      <Time>2012-05-04T06:15:27.6530291-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022\022_0.png</Source>
+      <Name>Pokemon\Front\022\022_0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022\022_0.xnb</Output>
+      <Time>2012-05-04T06:15:38.5596529-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022\022_1.png</Source>
+      <Name>Pokemon\Front\022\022_1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022\022_1.xnb</Output>
+      <Time>2012-05-04T06:15:38.560653-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022\022_10.png</Source>
+      <Name>Pokemon\Front\022\022_10</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022\022_10.xnb</Output>
+      <Time>2012-05-04T06:15:38.5626531-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022\022_11.png</Source>
+      <Name>Pokemon\Front\022\022_11</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022\022_11.xnb</Output>
+      <Time>2012-05-04T06:15:38.5646532-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022\022_12.png</Source>
+      <Name>Pokemon\Front\022\022_12</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022\022_12.xnb</Output>
+      <Time>2012-05-04T06:15:38.5656533-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022\022_13.png</Source>
+      <Name>Pokemon\Front\022\022_13</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022\022_13.xnb</Output>
+      <Time>2012-05-04T06:15:38.5666533-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022\022_14.png</Source>
+      <Name>Pokemon\Front\022\022_14</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022\022_14.xnb</Output>
+      <Time>2012-05-04T06:15:38.5686535-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022\022_15.png</Source>
+      <Name>Pokemon\Front\022\022_15</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022\022_15.xnb</Output>
+      <Time>2012-05-04T06:15:38.5706536-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022\022_16.png</Source>
+      <Name>Pokemon\Front\022\022_16</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022\022_16.xnb</Output>
+      <Time>2012-05-04T06:15:38.5716536-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022\022_17.png</Source>
+      <Name>Pokemon\Front\022\022_17</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022\022_17.xnb</Output>
+      <Time>2012-05-04T06:15:38.5726537-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022\022_18.png</Source>
+      <Name>Pokemon\Front\022\022_18</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022\022_18.xnb</Output>
+      <Time>2012-05-04T06:15:38.5736537-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022\022_19.png</Source>
+      <Name>Pokemon\Front\022\022_19</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022\022_19.xnb</Output>
+      <Time>2012-05-04T06:15:38.5746538-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022\022_2.png</Source>
+      <Name>Pokemon\Front\022\022_2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022\022_2.xnb</Output>
+      <Time>2012-05-04T06:15:38.5756539-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022\022_3.png</Source>
+      <Name>Pokemon\Front\022\022_3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022\022_3.xnb</Output>
+      <Time>2012-05-04T06:15:38.5766539-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022\022_4.png</Source>
+      <Name>Pokemon\Front\022\022_4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022\022_4.xnb</Output>
+      <Time>2012-05-04T06:15:38.577654-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022\022_5.png</Source>
+      <Name>Pokemon\Front\022\022_5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022\022_5.xnb</Output>
+      <Time>2012-05-04T06:15:38.578654-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022\022_6.png</Source>
+      <Name>Pokemon\Front\022\022_6</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022\022_6.xnb</Output>
+      <Time>2012-05-04T06:15:38.5796541-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022\022_7.png</Source>
+      <Name>Pokemon\Front\022\022_7</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022\022_7.xnb</Output>
+      <Time>2012-05-04T06:15:38.5816542-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022\022_8.png</Source>
+      <Name>Pokemon\Front\022\022_8</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022\022_8.xnb</Output>
+      <Time>2012-05-04T06:15:38.5826543-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022\022_9.png</Source>
+      <Name>Pokemon\Front\022\022_9</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022\022_9.xnb</Output>
+      <Time>2012-05-04T06:15:38.5846544-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Classes\Fighter.xml</Source>
+      <Name>Game\Classes\Fighter</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Classes\Fighter.xnb</Output>
+      <Time>2012-04-11T21:47:41.6642729-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Classes\Priest.xml</Source>
+      <Name>Game\Classes\Priest</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Classes\Priest.xnb</Output>
+      <Time>2012-04-11T21:47:41.665273-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Classes\Rogue.xml</Source>
+      <Name>Game\Classes\Rogue</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Classes\Rogue.xnb</Output>
+      <Time>2012-04-11T21:47:41.6672731-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Classes\Wizard.xml</Source>
+      <Name>Game\Classes\Wizard</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Classes\Wizard.xnb</Output>
+      <Time>2012-04-11T21:47:41.6682732-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Game.xml</Source>
+      <Name>Game\Game</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Game.xnb</Output>
+      <Time>2012-04-11T21:47:41.6692732-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Items\Recovery\Potion.xml</Source>
+      <Name>Game\Items\Recovery\Potion</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Items\Recovery\Potion.xnb</Output>
+      <Time>2012-04-11T21:47:41.6722734-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Chests\Potion.xml</Source>
+      <Name>Game\Chests\Potion</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Chests\Potion.xnb</Output>
+      <Time>2012-04-11T21:47:40.2081896-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Items\Misc\Thunder Stone.xml</Source>
+      <Name>Game\Items\Misc\Thunder Stone</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Items\Misc\Thunder Stone.xnb</Output>
+      <Time>2012-04-11T21:47:41.6712733-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Skills\Bartering.xml</Source>
+      <Name>Game\Skills\Bartering</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Skills\Bartering.xnb</Output>
+      <Time>2012-04-11T21:47:41.683274-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Skills\Herbalism.xml</Source>
+      <Name>Game\Skills\Herbalism</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Skills\Herbalism.xnb</Output>
+      <Time>2012-04-11T21:47:41.6842741-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Skills\Poison Making.xml</Source>
+      <Name>Game\Skills\Poison Making</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Skills\Poison Making.xnb</Output>
+      <Time>2012-04-11T21:47:41.6862742-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Skills\Trap Making.xml</Source>
+      <Name>Game\Skills\Trap Making</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Skills\Trap Making.xnb</Output>
+      <Time>2012-04-11T21:47:41.6872742-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Levels\Maps\MTest.xml</Source>
+      <Name>Game\Levels\Maps\MTest</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Levels\Maps\MTest.xnb</Output>
+      <Time>2012-04-27T20:44:45.7068912-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Levels\MTest.xml</Source>
+      <Name>Game\Levels\MTest</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Levels\MTest.xnb</Output>
+      <Time>2012-04-27T20:44:45.7078913-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Agility.xml</Source>
+      <Name>Game\Attacks\Agility</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Attacks\Agility.xnb</Output>
+      <Time>2012-05-03T14:47:45.6283434-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Air Slash.xml</Source>
+      <Name>Game\Attacks\Air Slash</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Attacks\Air Slash.xnb</Output>
+      <Time>2012-05-03T14:47:45.6293435-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Brave Bird.xml</Source>
+      <Name>Game\Attacks\Brave Bird</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Attacks\Brave Bird.xnb</Output>
+      <Time>2012-05-03T14:47:45.6303435-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Drill Peck.xml</Source>
+      <Name>Game\Attacks\Drill Peck</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Attacks\Drill Peck.xnb</Output>
+      <Time>2012-05-03T14:47:45.6313436-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Featherdance.xml</Source>
+      <Name>Game\Attacks\Featherdance</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Attacks\Featherdance.xnb</Output>
+      <Time>2012-05-03T14:47:45.6323436-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Fury Attack.xml</Source>
+      <Name>Game\Attacks\Fury Attack</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Attacks\Fury Attack.xnb</Output>
+      <Time>2012-05-03T14:47:45.6333437-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Growl.xml</Source>
+      <Name>Game\Attacks\Growl</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Attacks\Growl.xnb</Output>
+      <Time>2012-05-03T14:47:45.6343438-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Gust.xml</Source>
+      <Name>Game\Attacks\Gust</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Attacks\Gust.xnb</Output>
+      <Time>2012-05-03T14:47:45.6353438-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Hurricane.xml</Source>
+      <Name>Game\Attacks\Hurricane</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Attacks\Hurricane.xnb</Output>
+      <Time>2012-05-03T14:47:45.6353438-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Leer.xml</Source>
+      <Name>Game\Attacks\Leer</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Attacks\Leer.xnb</Output>
+      <Time>2012-05-03T14:47:45.6363439-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Peck.xml</Source>
+      <Name>Game\Attacks\Peck</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Attacks\Peck.xnb</Output>
+      <Time>2012-05-03T14:47:45.6373439-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Quick Attack.xml</Source>
+      <Name>Game\Attacks\Quick Attack</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Attacks\Quick Attack.xnb</Output>
+      <Time>2012-05-03T14:47:45.638344-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Roost.xml</Source>
+      <Name>Game\Attacks\Roost</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Attacks\Roost.xnb</Output>
+      <Time>2012-05-03T14:47:45.639344-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Sand-attack.xml</Source>
+      <Name>Game\Attacks\Sand-attack</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Attacks\Sand-attack.xnb</Output>
+      <Time>2012-05-03T14:47:45.6403441-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Tackle.xml</Source>
+      <Name>Game\Attacks\Tackle</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Attacks\Tackle.xnb</Output>
+      <Time>2012-05-03T14:47:45.6413442-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Twister.xml</Source>
+      <Name>Game\Attacks\Twister</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Attacks\Twister.xnb</Output>
+      <Time>2012-05-03T14:47:45.6413442-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Attacks\Wing Attack.xml</Source>
+      <Name>Game\Attacks\Wing Attack</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Attacks\Wing Attack.xnb</Output>
+      <Time>2012-05-03T14:47:45.6423442-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Pokemon\18.xml</Source>
+      <Name>Game\Pokemon\18</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Pokemon\18.xnb</Output>
+      <Time>2012-05-03T14:47:45.6443443-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Game\Pokemon\22.xml</Source>
+      <Name>Game\Pokemon\22</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Game\Pokemon\22.xnb</Output>
+      <Time>2012-05-03T14:47:45.6453444-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Back\018.gif</Source>
+      <Name>Pokemon\Back\018</Name>
+      <Importer>GifAminationImporter</Importer>
+      <Processor>GifAnimationProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Back\018.xnb</Output>
+      <Time>2012-05-04T06:21:45.9266651-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022.gif</Source>
+      <Name>Pokemon\Front\022</Name>
+      <Importer>GifAminationImporter</Importer>
+      <Processor>GifAnimationProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\Pokemon\Front\022.xnb</Output>
+      <Time>2012-05-04T06:21:58.1403637-06:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Release</BuildConfiguration>
+      <CompressContent>true</CompressContent>
+      <RootDirectory>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragonContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragonContent\obj\x86\Release\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Release\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\XRpgLibrary\bin\x86\Release\XRpgLibrary.dll</Key>
+        <Value>2012-05-04T06:20:05.9399462-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T13:41:18-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T13:41:18-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\GifAnimation.Pipeline\bin\x86\Debug\GifAnimation.Pipeline.dll</Key>
+        <Value>2012-05-04T06:24:06.6757155-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2011-12-12T20:24:52.9994497-07:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

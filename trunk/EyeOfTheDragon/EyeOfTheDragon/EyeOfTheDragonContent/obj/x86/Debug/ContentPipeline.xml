@@ -227,24 +227,6 @@
       <Time>2012-04-29T16:37:21.5028659-06:00</Time>
     </Item>
     <Item>
-      <Source>Pokemon\Front\test.png</Source>
-      <Name>Pokemon\Front\test</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Pokemon\Front\test.xnb</Output>
-      <Time>2012-04-29T19:18:24.4505549-06:00</Time>
-    </Item>
-    <Item>
-      <Source>Pokemon\Back\testback.png</Source>
-      <Name>Pokemon\Back\testback</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Pokemon\Back\testback.xnb</Output>
-      <Time>2012-04-29T19:18:26.881694-06:00</Time>
-    </Item>
-    <Item>
       <Source>GUI\hpbars.png</Source>
       <Name>GUI\hpbars</Name>
       <Importer>TextureImporter</Importer>
@@ -587,20 +569,22 @@
       <Time>2012-05-03T14:47:45.6453444-06:00</Time>
     </Item>
     <Item>
-      <Source>Pokemon\Front\022.gif</Source>
-      <Name>Pokemon\Front\022</Name>
-      <Importer>GifAminationImporter</Importer>
-      <Options>None</Options>
-      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Pokemon\Front\022.xnb</Output>
-      <Time>2012-05-03T16:07:16.5312235-06:00</Time>
-    </Item>
-    <Item>
       <Source>Pokemon\Back\018.gif</Source>
       <Name>Pokemon\Back\018</Name>
       <Importer>GifAminationImporter</Importer>
+      <Processor>GifAnimationProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Pokemon\Back\018.xnb</Output>
-      <Time>2012-05-03T16:07:29.075941-06:00</Time>
+      <Time>2012-05-04T06:21:45.9266651-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Pokemon\Front\022.gif</Source>
+      <Name>Pokemon\Front\022</Name>
+      <Importer>GifAminationImporter</Importer>
+      <Processor>GifAnimationProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\EyeOfTheDragon\EyeOfTheDragon\bin\x86\Debug\Content\Pokemon\Front\022.xnb</Output>
+      <Time>2012-05-04T06:21:58.1403637-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -644,7 +628,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\GifAnimation.Pipeline\bin\x86\Debug\GifAnimation.Pipeline.dll</Key>
-        <Value>2012-05-03T16:02:04.7543908-06:00</Value>
+        <Value>2012-05-04T06:43:38.2407252-06:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>

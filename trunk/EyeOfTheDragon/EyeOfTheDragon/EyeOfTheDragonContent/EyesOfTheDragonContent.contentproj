@@ -310,20 +310,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pokemon\Front\test.png">
-      <Name>test</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Pokemon\Back\testback.png">
-      <Name>testback</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="GUI\hpbars.png">
       <Name>hpbars</Name>
       <Importer>TextureImporter</Importer>
@@ -456,16 +442,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pokemon\Front\022.gif">
-      <Name>022</Name>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Pokemon\Back\018.gif">
-      <Name>018</Name>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
@@ -486,6 +462,20 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pokemon\Back\018.gif">
+      <Name>018</Name>
+      <Importer>GifAminationImporter</Importer>
+      <Processor>GifAnimationProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pokemon\Front\022.gif">
+      <Name>022</Name>
+      <Importer>GifAminationImporter</Importer>
+      <Processor>GifAnimationProcessor</Processor>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
