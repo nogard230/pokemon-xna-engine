@@ -101,6 +101,7 @@
     <Compile Include="AttackClasses\AttackEffects\BasicDamage.cs" />
     <Compile Include="AttackClasses\AttackEffects\FixedDamage.cs" />
     <Compile Include="AttackClasses\AttackEffects\Heal.cs" />
+    <Compile Include="AttackClasses\AttackEffects\HighCriticalChanceDamage.cs" />
     <Compile Include="AttackClasses\AttackEffects\ModifyStat.cs" />
     <Compile Include="AttackClasses\AttackEffects\RecoilAttack.cs" />
     <Compile Include="AttackClasses\AttackEffects\RepeatingAttack.cs" />
