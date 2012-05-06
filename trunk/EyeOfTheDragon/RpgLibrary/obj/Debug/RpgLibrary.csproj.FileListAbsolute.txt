@@ -1,5 +1,0 @@
-c:\users\kevin\documents\visual studio 2010\Projects\EyeOfTheDragon\RpgLibrary\bin\Debug\RpgLibrary.dll
-c:\users\kevin\documents\visual studio 2010\Projects\EyeOfTheDragon\RpgLibrary\bin\Debug\RpgLibrary.pdb
-c:\users\kevin\documents\visual studio 2010\Projects\EyeOfTheDragon\RpgLibrary\obj\Debug\ResolveAssemblyReference.cache
-c:\users\kevin\documents\visual studio 2010\Projects\EyeOfTheDragon\RpgLibrary\obj\Debug\RpgLibrary.dll
-c:\users\kevin\documents\visual studio 2010\Projects\EyeOfTheDragon\RpgLibrary\obj\Debug\RpgLibrary.pdb

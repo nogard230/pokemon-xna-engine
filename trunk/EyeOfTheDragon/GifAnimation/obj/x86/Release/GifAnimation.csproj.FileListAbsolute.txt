@@ -1,6 +1,0 @@
-C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\GifAnimation\bin\x86\Release\GifAnimation.dll
-C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\GifAnimation\bin\x86\Release\GifAnimation.pdb
-C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\GifAnimation\obj\x86\Release\ResolveAssemblyReference.cache
-C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\GifAnimation\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\GifAnimation\obj\x86\Release\GifAnimation.dll
-C:\Users\Kevin\Documents\Visual Studio 2010\Projects\SVN\EyeOfTheDragon\GifAnimation\obj\x86\Release\GifAnimation.pdb
