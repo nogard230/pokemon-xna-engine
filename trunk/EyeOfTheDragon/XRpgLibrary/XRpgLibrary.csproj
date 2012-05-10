@@ -113,8 +113,11 @@
     <Compile Include="CharacterClasses\EntityData.cs" />
     <Compile Include="CharacterClasses\EntityDataManager.cs" />
     <Compile Include="CharacterClasses\NonPlayerCharacter.cs" />
+    <Compile Include="Controls\AttackControl.cs" />
+    <Compile Include="Controls\BlankGridSpace.cs" />
     <Compile Include="Controls\Control.cs" />
     <Compile Include="Controls\ControlManager.cs" />
+    <Compile Include="Controls\GridControlManager.cs" />
     <Compile Include="Controls\Label.cs" />
     <Compile Include="Controls\LeftRightSelector.cs" />
     <Compile Include="Controls\LinkLabel.cs" />

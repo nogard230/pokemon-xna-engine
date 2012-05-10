@@ -24,7 +24,17 @@
                 content.Frames[i].__2__Width = source.Width;
                 content.Frames[i].__3__Height = source.Height;
                 content.Frames[i].__4__Levels = 1;
-                content.Frames[i].Data = buffer;
+
+                byte[] bgraPixelData = new byte[buffer.Length];
+                for (int j = 0; j < buffer.Length; j += 4)
+                {
+                    bgraPixelData[j] = buffer[j + 2];
+                    bgraPixelData[j + 1] = buffer[j + 1];
+                    bgraPixelData[j + 2] = buffer[j];
+                    bgraPixelData[j + 3] = buffer[j + 3]; //The video comes with 0 alpha so it is transparent
+                }
+
+                content.Frames[i].Data = bgraPixelData;
             }
             source.Dispose();
             return content;

@@ -13,6 +13,7 @@ using XRpgLibrary;
 using XRpgLibrary.TileEngine;
 using XRpgLibrary.SpriteClasses;
 using XRpgLibrary.WorldClasses;
+using XRpgLibrary.Controls;
 
 namespace EyesOfTheDragon.GameScreens
 {
@@ -23,6 +24,15 @@ namespace EyesOfTheDragon.GameScreens
         Engine engine = new Engine(32, 32);
         static Player player;
         static World world;
+
+        GridControlManager pauseMenu;
+        Texture2D menuBackground;
+        LinkLabel pokemon;
+        LinkLabel pokedex;
+        LinkLabel bag;
+        LinkLabel trainer;
+        LinkLabel save;
+        LinkLabel options;
         
         #endregion
 
@@ -56,12 +66,40 @@ namespace EyesOfTheDragon.GameScreens
         public override void Initialize()
         {
             base.Initialize();
+
         }
 
         protected override void LoadContent()
         {
             base.LoadContent();
 
+            SpriteFont pauseFont = GameRef.Content.Load<SpriteFont>(@"Fonts\PauseMenuFont");
+            pauseMenu = new GridControlManager(pauseFont);
+            pokemon = new LinkLabel();
+            pokemon.Text = "Pokemon";
+            pokemon.SpriteFont = pauseFont;
+            pokedex = new LinkLabel();
+            pokedex.Text = "Pokedex";
+            pokedex.SpriteFont = pauseFont;
+            bag = new LinkLabel();
+            bag.Text = "Bag";
+            bag.SpriteFont = pauseFont;
+            trainer = new LinkLabel();
+            trainer.Text = player.Character.Entity.EntityName;
+            trainer.SpriteFont = pauseFont;
+            save = new LinkLabel();
+            save.Text = "Save";
+            save.SpriteFont = pauseFont;
+            options = new LinkLabel();
+            options.Text = "Options";
+            options.SpriteFont = pauseFont;
+
+            pauseMenu.AddControl(pokedex, 0);
+            pauseMenu.AddControl(pokemon, 1);
+            pauseMenu.AddControl(bag, 2);
+            pauseMenu.AddControl(trainer, 3);
+            pauseMenu.AddControl(save, 4);
+            pauseMenu.AddControl(options, 5);
         }
 
         public override void Update(GameTime gameTime)
@@ -87,6 +125,7 @@ namespace EyesOfTheDragon.GameScreens
 
             world.DrawLevel(gameTime, GameRef.SpriteBatch, player.Camera);
             player.Draw(gameTime, GameRef.SpriteBatch);
+            pauseMenu.Draw(GameRef.SpriteBatch);
 
             GameRef.SpriteBatch.End();
         }

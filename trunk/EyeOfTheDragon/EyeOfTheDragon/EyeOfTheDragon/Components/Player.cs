@@ -54,7 +54,7 @@ namespace EyesOfTheDragon.Components
         {
             gameRef = (Game1)game;
             camera = new Camera(gameRef.ScreenRectangle);
-            //camera.Zoom = 4f;
+            camera.Zoom = 4f;
             movementType = MovementType.Walk;
             inventory = new List<BaseItem>();
             this.character = character;
