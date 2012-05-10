@@ -34,7 +34,7 @@ namespace EyesOfTheDragon.Components
             return background;
         }
 
-        public Texture2D loadBattlfiled(string type, string time)
+        public Texture2D loadBattlfieled(string type, string time)
         {
             Texture2D battlefield;
 

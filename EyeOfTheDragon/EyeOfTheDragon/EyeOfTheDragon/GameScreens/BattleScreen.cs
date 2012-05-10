@@ -53,6 +53,19 @@ namespace EyesOfTheDragon.GameScreens
         SelectedControl selectedAttack = SelectedControl.Attack1;
         SelectedMenu selectedMenu = SelectedMenu.Main;
 
+        GridControlManager mainMenuManager = new GridControlManager(ControlManager.SpriteFont);
+        PictureBox fight;
+        PictureBox bag;
+        PictureBox pokemon;
+        PictureBox run;
+
+        GridControlManager attackManager = new GridControlManager(ControlManager.SpriteFont);
+        AttackControl attack1;
+        AttackControl attack2;
+        AttackControl attack3;
+        AttackControl attack4;
+        PictureBox back;
+
         List<GifAnimation.GifAnimation> pokemonImages;
 
         static double opponentHPBarScale = 3.5;
@@ -97,7 +110,7 @@ namespace EyesOfTheDragon.GameScreens
             BattleImageLoader battleImageLoader = new BattleImageLoader(Game);
 
             backgroundImage = battleImageLoader.loadBattleBackground("water", "day");
-            battefieldImage = battleImageLoader.loadBattlfiled("water", "day");
+            battefieldImage = battleImageLoader.loadBattlfieled("water", "day");
             battleHUD = battleImageLoader.loadHUD();
             attackFrame = battleImageLoader.loadAttackFrame();
             typeSymbols = battleImageLoader.loadTypeSymbols();
@@ -112,13 +125,132 @@ namespace EyesOfTheDragon.GameScreens
 
             battleRectange = new Rectangle(0, 0, 1024, 576);
 
+            fight = new PictureBox(battleHUD, new Rectangle(455, 660, 114, 26), new Rectangle(515, 185, 57, 13), Color.LightBlue);
+            fight.Selected += new EventHandler(mainMenu_Selected);
+            bag = new PictureBox(battleHUD, new Rectangle(0, 648, 156, 120), new Rectangle(518, 218, 78, 60), Color.LightBlue);
+            bag.Selected += new EventHandler(mainMenu_Selected);
+            pokemon = new PictureBox(battleHUD, new Rectangle(868, 648, 156, 120), new Rectangle(696, 220, 78, 60), Color.LightBlue);
+            pokemon.Selected += new EventHandler(mainMenu_Selected);
+            run = new PictureBox(battleHUD, new Rectangle(436, 713, 152, 55), new Rectangle(608, 235, 76, 44), Color.LightBlue);
+            run.Selected += new EventHandler(mainMenu_Selected);
+
+            mainMenuManager.AddBlank(0, 0, 1);
+            mainMenuManager.AddControl(fight, 0);
+            mainMenuManager.AddControl(bag, 1);
+            mainMenuManager.AddControl(run, 1);
+            mainMenuManager.AddControl(pokemon, 1);
+            mainMenuManager.SelectedRow = 0;
+            mainMenuManager.SelectedColumn = 1;
+            
+
+            attack1 = new AttackControl(attackFrame, new Rectangle(270, 581, 205, 90), typeSymbols, new Rectangle(240, 0, 32, 16), 
+                battleManger.MyPokemon.Moveset[0].Name, battleManger.MyPokemon.Moveset[0].CurrentPP, Color.LightBlue);
+            attack1.Selected += new EventHandler(attack_Selected);
+            attack2 = new AttackControl(attackFrame, new Rectangle(577, 581, 205, 90), typeSymbols, new Rectangle(240, 0, 32, 16), 
+                battleManger.MyPokemon.Moveset[1].Name, battleManger.MyPokemon.Moveset[1].CurrentPP, Color.LightBlue);
+            attack2.Selected += new EventHandler(attack_Selected);
+            attack3 = new AttackControl(attackFrame, new Rectangle(270, 674, 205, 90), typeSymbols, new Rectangle(240, 0, 32, 16), 
+                battleManger.MyPokemon.Moveset[2].Name, battleManger.MyPokemon.Moveset[2].CurrentPP, Color.LightBlue);
+            attack3.Selected += new EventHandler(attack_Selected);
+            attack4 = new AttackControl(attackFrame, new Rectangle(577, 674, 205, 90), typeSymbols, new Rectangle(240, 0, 32, 16), 
+                battleManger.MyPokemon.Moveset[3].Name, battleManger.MyPokemon.Moveset[3].CurrentPP, Color.LightBlue);
+            attack4.Selected += new EventHandler(attack_Selected);
+
+            back = new PictureBox(battleHUD, new Rectangle(868, 648, 156, 120), new Rectangle(696, 220, 78, 60), Color.LightBlue);
+
+            attackManager.AddControl(attack1, 0);
+            attackManager.AddControl(attack2, 0);
+            attackManager.AddControl(attack3, 1);
+            attackManager.AddControl(attack4, 1);
+            attackManager.AddControl(back, 1);
+            attackManager.SelectedRow = 0;
+            attackManager.SelectedColumn = 0;
+            attackManager.Visible = false;
+            
             HighlightControl(selectedControl);
+        }
+
+        void mainMenu_Selected(object sender, EventArgs e)
+        {
+            if (sender == fight)
+            {
+                mainMenuManager.Visible = false;
+                attackManager.Visible = true;
+            }
+
+            if (sender == bag)
+            {
+
+            }
+
+            if (sender == pokemon)
+            {
+
+            }
+
+            if (sender == run)
+            {
+                Transition(ChangeType.Change, GameRef.StartMenuScreen);
+            }
+        }
+
+        void attack_Selected(object sender, EventArgs e)
+        {
+            if (sender == attack1)
+            {
+                battleManger.MyPokemon.Moveset[0].useAttack(battleManger.MyPokemon, battleManger.OpponentPokemon);
+                attackManager.Visible = false;
+                mainMenuManager.Visible = true;
+                //InputHandler.Flush();
+            }
+
+            if (sender == attack2)
+            {
+                battleManger.MyPokemon.Moveset[1].useAttack(battleManger.MyPokemon, battleManger.OpponentPokemon);
+                attackManager.Visible = false;
+                mainMenuManager.Visible = true;
+                //InputHandler.Flush();
+            }
+
+            if (sender == attack3)
+            {
+                battleManger.MyPokemon.Moveset[2].useAttack(battleManger.MyPokemon, battleManger.OpponentPokemon);
+                attackManager.Visible = false;
+                mainMenuManager.Visible = true;
+                //InputHandler.Flush();
+            }
+
+            if (sender == attack4)
+            {
+                battleManger.MyPokemon.Moveset[3].useAttack(battleManger.MyPokemon, battleManger.OpponentPokemon);
+                attackManager.Visible = false;
+                mainMenuManager.Visible = true;
+                //InputHandler.Flush();
+            }
+
+            if (sender == back)
+            {
+                attackManager.Visible = false;
+                mainMenuManager.Visible = true;
+                //InputHandler.Flush();
+                //selectedMenu = SelectedMenu.Main;
+                //HighlightControl(selectedControl);
+            }
         }
 
         public override void Update(GameTime gameTime)
         {
 
-            UpdateControls();
+            //UpdateControls();
+
+            if (mainMenuManager.Visible)
+            {
+                mainMenuManager.Update(gameTime, playerIndexInControl);
+            }
+            else if (attackManager.Visible)
+            {
+                attackManager.Update(gameTime, playerIndexInControl);
+            }
 
             pokemonImages[0].Update(gameTime.ElapsedGameTime.Ticks);
             pokemonImages[1].Update(gameTime.ElapsedGameTime.Ticks);
@@ -354,7 +486,7 @@ namespace EyesOfTheDragon.GameScreens
 
         private void drawHUD()
         {
-            if (selectedMenu == SelectedMenu.Main)
+            if (mainMenuManager.Visible)
             {
                 //top
                 GameRef.SpriteBatch.Draw(
@@ -370,36 +502,38 @@ namespace EyesOfTheDragon.GameScreens
                     new Rectangle(91, 257, 334, 91),
                     Color.White);
 
+                mainMenuManager.Draw(GameRef.SpriteBatch);
+
                 //Bag
-                GameRef.SpriteBatch.Draw(
-                    battleHUD,
-                    new Rectangle(0, 648, 156, 120),
-                    new Rectangle(518, 218, 78, 60),
-                    bagHighlight);
+                //GameRef.SpriteBatch.Draw(
+                //    battleHUD,
+                //    new Rectangle(0, 648, 156, 120),
+                //    new Rectangle(518, 218, 78, 60),
+                //    bagHighlight);
 
                 //Pokemon
-                GameRef.SpriteBatch.Draw(
-                    battleHUD,
-                    new Rectangle(868, 648, 156, 120),
-                    new Rectangle(696, 220, 78, 60),
-                    pokemonHighlight);
+                //GameRef.SpriteBatch.Draw(
+                //    battleHUD,
+                //    new Rectangle(868, 648, 156, 120),
+                //    new Rectangle(696, 220, 78, 60),
+                //    pokemonHighlight);
 
                 //Run
-                GameRef.SpriteBatch.Draw(
-                    battleHUD,
-                    new Rectangle(436, 713, 152, 55),
-                    new Rectangle(608, 235, 76, 44),
-                    runHighlight);
+                //GameRef.SpriteBatch.Draw(
+                //    battleHUD,
+                //    new Rectangle(436, 713, 152, 55),
+                //    new Rectangle(608, 235, 76, 44),
+                //    runHighlight);
 
                 //Fight
-                GameRef.SpriteBatch.Draw(
-                    battleHUD,
-                    new Rectangle(455, 660, 114, 26),
-                    new Rectangle(515, 185, 57, 13),
-                    fightHighlight);
+                //GameRef.SpriteBatch.Draw(
+                //    battleHUD,
+                //    new Rectangle(455, 660, 114, 26),
+                //    new Rectangle(515, 185, 57, 13),
+                //    fightHighlight);
             }
 
-            if (selectedMenu == SelectedMenu.Attack)
+            if (attackManager.Visible)
             {
                 //top
                 GameRef.SpriteBatch.Draw(
@@ -416,23 +550,24 @@ namespace EyesOfTheDragon.GameScreens
                     Color.White);
 
                 //Attack 1
-                DrawAttack(new Rectangle(270, 581, 205, 90), 1, attack1Highlight);
+                //DrawAttack(new Rectangle(270, 581, 205, 90), 1, attack1Highlight);
+                attackManager.Draw(GameRef.SpriteBatch);
 
                 //Attack 2
-                DrawAttack(new Rectangle(577, 581, 205, 90), 2, attack2Highlight);
+                //DrawAttack(new Rectangle(577, 581, 205, 90), 2, attack2Highlight);
 
                 //Attack 3
-                DrawAttack(new Rectangle(270, 674, 205, 90), 3, attack3Highlight);
+                //DrawAttack(new Rectangle(270, 674, 205, 90), 3, attack3Highlight);
 
                 //Attack 4
-                DrawAttack(new Rectangle(577, 674, 205, 90), 4, attack4Highlight);
+                //DrawAttack(new Rectangle(577, 674, 205, 90), 4, attack4Highlight);
 
                 //Back
-                GameRef.SpriteBatch.Draw(
-                battleHUD,
-                new Rectangle(868, 648, 156, 120),
-                new Rectangle(696, 220, 78, 60),
-                backHighlight);
+                //GameRef.SpriteBatch.Draw(
+                //battleHUD,
+                //new Rectangle(868, 648, 156, 120),
+                //new Rectangle(696, 220, 78, 60),
+                //backHighlight);
             }
         }
 
