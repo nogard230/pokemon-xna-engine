@@ -1,0 +1,1 @@
+Based off of the RPG turials located here: http://xnagpa.net/xna4rpg.php, this XNA Engine will be for games like pokemon game clones, as well as other similar monster gathering RPGs.
